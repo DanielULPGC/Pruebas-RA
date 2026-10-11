@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="titulo descr">
+<title id="titulo">Comparación de niveles de evidencia: papiro estudiado y modelo contemporáneo</title>
+<desc id="descr">Panel izquierdo con ficha documental del papiro MPER N.S. 1.1 y el problema 18, sin falsificar un dibujo antiguo. Panel derecho con una pirámide cuadrangular esquemática moderna, indicando altura perpendicular y base cuadrada.</desc>
+<defs><linearGradient id="fondo" x2="1" y2="1"><stop stop-color="#f9ebd4"/><stop offset="1" stop-color="#d6edf0"/></linearGradient><linearGradient id="cara" x2="1" y2=".8"><stop stop-color="#f5ca82"/><stop offset="1" stop-color="#e0a15c"/></linearGradient></defs>
+<rect width="1120" height="720" rx="28" fill="url(#fondo)"/>
+<text x="46" y="69" font-size="31" font-weight="800" fill="#153c4e" font-family="DejaVu Sans,sans-serif">Una pregunta, dos niveles de representación</text>
+<text x="46" y="105" font-size="18" fill="#50636a" font-family="DejaVu Sans,sans-serif">Historia documentada y geometría contemporánea no son lo mismo.</text>
+<rect x="45" y="145" width="475" height="470" rx="22" fill="#fffcf5" stroke="#ceab72" stroke-width="3"/>
+<rect x="600" y="145" width="475" height="470" rx="22" fill="#effafc" stroke="#85b2bb" stroke-width="3"/>
+<rect x="63" y="167" width="436" height="58" rx="13" fill="#f2d5a4"/>
+<text x="86" y="205" font-size="25" fill="#4d331c" font-weight="700" font-family="DejaVu Sans,sans-serif">TESTIMONIO DOCUMENTADO</text>
+<text x="91" y="272" font-size="25" font-weight="700" fill="#674222" font-family="DejaVu Sans,sans-serif">MPER N.S. 1.1</text>
+<text x="91" y="315" font-size="21" fill="#483d34" font-family="DejaVu Sans,sans-serif">Problema 18:</text>
+<text x="91" y="347" font-size="21" fill="#483d34" font-family="DejaVu Sans,sans-serif">pirámide de base cuadrada.</text>
+<line x1="90" y1="378" x2="460" y2="378" stroke="#d3bb9f" stroke-width="2"/>
+<text x="91" y="430" font-size="21" fill="#483d34" font-family="DejaVu Sans,sans-serif">Kelly (2026), figura A.8:</text>
+<text x="91" y="462" font-size="21" fill="#483d34" font-family="DejaVu Sans,sans-serif">interpretación del dibujo</text>
+<text x="91" y="494" font-size="21" fill="#483d34" font-family="DejaVu Sans,sans-serif">con incertidumbres.</text>
+<text x="91" y="568" font-size="17" fill="#94643b" font-weight="700" font-family="DejaVu Sans,sans-serif">NO SE REPRODUCE EL PAPIRO AQUÍ</text>
+<rect x="617" y="167" width="440" height="58" rx="13" fill="#b7e0e6"/>
+<text x="637" y="205" font-size="25" fill="#164d63" font-weight="700" font-family="DejaVu Sans,sans-serif">MODELO DIDÁCTICO ACTUAL</text>
+<path d="M835 260L685 505L872 558Z" fill="url(#cara)" stroke="#956238" stroke-width="4"/>
+<path d="M835 260L872 558L1002 491Z" fill="#b97f4f" stroke="#956238" stroke-width="4"/>
+<path d="M835 260L1002 491L857 456Z" fill="#f6d698" stroke="#956238" stroke-width="4"/>
+<path d="M685 505L857 456L1002 491" fill="none" stroke="#94633c" stroke-width="3" stroke-dasharray="9 9"/>
+<path d="M835 260L835 503" stroke="#185f80" stroke-width="6" stroke-dasharray="11 9"/>
+<circle cx="835" cy="503" r="7" fill="#185f80"/>
+<text x="846" y="377" font-size="20" font-weight="700" fill="#13495f" font-family="DejaVu Sans,sans-serif">altura</text>
+<text x="734" y="590" font-size="20" font-weight="700" fill="#20566b" font-family="DejaVu Sans,sans-serif">base cuadrada</text>
+<text x="51" y="670" font-size="20" font-weight="700" fill="#234858" font-family="DejaVu Sans,sans-serif">FUENTE → interpretación académica → modelo actual → razonamiento matemático</text>
+</svg>
