@@ -23,7 +23,7 @@
 <path d="M854 260L872 558L1002 491Z" fill="#b97f4f" stroke="#956238" stroke-width="4"/>
 <path d="M854 260L1002 491L857 456Z" fill="#f6d698" stroke="#956238" stroke-width="4"/>
 <path d="M685 505L857 456L1002 491" fill="none" stroke="#94633c" stroke-width="3" stroke-dasharray="9 9"/>
-<path d="M854 260L835 503" stroke="#185f80" stroke-width="6" stroke-dasharray="11 9"/>
+<path d="M854 260L854 503" stroke="#185f80" stroke-width="6" stroke-dasharray="11 9"/>
 <circle cx="854" cy="503" r="7" fill="#185f80"/>
 <text x="865" y="377" font-size="20" font-weight="700" fill="#13495f" font-family="DejaVu Sans,sans-serif">altura</text>
 <text x="734" y="590" font-size="20" font-weight="700" fill="#20566b" font-family="DejaVu Sans,sans-serif">base cuadrada</text>

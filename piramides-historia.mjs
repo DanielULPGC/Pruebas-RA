@@ -37,7 +37,7 @@ const INFO = {
     edicion: 'Figura A.8 derecha, edición académica de Kelly (2026).',
     modelo: 'Tronco cuadrangular de elaboración contemporánea.',
     descripcion: 'Tronco de pirámide cuadrangular: dos bases cuadradas paralelas de distinto tamaño y caras laterales trapezoidales.',
-    alt: 'Ilustración moderna de un tronco de pirámide ocre que destaca sus dos bases paralelas de tamaños diferentes.'
+    alt: 'Esquema matemático moderno de un tronco de pirámide cuadrangular recta: dos bases cuadradas paralelas, cuatro caras laterales trapezoidales y línea discontinua de altura entre los centros. Sin escala métrica.'
   }
 };
 let caso = 'grupo';
@@ -78,6 +78,7 @@ function mostrarCaso(id) {
   });
   $('contexto').textContent=e.contexto;
   $('infografia').src=ILUSTRACIONES[id]; $('infografia').alt=inf.alt;
+  $('enlace-ampliar-figura').href=ILUSTRACIONES[id];
   $('pista').textContent=inf.pista; $('referencia-caso').textContent=inf.pagina;
   $('fuente-titulo').textContent=inf.titulo;
   $('dato-historico').textContent=e.contexto;

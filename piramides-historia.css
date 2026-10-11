@@ -37,3 +37,10 @@ button,input,textarea{font:inherit}button{cursor:pointer}a{color:#125a71}a:focus
 @media(max-width:920px){.atlas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:630px){.atlas-grid{grid-template-columns:1fr}.atlas-heading{display:block}.atlas-count{display:inline-block;margin-top:12px}.atlas{padding:14px}.atlas-image{aspect-ratio:auto}.atlas-image img{height:auto}}
 @media(prefers-reduced-motion:reduce){.atlas *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* P4.5.4-B: acceso alternativo de ampliación, teclado y tacto */
+.figure-tools{display:flex;justify-content:flex-end;margin:10px 0 0}
+.figure-tools a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 15px;background:#FFFFFF;color:#13536B;border:2px solid #57808B;border-radius:10px;font-size:.89rem;line-height:1.3;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.figure-tools a:hover{background:#E8F5F6}
+.figure-tools a:focus-visible{outline:3px solid #A54E11;outline-offset:4px}
+@media(max-width:670px){.figure-tools a{width:100%;text-align:center}}
