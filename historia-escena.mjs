@@ -38,6 +38,8 @@ export function mountCover(root,T,options={}) {
   const buttons=Object.fromEntries([...root.querySelectorAll('[data-scene-action]')].map(b=>[b.dataset.sceneAction,b]));
   const reduced=env.matchMedia('(prefers-reduced-motion: reduce)');
   let renderer=null,model=null,raf=0,last=0,visible=true,automatic=false,drag=null,disposed=false,failed=false;
+  let sizedWidth=0,sizedHeight=0,sizedRatio=0;
+  function releaseModel(){if(!model)return;const geometries=new Set(),materials=new Set();model.scene.traverse(o=>{if(o.geometry)geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[])materials.add(m);});geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());model=null;}
   const listeners=[];function on(el,type,fn,opt){el.addEventListener(type,fn,opt);listeners.push(()=>el.removeEventListener(type,fn,opt));}
   const canAnimate=()=>automatic&&!reduced.matches&&visible&&!doc.hidden&&!disposed;
   function sync(){buttons.auto.setAttribute('aria-pressed',String(automatic));buttons.auto.textContent=automatic?'Pausar giro':'Giro automático';buttons.auto.disabled=reduced.matches;}
@@ -50,10 +52,13 @@ export function mountCover(root,T,options={}) {
   function pause(){automatic=false;last=0;if(raf){env.cancelAnimationFrame(raf);raf=0;}sync();}
   function fail(){failed=true;pause();controls.hidden=true;canvas.hidden=true;root.classList.remove('escena-lista');fallback.removeAttribute('aria-hidden');
     caption.textContent='ILUSTRACIÓN ACTUAL · SIN ESCALA HISTÓRICA';status.textContent='Se muestra la ilustración estática. Puedes continuar hacia las actividades.';
-    if(renderer){try{renderer.dispose();}catch(_){}renderer=null;}
+    if(renderer){try{renderer.dispose();}catch(_){}renderer=null;}releaseModel();
   }
   function resize(){if(!renderer)return;const rect=frame.getBoundingClientRect();const width=Math.max(1,Math.round(rect.width)),height=Math.max(1,Math.round(rect.height));
-    renderer.setPixelRatio(Math.min(env.devicePixelRatio||1,width<500?1.25:1.5));renderer.setSize(width,height,false);
+    const ratio=Math.min(env.devicePixelRatio||1,width<500?1.25:1.5);
+    if(width===sizedWidth&&height===sizedHeight&&ratio===sizedRatio)return;
+    if(ratio!==sizedRatio)renderer.setPixelRatio(ratio);
+    renderer.setSize(width,height,false);sizedWidth=width;sizedHeight=height;sizedRatio=ratio;
     model.camera.aspect=width/height;model.camera.updateProjectionMatrix();schedule();
   }
   function start(){if(renderer||failed||disposed)return;
@@ -80,9 +85,10 @@ export function mountCover(root,T,options={}) {
   if(env.IntersectionObserver){observer=new env.IntersectionObserver(entries=>{visible=entries.some(e=>e.isIntersecting);last=0;if(visible){start();schedule();}else if(raf){env.cancelAnimationFrame(raf);raf=0;}},{rootMargin:'80px'});observer.observe(root);}else start();
   if(env.ResizeObserver){resizeObserver=new env.ResizeObserver(resize);resizeObserver.observe(frame);}else on(env,'resize',resize);
   function dispose(){disposed=true;if(raf)env.cancelAnimationFrame(raf);listeners.forEach(off=>off());observer?.disconnect();resizeObserver?.disconnect();
-    if(model){const geometries=new Set(),materials=new Set();model.scene.traverse(o=>{if(o.geometry)geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[])materials.add(m);});geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());}
+    releaseModel();
     renderer?.dispose();renderer=null;
   }
   on(env,'pagehide',e=>{if(!e.persisted)dispose();});
   sync();return {dispose,getState:()=>({ready:!!renderer,failed,automatic,visible,reduced:reduced.matches,rotation:model?.group.rotation.y||0})};
 }
+
