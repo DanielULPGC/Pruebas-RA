@@ -64,6 +64,12 @@ class ScaleTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Transformación'):
             scales.dimensiones_glb(path)
 
+    def test_svg_transform_cannot_change_physical_size_silently(self):
+        path = self.root / 'desarrollo-cubo.svg'
+        path.write_text(path.read_text().replace('<rect x="90" y="142"', '<rect transform="scale(2)" x="90" y="142"'))
+        with self.assertRaisesRegex(ValueError, 'Transformación'):
+            scales.plantilla_cm(path)
+
     def test_historical_model_cannot_be_declared_nominal(self):
         def change(data):
             next(m for m in data['modelos'] if 'historico' in m['archivo'])['interpretacion'] = 'MODELO_MATEMATICO_NOMINAL'

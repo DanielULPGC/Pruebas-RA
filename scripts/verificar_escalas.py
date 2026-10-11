@@ -90,6 +90,8 @@ def plantilla_cm(path):
     svg = ET.parse(path).getroot()
     if svg.get('width') != '210mm' or svg.get('height') != '297mm' or svg.get('viewBox') != '0 0 210 297':
         raise ValueError('Plantilla sin correspondencia física A4 verificada')
+    if any('transform' in e.attrib or 'style' in e.attrib or e.tag in {NS + 'style', NS + 'use'} for e in svg.iter()):
+        raise ValueError('Transformación o estilo de plantilla no soportado')
     faces = [e for e in svg.findall(NS + 'rect') if e.get('width') == '30' and e.get('height') == '30']
     control = [e for e in svg.findall(NS + 'line') if e.get('y1') == e.get('y2') == '228']
     if len(faces) != 6 or len(control) != 1:
@@ -154,6 +156,8 @@ def inspect(root):
         raise ValueError('Comparación 1:4 incoherente')
     if '3 cm ÷ 12 cm = 1/4' not in page or 'sin escala métrica' not in page:
         raise ValueError('Explicación de escala incompleta')
+    if (original / paper) ** 2 != 16 or (original / paper) ** 3 != 64 or '1:16' not in page or '1:64' not in page:
+        raise ValueError('Relaciones de área o volumen incoherentes')
     diagram = ET.parse(root / 'ilustraciones/auditoria_volumen_piramide.svg').getroot()
     labels = [e.text for e in diagram.findall(NS + 'text')]
     if labels.count('a = 6 m') != 2 or labels.count('h = 4 m') != 2 or not any('no está a escala' in (s or '') for s in labels):

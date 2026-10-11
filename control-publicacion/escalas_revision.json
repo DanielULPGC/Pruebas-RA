@@ -1,5 +1,5 @@
 {
-  "revision": "P4.5.4-C · cotas y escalas selectivas",
+  "revision": "P4.5.4-C · cotas y escalas selectivas · R2",
   "fecha": "2026-10-11",
   "base_commit": "02815652f727c58479d25d00d1376ba18d24fb5a",
   "criterio": "Cotas para identificar y calcular; escala numérica solo con objeto de referencia y unidades acreditados. Sin conversión de pies históricos ni escala arqueológica inferida.",
@@ -15,7 +15,7 @@
   "imagenes": [
     {
       "archivo": "desarrollo-cubo.svg",
-      "sha256": "98ebef68abdfb3c45ade2e7f44ee8bc8f7a070ed9821e75cd7a571301aada57a",
+      "sha256": "528975cd6b3477107d1d160ce59d6fa8646b3f2587eb3b46edc79cf7265f7b86",
       "decision": "PLANTILLA_FISICA_3_CM",
       "justificacion": "A4 210 × 297 mm, seis caras de 30 × 30 mm y línea de control de 30 mm; verificar impresión al 100 %.",
       "revision_humana": "PENDIENTE"
@@ -234,5 +234,7 @@
       "interpretacion": "MODELO_MATEMATICO_NOMINAL",
       "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
     }
-  ]
+  ],
+  "precision_comparacion": "1:4 solo para longitudes entre el cubo de papel de 3 cm y el nominal de 12 cm; áreas 1:16; volúmenes 1:64. No es una escala global ni acredita tamaño de pantalla o RA.",
+  "correccion_plantilla": "Título e instrucciones redistribuidos para evitar recortes en A4; caras, uniones y línea de control conservadas."
 }

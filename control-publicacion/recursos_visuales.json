@@ -8,7 +8,7 @@
     {
       "id": "PVC-01",
       "archivo": "desarrollo-cubo.svg",
-      "sha256": "98ebef68abdfb3c45ade2e7f44ee8bc8f7a070ed9821e75cd7a571301aada57a",
+      "sha256": "528975cd6b3477107d1d160ce59d6fa8646b3f2587eb3b46edc79cf7265f7b86",
       "ids_heredados": [
         "VIS-14"
       ],

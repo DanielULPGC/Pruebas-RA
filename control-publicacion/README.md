@@ -79,3 +79,11 @@ No completar datos ausentes por inferencia. Cualquier modificación de bytes exi
 4. Revalidar la rama y el despliegue tras cualquier integración autorizada.
 
 El informe externo de esta unidad registra verificaciones ejecutadas y limitaciones. Las pruebas históricas B (94/94 y 140/140) son antecedentes; no se presentan como reejecutadas. Los ensayos físicos de RA en Android, iPhone e iPad y el pilotaje escolar conservan P5 = NO-GO.
+
+## Segunda revisión de escalas (11-10-2026)
+
+Se detectaron recortes del título y de una instrucción en el render A4 de la plantilla original. Se redistribuyeron sus textos conservando íntegramente las seis caras de 30 × 30 mm, las uniones y la línea de control de 30 mm. El recorte podía inducir a reducir la impresión para hacer caber el contenido y alterar así las medidas. Se mantiene la exigencia de comprobar físicamente los 3 cm tras imprimir.
+
+Se precisa que la relación 1:4 corresponde exclusivamente al par de cubos semejantes de aristas nominales 12 cm y 3 cm. No es una escala global del sitio, de la pantalla ni de la RA. Para ese par, las razones entre áreas de caras y entre volúmenes son respectivamente 1:16 y 1:64. En el taller se explicita que el tamaño visual del modelo no representa las medidas históricas en pies. Las cotas de la pirámide de volumen son datos del ejemplo escolar; su dibujo continúa sin escala métrica.
+
+Verificación de R2: 23 pruebas superadas; controles métrico y técnico en PASS. Se compararon las caras y todas las líneas de la plantilla con la versión base: sus atributos geométricos son idénticos. Se inspeccionó el render A4 corregido. Sigue pendiente medir la impresión real y comprobar el tamaño físico en RA.
