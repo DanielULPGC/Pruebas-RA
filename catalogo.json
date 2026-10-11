@@ -1,0 +1,149 @@
+[
+  {
+    "id": "cubo",
+    "nombre": "Cubo",
+    "dimensiones_cm": [
+      12,
+      12,
+      12
+    ],
+    "caras_planas": 6,
+    "aristas_rectas": 12,
+    "vertices": 8,
+    "tipo": "poliedro",
+    "reto": "¿Qué cambia en el volumen si duplicamos la longitud de la arista?",
+    "solucion": "Se multiplica por 8: V = a³ y (2a)³ = 8a³.",
+    "glb": "modelos_glb/cubo.glb",
+    "usdz_preliminar": "usdz_preliminar/cubo.usdz",
+    "triangulos": 12,
+    "glb_sha256": "a32b922158dd56bca22e9cfabb16bdb00add9546cd7eebc4b5acf71dba04ec5f",
+    "usdz_sha256": "1da9ab50c4d38f5a6419e89ef6bc53561097493c59a03667c3803b42c8e75e3a",
+    "malla_cerrada": true
+  },
+  {
+    "id": "ortoedro",
+    "nombre": "Ortoedro",
+    "dimensiones_cm": [
+      16,
+      10,
+      8
+    ],
+    "caras_planas": 6,
+    "aristas_rectas": 12,
+    "vertices": 8,
+    "tipo": "poliedro",
+    "reto": "Si mide 16 × 10 × 8 cm, ¿cuál es su volumen?",
+    "solucion": "V = 16 × 10 × 8 = 1280 cm³.",
+    "glb": "modelos_glb/ortoedro.glb",
+    "usdz_preliminar": "usdz_preliminar/ortoedro.usdz",
+    "triangulos": 12,
+    "glb_sha256": "8c83c2fe22a4cd41d55fb6ac18a700e1345c3fc0a5ef89b5acdff22e3ab8b665",
+    "usdz_sha256": "d583b182b3a4a7f22324965668a1a1bb966aeccc613eeb601d62d929a27281e3",
+    "malla_cerrada": true
+  },
+  {
+    "id": "prisma_triangular",
+    "nombre": "Prisma triangular",
+    "dimensiones_cm": [
+      12,
+      10,
+      16
+    ],
+    "caras_planas": 5,
+    "aristas_rectas": 9,
+    "vertices": 6,
+    "tipo": "poliedro",
+    "reto": "¿Cuántas bases y caras laterales tiene? ¿Son todas sus caras triangulares?",
+    "solucion": "Tiene 2 bases triangulares y 3 caras laterales rectangulares. No todas las caras son triangulares.",
+    "glb": "modelos_glb/prisma_triangular.glb",
+    "usdz_preliminar": "usdz_preliminar/prisma_triangular.usdz",
+    "triangulos": 8,
+    "glb_sha256": "b6b6845055c891900734d63892ea8c41cf5327b74c103cbb1c88e6e604aa3d95",
+    "usdz_sha256": "f50a7a4ea4c4af7eaa823d35d87a8d8c5596e2d9b8b2810fff53c1ce0978ffff",
+    "malla_cerrada": true
+  },
+  {
+    "id": "piramide_cuadrangular",
+    "nombre": "Pirámide cuadrangular",
+    "dimensiones_cm": [
+      14,
+      12,
+      14
+    ],
+    "caras_planas": 5,
+    "aristas_rectas": 8,
+    "vertices": 5,
+    "tipo": "poliedro",
+    "reto": "¿Cuántas caras triangulares convergen en el vértice superior?",
+    "solucion": "Convergen 4 caras triangulares; la quinta cara es la base cuadrada.",
+    "glb": "modelos_glb/piramide_cuadrangular.glb",
+    "usdz_preliminar": "usdz_preliminar/piramide_cuadrangular.usdz",
+    "triangulos": 6,
+    "glb_sha256": "f6aebf5cb4611c0513630350ec71f33442b079734ecf32bbe04c7f004a51b3b9",
+    "usdz_sha256": "0336b5ded117e7220e879f023ac791a6f79278461a4ced7fcfb56d88a7544396",
+    "malla_cerrada": true
+  },
+  {
+    "id": "cilindro",
+    "nombre": "Cilindro",
+    "dimensiones_cm": [
+      12,
+      12,
+      12
+    ],
+    "caras_planas": 2,
+    "aristas_rectas": 0,
+    "vertices": 0,
+    "tipo": "cuerpo_redondo",
+    "reto": "¿Qué superficies son planas y cuál es curva?",
+    "solucion": "Las 2 bases circulares son planas. La superficie lateral es curva.",
+    "glb": "modelos_glb/cilindro.glb",
+    "usdz_preliminar": "usdz_preliminar/cilindro.usdz",
+    "triangulos": 192,
+    "glb_sha256": "c54b4c6025e336010782f1cf92109974a63f12c92c1b225a9cc2fd4d0626cf48",
+    "usdz_sha256": "a2fba5a2760d4c96a687aaf401879137c7e24abf5f9e5b9a078fa4b8cc8f824a",
+    "malla_cerrada": true
+  },
+  {
+    "id": "cono",
+    "nombre": "Cono",
+    "dimensiones_cm": [
+      12,
+      14,
+      12
+    ],
+    "caras_planas": 1,
+    "aristas_rectas": 0,
+    "vertices": 1,
+    "tipo": "cuerpo_redondo",
+    "reto": "¿Por qué el cono no es una pirámide?",
+    "solucion": "Porque tiene una base circular y una superficie lateral curva, no caras laterales poligonales.",
+    "glb": "modelos_glb/cono.glb",
+    "usdz_preliminar": "usdz_preliminar/cono.usdz",
+    "triangulos": 96,
+    "glb_sha256": "92adcf5a83923971b16a0ea87c3fe8d28c5fb3ce3390d96885e65bd87fc7d478",
+    "usdz_sha256": "7a3da2935dc3c587531a60b9a7c11ff7f67dc1d88f6764a6c768a1a6a1f72bda",
+    "malla_cerrada": true
+  },
+  {
+    "id": "esfera",
+    "nombre": "Esfera",
+    "dimensiones_cm": [
+      13,
+      13,
+      13
+    ],
+    "caras_planas": 0,
+    "aristas_rectas": 0,
+    "vertices": 0,
+    "tipo": "cuerpo_redondo",
+    "reto": "¿Tiene la esfera alguna cara plana o vértice?",
+    "solucion": "No. Su superficie es completamente curva y no tiene vértices.",
+    "glb": "modelos_glb/esfera.glb",
+    "usdz_preliminar": "usdz_preliminar/esfera.usdz",
+    "triangulos": 1280,
+    "glb_sha256": "d434ad4f1392db278d51478c6dbabbcc7d7f4d181dcb0d949e9f858abb8ff65b",
+    "usdz_sha256": "4b0d3e013006079b7818ae561e79b0dae479e7bcb4a0ac12c9f162864a602216",
+    "malla_cerrada": true
+  }
+]

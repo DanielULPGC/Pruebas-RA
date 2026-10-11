@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta name="description" content="Registro local de comprobaciones de realidad aumentada en dispositivos físicos.">
+<title>P5 · Registro de ensayos RA</title><link rel="stylesheet" href="ensayos.css"><script src="ensayos.js" defer></script></head>
+<body><main class="contenedor"><p><a href="index.html">← Volver a las figuras</a> · <a href="diagnostico.html">Diagnóstico automático</a></p>
+<h1>Registro de ensayos en dispositivos físicos</h1>
+<p>Esta hoja <strong>no realiza las pruebas automáticamente</strong>: registra observaciones humanas sobre un dispositivo. Los datos se procesan en el propio navegador, sin enviarse ni almacenarse en un servidor desde esta herramienta. Se descargará un CSV local.</p>
+<div class="advertencia"><strong>Importante:</strong> no introduzcas nombres, correos, identificadores de alumnado, ubicaciones precisas ni fotografías de menores. El registro no certifica por sí solo la ejecución de pruebas.</div>
+<form id="registro"><fieldset><legend>Contexto de la prueba</legend>
+<label>Plataforma <select id="plataforma" required><option value="">Seleccionar…</option><option value="ANDROID">Android (Chrome)</option><option value="IPHONE">iPhone (Safari)</option><option value="IPAD">iPad (Safari)</option></select></label>
+<label>Código anónimo del equipo <input id="equipo" required maxlength="12" pattern="[A-Za-z0-9_-]{1,12}" placeholder="Ej.: A01"></label>
+<label>Fecha de ensayo <input id="fecha" type="date" required></label>
+<label>Código del centro o del ensayo (opcional) <input id="lote" maxlength="12" pattern="[A-Za-z0-9_-]{0,12}" placeholder="Ej.: LOTE01"></label>
+</fieldset><fieldset><legend>Comprobaciones observadas</legend>
+<p>Selecciona un estado para cada criterio. <strong>PASA</strong> solo cuando la conducta descrita se haya observado efectivamente; las acciones imposibles de verificar quedan en <strong>NO REALIZADO</strong> o <strong>BLOQUEADO</strong>.</p>
+<div id="pruebas"></div></fieldset>
+<fieldset><legend>Declaración del procedimiento</legend>
+<label class="check"><input id="fisico" type="checkbox"> He efectuado personalmente el ensayo en un dispositivo físico compatible, no en un simulador.</label>
+<p>Si no activas la casilla, el CSV quedará clasificado como PREPARACIÓN y no podrá acreditar los requisitos técnicos de P5.</p>
+<label>Observación general (opcional; sin datos personales) <textarea id="nota" maxlength="500" rows="3" placeholder="Incidencias reproducibles y limitaciones, sin datos personales"></textarea></label>
+</fieldset>
+<div class="botones"><button type="submit">Descargar CSV de este equipo</button><button type="button" id="copiar-csv" disabled>Copiar CSV al portapapeles</button><button type="button" id="reiniciar">Restablecer respuestas</button></div>
+<p id="mensaje" role="status" aria-live="polite"></p><label id="csv-manual-wrap" hidden>CSV para copia manual si el navegador impide la descarga o el portapapeles<textarea id="csv-manual" readonly rows="7"></textarea></label></form>
+<h2>Condición de avance</h2><p>Para evaluar la puerta técnica de P5, recopila un CSV de cada plataforma (Android, iPhone e iPad) y ejecuta el evaluador independiente incluido en el expediente. Incluso si los tres informes declaran resultados positivos, <strong>se requiere revisión humana</strong> de la evidencia antes de autorizar un pilotaje escolar.</p></main></body></html>

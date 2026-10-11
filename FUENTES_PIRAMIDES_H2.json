@@ -1,0 +1,112 @@
+{
+  "modulo": "P4.4-H2",
+  "titulo": "Las pirámides del papiro: observar, interpretar y calcular",
+  "origen_primario": "MPER N.S. 1.1 (TM 63192), Egipto romano",
+  "estudio": {
+    "autor": "Thomas Kelly",
+    "año": 2026,
+    "titulo": "Diagrams in ancient Greek practical mathematics",
+    "revista": "Historia Mathematica",
+    "volumen": 75,
+    "articulo": "103248",
+    "doi": "10.1016/j.hm.2026.103248",
+    "licencia_articulo": "CC BY 4.0"
+  },
+  "estatus": {
+    "P5": "NO_GO",
+    "https": "NO_PUBLICADO",
+    "hardware_android": "NO_REALIZADO",
+    "hardware_iphone": "NO_REALIZADO",
+    "hardware_ipad": "NO_REALIZADO",
+    "eficacia_didactica": "NO_EVALUADA"
+  },
+  "casos": [
+    {
+      "id": "grupo_10_13",
+      "referencia": "Kelly 2026 pp. 15–17, fig. A.4, MPER N.S. 1.1, problemas 10–13",
+      "tipo": "conjunto de pirámides de base triangular y troncos",
+      "certeza": "correspondencias individuales parcialmente discutidas",
+      "punto_critico": "el autor considera tentativas algunas asignaciones e interpretaciones de marcas",
+      "adaptacion": "modelo triangular moderno con dimensiones de ejemplo no extraídas del papiro"
+    },
+    {
+      "id": "p18",
+      "referencia": "Kelly 2026 pp. 10–11, 18–19, figs. 4–6 y A.8 (izquierda), problema 18",
+      "tipo": "pirámide cuadrangular",
+      "certeza": "identificación del tipo geométrico documentada, interpretación de ciertos trazos hipotética",
+      "punto_critico": "no presentar el trazo central como altura geométrica inequívoca",
+      "adaptacion": "pirámide cuadrangular moderna con cifras didácticas"
+    },
+    {
+      "id": "p19",
+      "referencia": "Kelly 2026 pp. 18–19, fig. A.8 (derecha), problema 19",
+      "tipo": "tronco de pirámide cuadrangular",
+      "certeza": "tipo geométrico documentado",
+      "punto_critico": "marcas diagonales del diagrama sin explicación segura en el estudio",
+      "adaptacion": "tronco moderno simplificado, sin dimensiones históricas atribuidas"
+    }
+  ],
+  "reproducciones": [
+    {
+      "archivo": "fuentes/kelly_2026_A4_piramides_10_13.png",
+      "figura": "A.4",
+      "pagina_pdf": 16,
+      "estudio": "Kelly 2026",
+      "licencia_del_articulo": "CC BY 4.0",
+      "rol_epistemico": "edición científica (trazos editados y normalizados)",
+      "transformacion": "recorte de página, sin redibujado de líneas ni sustitución de numerales",
+      "sha256": "a6cce6f9186d2fd63616c588ee4059d5000a3f2fdcf7cbf20521d6b9cf6e7f12"
+    },
+    {
+      "archivo": "fuentes/kelly_2026_A8_piramides_18_19.png",
+      "figura": "A.8",
+      "pagina_pdf": 19,
+      "estudio": "Kelly 2026",
+      "licencia_del_articulo": "CC BY 4.0",
+      "rol_epistemico": "edición científica (tiras de dibujos editadas)",
+      "transformacion": "recorte de página, sin redibujado de líneas ni sustitución de numerales",
+      "sha256": "c368c50a4d42adf8308c6e826972b60fcad99c65c287003e99a617baee18b214"
+    },
+    {
+      "archivo": "fuentes/kelly_2026_fig4_fotografia_p18.png",
+      "figura": "4",
+      "pagina_pdf": 11,
+      "estudio": "Kelly 2026",
+      "licencia_del_articulo": "CC BY 4.0",
+      "rol_epistemico": "fotografía de papiro publicada en el artículo; procede del testimonio material",
+      "transformacion": "recorte de página, sin redibujado de líneas ni sustitución de numerales",
+      "sha256": "827a7f2a6fb716559a480fc860236e3d263a09130919be7ff441e6b468741fab"
+    },
+    {
+      "archivo": "fuentes/kelly_2026_fig5_edicion_p18.png",
+      "figura": "5",
+      "pagina_pdf": 11,
+      "estudio": "Kelly 2026",
+      "licencia_del_articulo": "CC BY 4.0",
+      "rol_epistemico": "edición moderna de Kelly, no fotografía",
+      "transformacion": "recorte de página, sin redibujado de líneas ni sustitución de numerales",
+      "sha256": "af5a3c9930b27083ba34ca72103940c568929cd5fb51c456d84dadc2bbe5c6f4"
+    }
+  ],
+  "modelos": [
+    {
+      "modelo": "historico_piramide_triangular_didactica.glb",
+      "volumen_nominal_modelo": 0.276,
+      "caras_trianguladas": 4,
+      "vertices_malla": 4
+    },
+    {
+      "modelo": "historico_piramide_cuadrangular_didactica.glb",
+      "volumen_nominal_modelo": 0.98,
+      "caras_trianguladas": 6,
+      "vertices_malla": 5
+    },
+    {
+      "modelo": "historico_tronco_piramide_didactico.glb",
+      "volumen_nominal_modelo": 0.940553,
+      "caras_trianguladas": 12,
+      "vertices_malla": 8
+    }
+  ],
+  "regla_no_invencion": "No transcribir números no leídos; no identificar automáticamente trazo como altura; no asociar unívocamente A.4; no presentar la geometría didáctica como reconstrucción histórica."
+}

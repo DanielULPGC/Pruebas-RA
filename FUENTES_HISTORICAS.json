@@ -1,0 +1,40 @@
+{
+  "version": "P4.4-H1",
+  "no_go_p5": true,
+  "basado_en": "Kelly, T. (2026), Historia Mathematica 75, 103248, doi:10.1016/j.hm.2026.103248",
+  "licencia_articulo": "CC BY 4.0, © 2026 The Author. Published by Elsevier Inc.",
+  "fuente_antigua": "MPER N.S. 1.1, TM 63192",
+  "pagina_pdf": 15,
+  "casos": [
+    {
+      "problema": 2,
+      "fig": "A.1",
+      "cita": "Kelly 2026 pp. 14-15",
+      "interpretacion": "texto: cubo de arista 10 pies; figura izquierda: 8,5,20 pies y resultado anotado 80 frente a 800 correcto",
+      "incertidumbre": "Kelly sugiere error de cálculo, sin demostrar el mecanismo exacto"
+    },
+    {
+      "problema": 8,
+      "fig": "A.2",
+      "cita": "Kelly 2026 pp. 14-15",
+      "interpretacion": "el cubo izquierdo tiene lado 6 pies; 6³=216 como cálculo didáctico moderno",
+      "incertidumbre": "el otro dibujo del conjunto es de identificación no segura"
+    }
+  ],
+  "recortes_academicos": [
+    {
+      "ruta": "fuentes/kelly_2026_A1_problema_2.png",
+      "sha256": "81f1a0d59cd6bb2b841c5b2e3a99521118ffffdbe9c7ee36e18e19a894794fc5"
+    },
+    {
+      "ruta": "fuentes/kelly_2026_A2_problema_8.png",
+      "sha256": "2aba5965506e7bf8427496cd567614a990ebdfa5044241c342844cd743593b5a"
+    }
+  ],
+  "no_afirmaciones": [
+    "no se presenta fotografía del papiro original",
+    "no se atribuye desarrollo plano a la antigüedad",
+    "no se declara RA validada",
+    "no se atribuye metodología moderna al escriba"
+  ]
+}

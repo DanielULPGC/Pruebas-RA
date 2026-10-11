@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#103c53">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Pruebas locales de preparación del dispositivo y de los modelos 3D. No registra datos del alumnado.">
+<title>Diagnóstico · Geometría en tus manos</title>
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="diagnostico.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+<script src="diagnostico.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#pruebas">Saltar a las pruebas</a>
+<header class="cabecera"><div class="contenedor cabecera-inner"><div><span class="eyebrow">PROTOCOLO P4 · PRUEBAS DE COMPATIBILIDAD</span><h1>Diagnóstico del dispositivo</h1><p>Comprueba acceso, recursos y posibilidades técnicas. Ninguna comprobación sustituye un ensayo de realidad aumentada real.</p></div></div></header>
+<main class="contenedor diag" id="pruebas">
+<p><a href="index.html">← Volver a la biblioteca de figuras</a></p>
+<section class="principal diag-seccion" aria-labelledby="tit-estatico">
+<h2 id="tit-estatico">Comprobaciones automáticas</h2>
+<p>Se ejecutan en este navegador, sin almacenar ni enviar resultados. La carga de <code>model-viewer</code> sí requiere una petición al servicio externo indicado en el código.</p>
+<dl id="resultados" class="resultado-lista" aria-live="polite">
+<div><dt>Origen HTTPS y contexto seguro</dt><dd id="r-seguro">Comprobando…</dd></div>
+<div><dt>WebGL para ver el sólido 3D</dt><dd id="r-webgl">Comprobando…</dd></div>
+<div><dt>Biblioteca de visualización</dt><dd id="r-modulo">Comprobando…</dd></div>
+<div><dt>Siete archivos GLB locales</dt><dd id="r-archivos">Comprobando…</dd></div>
+<div><dt>Modelo de prueba cargado</dt><dd id="r-modelo">Comprobando…</dd></div>
+<div><dt>Posibilidad anunciada de RA</dt><dd id="r-ar">Comprobando…</dd></div>
+</dl>
+<p id="resultado-global" role="status">Verificación en curso…</p>
+<button class="principal-boton" id="repetir" type="button">Repetir comprobaciones</button>
+<button class="secundario-boton" id="copiar" type="button">Copiar resumen técnico (sin identificadores)</button>
+<p id="aviso-copia" role="status"></p>
+<model-viewer id="modelo-prueba" class="modelo-prueba" src="modelos_glb/cubo.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor" alt="Cubo de prueba en tres dimensiones"></model-viewer>
+</section>
+<section class="principal diag-seccion" aria-labelledby="tit-practica">
+<h2 id="tit-practica">Prueba práctica imprescindible</h2>
+<ol>
+<li>Comprueba que el cubo de prueba aparece, gira y conserva una forma reconocible.</li>
+<li>Abre la <a href="index.html?figura=cubo">figura del cubo</a> y activa «Ver en mi entorno (RA)», si aparece.</li>
+<li>Coloca el objeto sobre una mesa despejada; observa si el modelo queda anclado al desplazarte suavemente alrededor de la mesa.</li>
+<li>Sal de RA, regresa a la actividad y repite con el <a href="index.html?figura=prisma_triangular">prisma triangular</a>.</li>
+<li>Registra por separado los resultados en Android/Chrome, iPhone/Safari e iPad/Safari. Si RA falla, comprueba la vista 3D como alternativa.</li>
+</ol>
+<p><strong>Interpretación:</strong> «RA disponible» expresa únicamente una señal del navegador, no garantiza seguimiento espacial, colocación estable ni compatibilidad con todas las figuras.</p>
+</section>
+<section class="docente"><h2>Privacidad y seguridad</h2><p>No se solicita información de estudiantes, ni se utiliza analítica de uso, ni se envían informes. La copia del resumen requiere una pulsación del usuario y solo incluye los resultados técnicos. No fotografíes al alumnado ni otros datos identificativos durante las pruebas.</p></section>
+</main>
+<footer class="pie"><div class="contenedor">P4 · Diagnóstico técnico preliminar · 2026</div></footer>
+<p style="max-width:800px;margin:1rem auto;padding:1rem"><a href="ensayos.html">Ir al registro de pruebas físicas de P5</a>. El diagnóstico automatizado no demuestra RA real.</p>
+</body>
+</html>

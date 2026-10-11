@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#103c53">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Exploración didáctica de cuerpos geométricos en 3D y RA para Educación Primaria.">
+  <title>Geometría en tus manos · RA Matemáticas</title>
+  <!-- Versión fijada: requiere conexión a internet para cargar model-viewer. -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  <script src="catalogo.js" defer></script>
+  <script src="interfaz.js" defer></script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="skip" href="#actividad">Saltar a la actividad</a>
+<header class="cabecera">
+ <div class="contenedor cabecera-inner">
+  <div><span class="eyebrow">LABORATORIO DIDÁCTICO · PRIMARIA</span><h1>Geometría <span>en tus manos</span></h1><p>Explora cuerpos geométricos, observa sus propiedades y, si tu dispositivo lo permite, colócalos sobre tu mesa mediante realidad aumentada.</p></div>
+  <div class="sello">3D <span>+</span> RA<br><small>Android · iOS</small></div>
+ </div>
+</header>
+<main class="contenedor" id="actividad">
+ <section class="intro" aria-label="Instrucciones iniciales">
+  <strong>Cómo utilizar esta actividad</strong>
+  <p><b>1.</b> Selecciona un cuerpo. <b>2.</b> Gíralo con un dedo o el ratón. <b>3.</b> Si aparece el botón «Ver en mi entorno», actívalo y apunta a una superficie despejada. <b>4.</b> Resuelve el reto antes de consultar la solución.</p>
+ </section>
+ <div class="disposicion">
+ <nav class="panel" aria-label="Catálogo de cuerpos geométricos">
+  <h2>Elige una figura</h2>
+  <div class="figuras" id="lista-figuras">
+    <button data-figura="cubo" class="figura seleccionada" aria-current="true">Cubo</button>
+    <button data-figura="ortoedro" class="figura">Ortoedro</button>
+    <button data-figura="prisma_triangular" class="figura">Prisma triangular</button>
+    <button data-figura="piramide_cuadrangular" class="figura">Pirámide cuadrangular</button>
+    <button data-figura="cilindro" class="figura">Cilindro</button>
+    <button data-figura="cono" class="figura">Cono</button>
+    <button data-figura="esfera" class="figura">Esfera</button>
+  </div>
+  <p class="aviso"><strong>Importante:</strong> los valores indicados pertenecen al modelo matemático. No utilices la imagen RA como instrumento de medición de precisión: el posicionamiento y la escala física pueden variar según el dispositivo.</p>
+ </nav>
+ <section class="principal" aria-label="Exploración geométrica">
+  <div class="barra-figura"><div><span class="leyenda">FIGURA SELECCIONADA</span><h2 id="titulo-figura">Cubo</h2></div><span id="tipo-figura" class="categoria">Poliedro</span></div>
+  <div class="visor-wrap">
+    <model-viewer id="visor" alt="Modelo tridimensional interactivo de un cubo" src="modelos_glb/cubo.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look" ar-placement="floor" ar-scale="fixed" shadow-intensity="0.6" environment-image="neutral" camera-orbit="35deg 70deg auto" interaction-prompt="auto" touch-action="pan-y" loading="eager">
+      <button slot="ar-button" id="boton-ar" class="ar-button" type="button">Ver en mi entorno (RA)</button>
+      <div slot="progress-bar" class="carga" role="presentation"><div class="carga-barra"></div></div>
+    </model-viewer>
+  </div>
+  <div class="pie-visor"><span>☝️ Desliza para girar · Pellizca para ampliar</span><span class="metadatos" id="tamano">Medidas nominales: 12 × 12 × 12 cm</span></div>
+  <div class="actividad" id="reto-panel">
+    <div class="actividad-top"><span class="leyenda">PIENSA Y EXPLICA</span><span class="numero">RETO · 01</span></div>
+    <h3 id="reto">¿Qué cambia en el volumen si duplicamos la longitud de la arista?</h3>
+    <label for="respuesta">Escribe tu razonamiento (no se envía ni almacena):</label>
+    <textarea id="respuesta" rows="3" placeholder="Primero pienso que… Después justifico…"></textarea>
+    <div class="botones"><button id="consultar" class="principal-boton" type="button" aria-expanded="false">Ver solución razonada</button><button id="limpiar" class="secundario-boton" type="button">Limpiar respuesta</button></div>
+    <p id="solucion" class="solucion" hidden></p>
+  </div>
+  <div class="propiedades"><button id="desplegar" class="desplegar" type="button" aria-expanded="false" aria-controls="tabla-propiedades">Mostrar propiedades geométricas <span aria-hidden="true">⌄</span></button>
+    <div id="tabla-propiedades" hidden><dl><div><dt>Grupo geométrico</dt><dd id="prop-tipo">Poliedro</dd></div><div><dt>Caras planas</dt><dd id="prop-caras">6</dd></div><div><dt>Aristas rectas</dt><dd id="prop-aristas">12</dd></div><div><dt>Vértices</dt><dd id="prop-vertices">8</dd></div></dl><p>En cuerpos redondos distinguimos las superficies curvas de las caras planas. Las circunferencias que delimitan sus bases no se contabilizan aquí como aristas rectas.</p></div>
+  </div>
+ </section>
+ </div>
+ <section class="docente" id="historia"><h2>Novedad: historia de la geometría</h2><p>Analiza diagramas de un papiro del Egipto romano, compara la edición académica con modelos matemáticos contemporáneos y comprueba un posible error de cálculo. <strong>Actividad histórica 2D/3D; P5 sigue bloqueada.</strong></p><p><a href="historia-geometria.html">Abrir «El taller del escriba» →</a></p></section>
+ <section class="docente" id="pirámides-históricas"><h2>Novedad histórica: las pirámides en los papiros</h2><p>Examina diagramas de pirámides triangulares, cuadrangulares y truncadas publicados por Kelly (2026). Contrasta las fuentes con modelos 3D modernos y comprueba cómo se calcula un volumen, sin confundirlo con los procedimientos antiguos. <strong>P5 NO-GO.</strong></p><p><a href="piramides-historia.html">Abrir «Las pirámides del papiro» →</a></p></section>
+<section class="docente" id="ampliacion-cubo"><h2>Laboratorio nuevo: el cubo y su desarrollo plano</h2><p>Explora seis cuadrados articulados, realiza el plegado simulado, identifica las caras opuestas y deduce relaciones entre arista, superficie y volumen. Esta actividad <strong>funciona también sin RA</strong> y ofrece un modelo recortable.</p><p><a href="cubo-interactivo.html?figura=cubo">Abrir el laboratorio interactivo del cubo →</a> · <a href="desarrollo-cubo.svg">Abrir el desarrollo recortable (SVG)</a></p></section>
+ <section class="docente"><h2>Para docentes</h2><p><strong>Antes de utilizar la RA:</strong> abre el <a href="diagnostico.html">diagnóstico técnico</a> con el dispositivo de aula. El diagnóstico no sustituye la colocación real del objeto sobre una superficie.</p><p>La actividad ofrece una representación visual y una tarea de razonamiento, no una evaluación automática del aprendizaje. Contrasta la figura virtual con sólidos reales y desarrollos de cartulina. La respuesta escrita permanece exclusivamente en la página y se pierde al cerrarla; no se envía al servidor. El visor utiliza una biblioteca externa alojada por Google y, por tanto, requiere conexión y puede originar solicitudes a sus servidores.</p><p><strong>Accesibilidad:</strong> si no puedes utilizar la RA, trabaja con la representación 3D. Si tampoco se carga, utiliza un sólido físico y la ficha didáctica incluida en el paquete.</p></section>
+</main>
+<section class="docente"><h2>Ensayo técnico en dispositivos físicos</h2><p>Tras publicar el recurso por HTTPS, puedes registrar las comprobaciones de un Android, un iPhone o un iPad en una <a href="ensayos.html">hoja de ensayo local</a>. El informe se descarga en tu dispositivo y no se transmite desde esta página.</p></section>
+<footer class="pie"><div class="contenedor"><a href="diagnostico.html">Diagnóstico del dispositivo y de la RA</a> · Prototipo académico v0.4 · P4.3 (validación local; RA física pendiente) · Geometría de Educación Primaria · Modelos creados específicamente para este recurso.</div> <a href="auditoria-pilotaje.html">Guía de pilotaje H3</a></footer>
+</body>
+</html>

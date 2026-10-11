@@ -1,0 +1,44 @@
+{
+  "version": "P4.4-H3",
+  "origen": "H2 sin sustitución de fuente primaria",
+  "figura_A8_completa": "fuentes/kelly_2026_A8_piramides_18_19.png",
+  "derivaciones": [
+    {
+      "archivo": "fuentes/kelly_2026_A8_p18_recorte_columna.png",
+      "origen": "fuentes/kelly_2026_A8_piramides_18_19.png",
+      "origen_pagina_pdf": 19,
+      "figura": "A.8",
+      "caso": "p18",
+      "rol_epistemico": "recorte editorial de edición académica de Kelly; no fotografía del papiro",
+      "operacion": "recorte rectangular conservando trazos de versión diplomática y normalizada, sin redibujar ni borrar",
+      "rectangulo_origen": [
+        54,
+        22,
+        361,
+        676
+      ],
+      "sha256": "b87d6346fd2348573952f84a479d34528ac82c77791e1d68c1752d77eaa0035c"
+    },
+    {
+      "archivo": "fuentes/kelly_2026_A8_p19_recorte_columna.png",
+      "origen": "fuentes/kelly_2026_A8_piramides_18_19.png",
+      "origen_pagina_pdf": 19,
+      "figura": "A.8",
+      "caso": "p19",
+      "rol_epistemico": "recorte editorial de edición académica de Kelly; no fotografía del papiro",
+      "operacion": "recorte rectangular conservando trazos de versión diplomática y normalizada, sin redibujar ni borrar",
+      "rectangulo_origen": [
+        413,
+        22,
+        945,
+        676
+      ],
+      "sha256": "5de2c4606d5b6feb8c8365ec4d6413dc62ac3bfa3f92c11321e62c7bb9d2cc99"
+    }
+  ],
+  "licencia_articulo": "CC BY 4.0 (Kelly 2026), sin atribuir automáticamente derechos sobre cualquier fotografía de tercero",
+  "revision_derechos_institucional": "PENDIENTE",
+  "fotos_papiro": "testimonios fotográficos reproducidos en publicación académica; su crédito específico requiere revisión editorial",
+  "RA_fisica": "NO_PROBADA",
+  "HTTPS": "NO_PUBLICADO"
+}
