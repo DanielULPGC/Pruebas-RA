@@ -15,7 +15,7 @@ function elegir(id, registrar = true) {
   document.querySelector('#titulo-figura').textContent=f.nombre;
   document.querySelector('#tipo-figura').textContent=(f.tipo === 'poliedro') ? 'Poliedro' : 'Cuerpo redondo';
   document.querySelector('#reto').textContent=f.reto;
-  document.querySelector('#tamano').textContent='Medidas nominales: '+f.dimensiones_cm.join(' × ')+' cm';
+  document.querySelector('#tamano').textContent='Medidas nominales · '+f.medidas_texto;
   document.querySelector('#prop-tipo').textContent=f.tipo === 'poliedro' ? 'Poliedro' : 'Cuerpo redondo';
   document.querySelector('#prop-caras').textContent=f.caras_planas;
   document.querySelector('#prop-aristas').textContent=f.aristas_rectas;

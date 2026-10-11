@@ -1,5 +1,22 @@
 # P4.5.4-C: control de publicación de recursos visuales
 
+## Revisión selectiva de cotas y escalas (11-10-2026)
+
+Esta ampliación parte del `main` integrado `02815652f727c58479d25d00d1376ba18d24fb5a`, que incluye la corrección del taller del escriba. Los antecedentes de la sección siguiente conservan sus fechas y su línea base original.
+
+`escalas_revision.json` registra una decisión métrica por cada una de las 14 imágenes y la extensión X/Y/Z de los 11 GLB usados por las actividades. Siete modelos nominales coinciden con el catálogo. Los cuatro modelos con nombre `historico_*` son representaciones modernas relativas; sus extensiones informáticas no acreditan medidas de un objeto antiguo. Se mantienen las unidades históricas de las actividades sin convertirlas a centímetros.
+
+Se explicitan las medidas del catálogo mediante nombres de elementos: arista, diámetro, base, altura perpendicular y longitud del prisma. La lámina de volumen recibe cotas `a = 6 m` y `h = 4 m`, conservando el aviso de dibujo sin escala. Son datos escolares modernos y no se atribuyen al papiro. Se mantiene la plantilla A4 original: seis caras de 30 mm y línea de control de 30 mm. La actividad `escalas.html` compara su cubo de papel de 3 cm con el cubo nominal de 12 cm, con una relación de longitudes 1:4. El ajuste de impresión al 100 % corresponde al archivo, no a esa relación entre cubos.
+
+El control local lee los vértices binarios de los GLB, sin confiar en los límites declarados de los accessors. Usa metros glTF y convierte a centímetros. Admite únicamente las escenas estáticas y sin transformaciones de nodo de los modelos actuales; rechaza otras configuraciones. Tolerancia absoluta: 0,0001 cm por eje para los float32. Los USDZ preliminares y la conversión Quick Look quedan fuera de este control. La revisión no acredita tamaño físico de RA, compatibilidad real ni accesibilidad integral.
+
+```bash
+python3 scripts/verificar_escalas.py
+python3 -m unittest discover -s tests -v
+```
+
+Se actualizan las huellas de la lámina modificada y el manifiesto. Las revisiones humanas continúan pendientes; no se convierten decisiones métricas en autorizaciones de publicación. Verificación local ejecutada: 22 pruebas unitarias superadas, control métrico y control técnico de publicación en PASS, selección y rótulos de los siete modelos comprobados con DOM simulado, enlaces locales y anclas de la actividad comprobados. Se inspeccionó visualmente la lámina de cotas renderizada; no se acredita una prueba de la nueva página en un navegador real. Después de integrar el parche, queda comprobar la web publicada en escritorio y móvil y efectuar los ensayos físicos de RA ya previstos.
+
 ## Dictamen y alcance
 
 Candidato técnico para revisión. **La autorización definitiva por imagen permanece en NO-GO.** No se han recibido actas humanas, no hay acreditación individual de titularidad/licencia de los SVG y cuatro archivos superados/rechazados siguen presentes en el repositorio público. No se borra ni fusiona automáticamente ningún archivo.
@@ -62,3 +79,11 @@ No completar datos ausentes por inferencia. Cualquier modificación de bytes exi
 4. Revalidar la rama y el despliegue tras cualquier integración autorizada.
 
 El informe externo de esta unidad registra verificaciones ejecutadas y limitaciones. Las pruebas históricas B (94/94 y 140/140) son antecedentes; no se presentan como reejecutadas. Los ensayos físicos de RA en Android, iPhone e iPad y el pilotaje escolar conservan P5 = NO-GO.
+
+## Segunda revisión de escalas (11-10-2026)
+
+Se detectaron recortes del título y de una instrucción en el render A4 de la plantilla original. Se redistribuyeron sus textos conservando íntegramente las seis caras de 30 × 30 mm, las uniones y la línea de control de 30 mm. El recorte podía inducir a reducir la impresión para hacer caber el contenido y alterar así las medidas. Se mantiene la exigencia de comprobar físicamente los 3 cm tras imprimir.
+
+Se precisa que la relación 1:4 corresponde exclusivamente al par de cubos semejantes de aristas nominales 12 cm y 3 cm. No es una escala global del sitio, de la pantalla ni de la RA. Para ese par, las razones entre áreas de caras y entre volúmenes son respectivamente 1:16 y 1:64. En el taller se explicita que el tamaño visual del modelo no representa las medidas históricas en pies. Las cotas de la pirámide de volumen son datos del ejemplo escolar; su dibujo continúa sin escala métrica.
+
+Verificación de R2: 23 pruebas superadas; controles métrico y técnico en PASS. Se compararon las caras y todas las líneas de la plantilla con la versión base: sus atributos geométricos son idénticos. Se inspeccionó el render A4 corregido. Sigue pendiente medir la impresión real y comprobar el tamaño físico en RA.

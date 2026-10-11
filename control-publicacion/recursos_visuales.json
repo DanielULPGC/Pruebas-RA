@@ -8,7 +8,7 @@
     {
       "id": "PVC-01",
       "archivo": "desarrollo-cubo.svg",
-      "sha256": "98ebef68abdfb3c45ade2e7f44ee8bc8f7a070ed9821e75cd7a571301aada57a",
+      "sha256": "528975cd6b3477107d1d160ce59d6fa8646b3f2587eb3b46edc79cf7265f7b86",
       "ids_heredados": [
         "VIS-14"
       ],
@@ -22,7 +22,8 @@
       "publicamente_presente_en_main": true,
       "referencias_activas": [
         "cubo-interactivo.html",
-        "index.html"
+        "index.html",
+        "escalas.html"
       ]
     },
     {
@@ -134,7 +135,7 @@
     {
       "id": "PVC-08",
       "archivo": "ilustraciones/auditoria_volumen_piramide.svg",
-      "sha256": "a362a0453d1f0977a3a592322dcdde8f7abb0b4aaa4ed2e299b2a50c5d99467c",
+      "sha256": "1620b4a28ed94140408f9bce344a664c794ed02532ae4923c3709f471afdcf9d",
       "ids_heredados": [],
       "uso": "ACTIVA",
       "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
@@ -145,7 +146,8 @@
       "autorizacion_publicacion": "NO_RECIBIDA",
       "publicamente_presente_en_main": true,
       "referencias_activas": [
-        "piramides-historia.html"
+        "piramides-historia.html",
+        "escalas.html"
       ]
     },
     {
@@ -181,7 +183,8 @@
       "autorizacion_publicacion": "NO_RECIBIDA",
       "publicamente_presente_en_main": true,
       "referencias_activas": [
-        "cubo-interactivo.html"
+        "cubo-interactivo.html",
+        "escalas.html"
       ]
     },
     {

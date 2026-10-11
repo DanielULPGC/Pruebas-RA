@@ -18,7 +18,8 @@ const CATALOGO = [
     "triangulos": 12,
     "glb_sha256": "a32b922158dd56bca22e9cfabb16bdb00add9546cd7eebc4b5acf71dba04ec5f",
     "usdz_sha256": "1da9ab50c4d38f5a6419e89ef6bc53561097493c59a03667c3803b42c8e75e3a",
-    "malla_cerrada": true
+    "malla_cerrada": true,
+    "medidas_texto": "Arista: 12 cm"
   },
   {
     "id": "ortoedro",
@@ -39,7 +40,8 @@ const CATALOGO = [
     "triangulos": 12,
     "glb_sha256": "8c83c2fe22a4cd41d55fb6ac18a700e1345c3fc0a5ef89b5acdff22e3ab8b665",
     "usdz_sha256": "d583b182b3a4a7f22324965668a1a1bb966aeccc613eeb601d62d929a27281e3",
-    "malla_cerrada": true
+    "malla_cerrada": true,
+    "medidas_texto": "Largo: 16 cm · ancho: 8 cm · alto: 10 cm"
   },
   {
     "id": "prisma_triangular",
@@ -60,7 +62,8 @@ const CATALOGO = [
     "triangulos": 8,
     "glb_sha256": "b6b6845055c891900734d63892ea8c41cf5327b74c103cbb1c88e6e604aa3d95",
     "usdz_sha256": "f50a7a4ea4c4af7eaa823d35d87a8d8c5596e2d9b8b2810fff53c1ce0978ffff",
-    "malla_cerrada": true
+    "malla_cerrada": true,
+    "medidas_texto": "Base del triángulo: 12 cm · altura del triángulo: 10 cm · longitud del prisma: 16 cm"
   },
   {
     "id": "piramide_cuadrangular",
@@ -81,7 +84,8 @@ const CATALOGO = [
     "triangulos": 6,
     "glb_sha256": "f6aebf5cb4611c0513630350ec71f33442b079734ecf32bbe04c7f004a51b3b9",
     "usdz_sha256": "0336b5ded117e7220e879f023ac791a6f79278461a4ced7fcfb56d88a7544396",
-    "malla_cerrada": true
+    "malla_cerrada": true,
+    "medidas_texto": "Lado de la base: 14 cm · altura perpendicular: 12 cm"
   },
   {
     "id": "cilindro",
@@ -102,7 +106,8 @@ const CATALOGO = [
     "triangulos": 192,
     "glb_sha256": "c54b4c6025e336010782f1cf92109974a63f12c92c1b225a9cc2fd4d0626cf48",
     "usdz_sha256": "a2fba5a2760d4c96a687aaf401879137c7e24abf5f9e5b9a078fa4b8cc8f824a",
-    "malla_cerrada": true
+    "malla_cerrada": true,
+    "medidas_texto": "Diámetro: 12 cm · altura: 12 cm"
   },
   {
     "id": "cono",
@@ -123,7 +128,8 @@ const CATALOGO = [
     "triangulos": 96,
     "glb_sha256": "92adcf5a83923971b16a0ea87c3fe8d28c5fb3ce3390d96885e65bd87fc7d478",
     "usdz_sha256": "7a3da2935dc3c587531a60b9a7c11ff7f67dc1d88f6764a6c768a1a6a1f72bda",
-    "malla_cerrada": true
+    "malla_cerrada": true,
+    "medidas_texto": "Diámetro: 12 cm · altura perpendicular: 14 cm"
   },
   {
     "id": "esfera",
@@ -144,6 +150,7 @@ const CATALOGO = [
     "triangulos": 1280,
     "glb_sha256": "d434ad4f1392db278d51478c6dbabbcc7d7f4d181dcb0d949e9f858abb8ff65b",
     "usdz_sha256": "4b0d3e013006079b7818ae561e79b0dae479e7bcb4a0ac12c9f162864a602216",
-    "malla_cerrada": true
+    "malla_cerrada": true,
+    "medidas_texto": "Diámetro: 13 cm"
   }
 ];

@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="sistema-visual.css">
 <link rel="stylesheet" href="estilos.css">
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
-<script src="catalogo.js" defer></script>
-<script src="interfaz.js" defer></script>
+<script src="catalogo.js?v=escalas1" defer></script>
+<script src="interfaz.js?v=escalas1" defer></script>
 </head>
 <body>
 <a class="skip" href="#laboratorio">Saltar al laboratorio</a>
@@ -78,7 +78,7 @@
 <span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><path d="M39 8 13 53C13 67 65 67 65 53Z" fill="#d78d55"/><ellipse cx="39" cy="53" rx="26" ry="10" fill="#f0c08c"/></g></svg></span><span class="figura-texto"><strong>Cono</strong><small>1 base circular</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 <button type="button" data-figura="esfera" class="figura" >
 <span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><circle cx="38" cy="36" r="27" fill="#89c9c0"/><path d="M13 34C25 15 49 15 63 33" fill="none" opacity=".8"/><ellipse cx="38" cy="36" rx="12" ry="27" fill="none" opacity=".8"/><path d="M11 36h54" opacity=".6"/></g></svg></span><span class="figura-texto"><strong>Esfera</strong><small>Superficie curva</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-   <p class="aviso"><strong>Medición y escala:</strong> los valores indicados describen el modelo matemático. La RA no es un instrumento de medición de precisión.</p>
+   <p class="aviso"><strong>Medición y escala:</strong> los valores indicados describen el modelo matemático. La RA no es un instrumento de medición de precisión. <a href="escalas.html">Aprender a leer cotas y escalas</a>.</p>
   </nav>
   <section class="principal" aria-label="Exploración geométrica">
    <div class="barra-figura"><div><span class="leyenda">OBJETO DE ESTUDIO</span><h3 id="titulo-figura">Cubo</h3></div><span class="categoria" id="tipo-figura">Poliedro</span></div>
@@ -89,7 +89,7 @@
         <div slot="progress-bar" class="carga" role="presentation"><div class="carga-barra"></div></div>
       </model-viewer>
     </div></div>
-   <div class="pie-visor"><span>Desliza para girar · Pellizca para ampliar</span><span class="metadatos" id="tamano">Medidas nominales: 12 × 12 × 12 cm</span></div>
+   <div class="pie-visor"><span>Desliza para girar · Pellizca para ampliar</span><span class="metadatos" id="tamano">Medidas nominales · Arista: 12 cm</span></div>
    <div class="actividad" id="retos"><div class="actividad-top"><span class="leyenda">02 / PIENSA Y EXPLICA</span><span class="numero">DESAFÍO MATEMÁTICO</span></div>
       <h3 id="reto">¿Qué cambia en el volumen si duplicamos la longitud de la arista?</h3>
       <label for="respuesta">Escribe tu razonamiento antes de comprobarlo:</label>

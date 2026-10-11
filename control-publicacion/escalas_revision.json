@@ -1,0 +1,240 @@
+{
+  "revision": "P4.5.4-C · cotas y escalas selectivas · R2",
+  "fecha": "2026-10-11",
+  "base_commit": "02815652f727c58479d25d00d1376ba18d24fb5a",
+  "criterio": "Cotas para identificar y calcular; escala numérica solo con objeto de referencia y unidades acreditados. Sin conversión de pies históricos ni escala arqueológica inferida.",
+  "metodo": "Lectura de coordenadas POSITION float32 de las escenas estáticas GLB actuales, sin transformaciones de nodo. No se confía en min/max del accessor. Metros glTF convertidos a centímetros; tolerancia absoluta 0,0001 cm. El lector rechaza configuraciones no soportadas.",
+  "fuente_unidades": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#coordinate-system-and-units",
+  "validacion_ra_fisica": "PENDIENTE",
+  "usdz_preliminar": "FUERA_DEL_CONTROL_METRICO_ACTUAL; el visor genera Quick Look a partir del GLB y no asigna ios-src. No se acredita conversión ni tamaño en iOS.",
+  "comparacion_cubo": {
+    "arista_nominal_cm": 12,
+    "arista_papel_cm": 3,
+    "escala": "1:4"
+  },
+  "imagenes": [
+    {
+      "archivo": "desarrollo-cubo.svg",
+      "sha256": "528975cd6b3477107d1d160ce59d6fa8646b3f2587eb3b46edc79cf7265f7b86",
+      "decision": "PLANTILLA_FISICA_3_CM",
+      "justificacion": "A4 210 × 297 mm, seis caras de 30 × 30 mm y línea de control de 30 mm; verificar impresión al 100 %.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/atlas_elementos_piramide.webp",
+      "sha256": "8052d13ef59456adada9190e50c95626ebc24ec91f2440bb9513c998655094d0",
+      "decision": "EXCLUIDA",
+      "justificacion": "Se conserva la exclusión previa; no se añaden cotas ni escala.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/atlas_evidencia_y_modelo.svg",
+      "sha256": "3af029a11d50361f115393b6fcb2e3e65c7cb647df192e6a3eb323d7fe17c7b2",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/atlas_volumen_piramide.webp",
+      "sha256": "3714de36051a84908ab969435a75a7c6ab1608ea0b2f284a5c2ad7d9acb5d29f",
+      "decision": "EXCLUIDA",
+      "justificacion": "Se conserva la exclusión previa; no se añaden cotas ni escala.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/auditoria_elementos_piramide.svg",
+      "sha256": "88ada78b4d9148a51cf0597c463440399ab723a215e4fc1b136fb5f1476c4e91",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/auditoria_escriba_p2.svg",
+      "sha256": "a61c5fbb6e7b246b24e5e91ab3d71a06180fb4bea6a773bf0b3d9a71f9c7a2a9",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/auditoria_escriba_p8.svg",
+      "sha256": "3fc37c6bc1610978342efaf661c7ff8599cb95e862ca6c3f3d5bb63f20a53c8b",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/auditoria_volumen_piramide.svg",
+      "sha256": "1620b4a28ed94140408f9bce344a664c794ed02532ae4923c3709f471afdcf9d",
+      "decision": "COTAS_EJEMPLO_SIN_ESCALA",
+      "justificacion": "Cotas a = 6 m y h = 4 m de un ejemplo escolar moderno; no procede medir el dibujo.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/cubo_p8_ia.webp",
+      "sha256": "e6f9a56f5c72e91ceb7d6a3ffcb4c1b9caabb874aad4d1613a1d7c526e046f2e",
+      "decision": "EXCLUIDA",
+      "justificacion": "Se conserva la exclusión previa; no se añaden cotas ni escala.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/cubo_plano_y_cerrado.svg",
+      "sha256": "bf1b362195147da5f7804e3950f8ff78d856341b4fa109c3db98ccfa1bdc6c98",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/piramide_cuadrangular_didactica.svg",
+      "sha256": "5a426bf392ab7d96e939284439c5a618d4642ab223668f2d3f100defbb8f491a",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/piramides_triangular_didactica.svg",
+      "sha256": "24b8be3e8ce74f0c6aad6abfa042115370d890328ff6ccf92ac199c04126fba3",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/tronco_piramide_didactica.svg",
+      "sha256": "74478f784b20870360a12e2a34291ab3a3be57c6cf8ce95c82850f0e1397055e",
+      "decision": "SIN_ESCALA_METRICA",
+      "justificacion": "Ficha o esquema cualitativo contemporáneo: no se acredita correspondencia entre longitud representada y longitud física.",
+      "revision_humana": "PENDIENTE"
+    },
+    {
+      "archivo": "ilustraciones/volumen_p2_ia.webp",
+      "sha256": "0ea3e1ed96d33f1def5130b43d160b1385e10a3a06d3057e3975da1eaa8c328c",
+      "decision": "EXCLUIDA",
+      "justificacion": "Se conserva la exclusión previa; no se añaden cotas ni escala.",
+      "revision_humana": "PENDIENTE"
+    }
+  ],
+  "modelos": [
+    {
+      "archivo": "modelos_glb/cilindro.glb",
+      "sha256": "c54b4c6025e336010782f1cf92109974a63f12c92c1b225a9cc2fd4d0626cf48",
+      "extension_xyz_cm": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "interpretacion": "MODELO_MATEMATICO_NOMINAL",
+      "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
+    },
+    {
+      "archivo": "modelos_glb/cono.glb",
+      "sha256": "92adcf5a83923971b16a0ea87c3fe8d28c5fb3ce3390d96885e65bd87fc7d478",
+      "extension_xyz_cm": [
+        12.0,
+        14.0,
+        12.0
+      ],
+      "interpretacion": "MODELO_MATEMATICO_NOMINAL",
+      "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
+    },
+    {
+      "archivo": "modelos_glb/cubo.glb",
+      "sha256": "a32b922158dd56bca22e9cfabb16bdb00add9546cd7eebc4b5acf71dba04ec5f",
+      "extension_xyz_cm": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "interpretacion": "MODELO_MATEMATICO_NOMINAL",
+      "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
+    },
+    {
+      "archivo": "modelos_glb/esfera.glb",
+      "sha256": "d434ad4f1392db278d51478c6dbabbcc7d7f4d181dcb0d949e9f858abb8ff65b",
+      "extension_xyz_cm": [
+        13.0,
+        13.0,
+        13.0
+      ],
+      "interpretacion": "MODELO_MATEMATICO_NOMINAL",
+      "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
+    },
+    {
+      "archivo": "modelos_glb/historico_ortoedro_relativo.glb",
+      "sha256": "ef9be7cddcb2217c2e4574ecbe70e0992761ad9124c3fe4c21ee16bb4a09fa05",
+      "extension_xyz_cm": [
+        20.0,
+        8.0,
+        5.0
+      ],
+      "interpretacion": "MODELO_RELATIVO_NO_MEDIDA_HISTORICA",
+      "nota": "Extensión de la malla moderna en X/Y/Z; no expresa dimensiones de un objeto antiguo."
+    },
+    {
+      "archivo": "modelos_glb/historico_piramide_cuadrangular_didactica.glb",
+      "sha256": "5f79f8d5f08ebee8c4293b314d0869f7edaa8ae18f7c2583a831c6aec7abd8fd",
+      "extension_xyz_cm": [
+        139.999998,
+        150.0,
+        139.999998
+      ],
+      "interpretacion": "MODELO_RELATIVO_NO_MEDIDA_HISTORICA",
+      "nota": "Extensión de la malla moderna en X/Y/Z; no expresa dimensiones de un objeto antiguo."
+    },
+    {
+      "archivo": "modelos_glb/historico_piramide_triangular_didactica.glb",
+      "sha256": "aadbf7d673f17f2f24a564f224deeeb3311265104de96842a33b7b7d633713e6",
+      "extension_xyz_cm": [
+        89.999998,
+        160.000002,
+        114.999998
+      ],
+      "interpretacion": "MODELO_RELATIVO_NO_MEDIDA_HISTORICA",
+      "nota": "Extensión de la malla moderna en X/Y/Z; no expresa dimensiones de un objeto antiguo."
+    },
+    {
+      "archivo": "modelos_glb/historico_tronco_piramide_didactico.glb",
+      "sha256": "65f166d615ecbef6ad562d890e75f18d101a60f72efa5e7dbd1dcb66d9686068",
+      "extension_xyz_cm": [
+        139.999998,
+        85.000002,
+        139.999998
+      ],
+      "interpretacion": "MODELO_RELATIVO_NO_MEDIDA_HISTORICA",
+      "nota": "Extensión de la malla moderna en X/Y/Z; no expresa dimensiones de un objeto antiguo."
+    },
+    {
+      "archivo": "modelos_glb/ortoedro.glb",
+      "sha256": "8c83c2fe22a4cd41d55fb6ac18a700e1345c3fc0a5ef89b5acdff22e3ab8b665",
+      "extension_xyz_cm": [
+        16.0,
+        10.0,
+        8.0
+      ],
+      "interpretacion": "MODELO_MATEMATICO_NOMINAL",
+      "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
+    },
+    {
+      "archivo": "modelos_glb/piramide_cuadrangular.glb",
+      "sha256": "f6aebf5cb4611c0513630350ec71f33442b079734ecf32bbe04c7f004a51b3b9",
+      "extension_xyz_cm": [
+        14.0,
+        12.0,
+        14.0
+      ],
+      "interpretacion": "MODELO_MATEMATICO_NOMINAL",
+      "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
+    },
+    {
+      "archivo": "modelos_glb/prisma_triangular.glb",
+      "sha256": "b6b6845055c891900734d63892ea8c41cf5327b74c103cbb1c88e6e604aa3d95",
+      "extension_xyz_cm": [
+        12.0,
+        10.0,
+        16.0
+      ],
+      "interpretacion": "MODELO_MATEMATICO_NOMINAL",
+      "nota": "Extensión en X/Y/Z contrastada con el catálogo; no acredita tamaño físico de RA."
+    }
+  ],
+  "precision_comparacion": "1:4 solo para longitudes entre el cubo de papel de 3 cm y el nominal de 12 cm; áreas 1:16; volúmenes 1:64. No es una escala global ni acredita tamaño de pantalla o RA.",
+  "correccion_plantilla": "Título e instrucciones redistribuidos para evitar recortes en A4; caras, uniones y línea de control conservadas."
+}
