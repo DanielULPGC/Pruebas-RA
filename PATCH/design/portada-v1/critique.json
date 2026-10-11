@@ -1,0 +1,17 @@
+{
+  "verdict": "ESCALATE_HUMAN",
+  "score": null,
+  "coverage": ["Jerarquía y composición mediante render documental estático a 1440 y 390 px", "Enlaces y relaciones ARIA en código", "Contraste de pares textuales de portada", "Integridad del laboratorio heredado"],
+  "findings": [
+    {"criterion": "Identidad y orientación", "evidence": "Título conservado, escena central y tres tarjetas con destinos diferenciados.", "status": "OBSERVADO_EN_RENDER_ESTATICO"},
+    {"criterion": "Adaptación", "evidence": "En 390 px, navegación en dos columnas y secuencia de título, escena y tarjetas en una columna.", "status": "OBSERVADO_EN_RENDER_ESTATICO"},
+    {"criterion": "Escalas", "evidence": "La ilustración incluye leyenda y descripción sin escala; el dato 1:4 se limita a la tarjeta del cubo nominal y el cubo de papel.", "status": "VERIFICADO_EN_CODIGO"}
+  ],
+  "defects_observed": [],
+  "regressions": [],
+  "next_priority": "Revisar la candidata en navegador real y valorar la composición antes de integrar index.html.",
+  "iterations": [{"number": 1, "focus": "Primera composición candidata", "result": "Renderizado documental mostró límites de interpretación de clamp; no se adjudicó un fallo de navegador."}, {"number": 2, "focus": "Jerarquía tipográfica", "result": "Se añadió tamaño alternativo de título y retícula explícita de navegación; el render estático materializa las reglas por ancho y clamp."}],
+  "budget_remaining": 3,
+  "stop_reason": "Primera candidata entregada para revisión; no se declara aprobación final sin prueba de navegador y valoración visual humana.",
+  "limitations": ["Revisión interna en el mismo contexto, con exposición previa a las decisiones. No es evaluación independiente.", "El render documental no ejecuta JavaScript, no es una captura del navegador y no acredita accesibilidad completa.", "Móvil real, zoom, foco real y selección del visor pendientes en esta candidata.", "No se ha publicado ni sustituido index.html. Autorización visual definitiva y P5 siguen en NO_GO."]
+}

@@ -1,0 +1,336 @@
+{
+  "base": "a21abcf",
+  "resultado": "PASS",
+  "controles": [
+    {
+      "control": "index.html: identificadores y relaciones",
+      "resultado": "PASS",
+      "evidencia": {
+        "ids": 28,
+        "refs": 4
+      }
+    },
+    {
+      "control": "index.html: scripts, casos y etapas conservados",
+      "resultado": "PASS",
+      "evidencia": {
+        "casos": [],
+        "pasos": [],
+        "scripts": [
+          "https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js",
+          "catalogo.js?v=escalas1",
+          "interfaz.js?v=escalas1"
+        ]
+      }
+    },
+    {
+      "control": "index.html: enlaces y recursos locales existentes",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "index.html: imágenes con alternativa",
+      "resultado": "PASS",
+      "evidencia": {
+        "imagenes": 0
+      }
+    },
+    {
+      "control": "index.html: contenido externo a historia idéntico",
+      "resultado": "PASS",
+      "evidencia": "Se excluyen el bloque histórico y su enlace CSS adicional."
+    },
+    {
+      "control": "portada-candidata.html: identificadores y relaciones",
+      "resultado": "PASS",
+      "evidencia": {
+        "ids": 33,
+        "refs": 6
+      }
+    },
+    {
+      "control": "portada-candidata.html: scripts, casos y etapas conservados",
+      "resultado": "PASS",
+      "evidencia": {
+        "casos": [],
+        "pasos": [],
+        "scripts": [
+          "https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js",
+          "catalogo.js?v=escalas1",
+          "interfaz.js?v=escalas1"
+        ]
+      }
+    },
+    {
+      "control": "portada-candidata.html: enlaces y recursos locales existentes",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "portada-candidata.html: imágenes con alternativa",
+      "resultado": "PASS",
+      "evidencia": {
+        "imagenes": 0
+      }
+    },
+    {
+      "control": "portada-candidata.html: contenido externo a historia idéntico",
+      "resultado": "PASS",
+      "evidencia": "Se excluyen el bloque histórico y su enlace CSS adicional."
+    },
+    {
+      "control": "historia-geometria.html: identificadores y relaciones",
+      "resultado": "PASS",
+      "evidencia": {
+        "ids": 45,
+        "refs": 5
+      }
+    },
+    {
+      "control": "historia-geometria.html: scripts, casos y etapas conservados",
+      "resultado": "PASS",
+      "evidencia": {
+        "casos": [
+          "p2",
+          "p8"
+        ],
+        "pasos": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "scripts": [
+          "https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js",
+          "historia-geometria.mjs"
+        ]
+      }
+    },
+    {
+      "control": "historia-geometria.html: enlaces y recursos locales existentes",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "historia-geometria.html: imágenes con alternativa",
+      "resultado": "PASS",
+      "evidencia": {
+        "imagenes": 1
+      }
+    },
+    {
+      "control": "historia-geometria.html: actividades y fuentes idénticas",
+      "resultado": "PASS",
+      "evidencia": "Desde las etapas hasta las fuentes; nota técnica conservada aparte."
+    },
+    {
+      "control": "historia-geometria.html: nota técnica íntegra",
+      "resultado": "PASS",
+      "evidencia": "Contenido original dentro de Información para el profesorado."
+    },
+    {
+      "control": "piramides-historia.html: identificadores y relaciones",
+      "resultado": "PASS",
+      "evidencia": {
+        "ids": 50,
+        "refs": 6
+      }
+    },
+    {
+      "control": "piramides-historia.html: scripts, casos y etapas conservados",
+      "resultado": "PASS",
+      "evidencia": {
+        "casos": [
+          "grupo",
+          "p18",
+          "p19"
+        ],
+        "pasos": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "scripts": [
+          "https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js",
+          "piramides-historia.mjs"
+        ]
+      }
+    },
+    {
+      "control": "piramides-historia.html: enlaces y recursos locales existentes",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "piramides-historia.html: imágenes con alternativa",
+      "resultado": "PASS",
+      "evidencia": {
+        "imagenes": 4
+      }
+    },
+    {
+      "control": "piramides-historia.html: actividades y fuentes idénticas",
+      "resultado": "PASS",
+      "evidencia": "Desde las etapas hasta las fuentes; nota técnica conservada aparte."
+    },
+    {
+      "control": "piramides-historia.html: nota técnica íntegra",
+      "resultado": "PASS",
+      "evidencia": "Contenido original dentro de Información para el profesorado."
+    },
+    {
+      "control": "Corpus, modelos, escalas y código original intactos",
+      "resultado": "PASS",
+      "evidencia": {
+        "cambios_fuera_alcance": [],
+        "archivos_comparados": 89
+      }
+    },
+    {
+      "control": "Sintaxis CSS y ausencia de nuevas descargas",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "Preview index: sin recursos externos y enlaces resueltos",
+      "resultado": "PASS",
+      "evidencia": {
+        "enlaces_fallidos": [],
+        "recursos_externos": []
+      }
+    },
+    {
+      "control": "Preview taller: sin recursos externos y enlaces resueltos",
+      "resultado": "PASS",
+      "evidencia": {
+        "enlaces_fallidos": [],
+        "recursos_externos": []
+      }
+    },
+    {
+      "control": "Preview taller: sintaxis del bundle",
+      "resultado": "PASS",
+      "evidencia": ""
+    },
+    {
+      "control": "Preview piramides: sin recursos externos y enlaces resueltos",
+      "resultado": "PASS",
+      "evidencia": {
+        "enlaces_fallidos": [],
+        "recursos_externos": []
+      }
+    },
+    {
+      "control": "Preview piramides: sintaxis del bundle",
+      "resultado": "PASS",
+      "evidencia": ""
+    },
+    {
+      "control": "Contraste de pares nuevos especificados",
+      "resultado": "PASS",
+      "evidencia": [
+        {
+          "elemento": "Título",
+          "fg": "#253c40",
+          "bg": "#f1e2c9",
+          "ratio": 9.15
+        },
+        {
+          "elemento": "Acento",
+          "fg": "#815021",
+          "bg": "#f1e2c9",
+          "ratio": 5.31
+        },
+        {
+          "elemento": "Eyebrow",
+          "fg": "#72502b",
+          "bg": "#f1e2c9",
+          "ratio": 5.68
+        },
+        {
+          "elemento": "Descripción",
+          "fg": "#42575b",
+          "bg": "#f1e2c9",
+          "ratio": 5.99
+        },
+        {
+          "elemento": "Tarjeta",
+          "fg": "#253c40",
+          "bg": "#fffcf6",
+          "ratio": 11.4
+        },
+        {
+          "elemento": "Cuerpo de tarjeta",
+          "fg": "#42575b",
+          "bg": "#fffcf6",
+          "ratio": 7.47
+        },
+        {
+          "elemento": "Seleccionado",
+          "fg": "#253c40",
+          "bg": "#edf4ed",
+          "ratio": 10.43
+        },
+        {
+          "elemento": "Botón y etapa",
+          "fg": "#ffffff",
+          "bg": "#245e58",
+          "ratio": 7.45
+        },
+        {
+          "elemento": "Botón hover",
+          "fg": "#ffffff",
+          "bg": "#194c47",
+          "ratio": 9.69
+        },
+        {
+          "elemento": "Texto auxiliar",
+          "fg": "#52676b",
+          "bg": "#f7f1e7",
+          "ratio": 5.32
+        },
+        {
+          "elemento": "Aviso",
+          "fg": "#42575b",
+          "bg": "#fffaf0",
+          "ratio": 7.35
+        },
+        {
+          "elemento": "Error",
+          "fg": "#783515",
+          "bg": "#fae7d8",
+          "ratio": 7.54
+        },
+        {
+          "elemento": "Pie",
+          "fg": "#fff3d8",
+          "bg": "#253c40",
+          "ratio": 10.6
+        },
+        {
+          "elemento": "Nota portada",
+          "fg": "#59401f",
+          "bg": "#f1e2c9",
+          "ratio": 7.56
+        }
+      ]
+    }
+  ],
+  "limitaciones": [
+    "Análisis de fuente; contraste de pares especificados, sin certificación WCAG integral.",
+    "DOM sintético en verificacion-dom.json; no equivale a navegador real.",
+    "Renders documentales aproximados: portada y taller a 1440/390 px y pirámides a 390 px; revisión interna, sin ejecución JS ni navegador.",
+    "Navegador de la candidata, zoom, teclado real, visor 3D, descargas y RA física pendientes."
+  ],
+  "regresion": {
+    "pruebas_existentes": 23,
+    "resultado": "PASS",
+    "control_tecnico": "PASS",
+    "control_metrico_local": "PASS",
+    "modelos_glb": 11,
+    "imagenes_externas": 14,
+    "control_documental": "NO_GO",
+    "ra_fisica": "PENDIENTE"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "veredicto": "ESCALATE_HUMAN",
+  "puntuacion_global": null,
+  "motivo_no_puntuacion": "No se ha visto el renderizado WebGL real; no procede asignar una puntuación visual al 3D.",
+  "revision": "Interna con exposición previa a la implementación; no independiente.",
+  "cobertura": [
+    "Fuente y contratos del HTML/CSS",
+    "Geometría y proyección en CPU a 24 orientaciones",
+    "Interacción con DOM sintético y renderer simulado",
+    "Bundle entregable con contexto gráfico nulo"
+  ],
+  "evidencia": [
+    "19 controles de fuente PASS",
+    "37 comprobaciones de geometría e interacción PASS",
+    "Alternativa estática del bundle PASS"
+  ],
+  "defectos_confirmados_abiertos": [],
+  "aspectos_no_verificados": [
+    "Aspecto visual WebGL real, sombras y materiales",
+    "Móvil, teclado real, zoom y desplazamiento táctil",
+    "Convivencia de la portada con model-viewer y rendimiento"
+  ],
+  "regresiones": "Ningún archivo histórico, métrico ni científico cambia respecto de Historia V2.",
+  "correccion_focalizada": "Se amplió la cámara a 42 grados tras comprobar el encuadre geométrico; los vértices quedan dentro del frustum en 24 orientaciones.",
+  "siguiente_accion": "Abrir la vista previa en un navegador con WebGL y revisar únicamente la portada."
+}

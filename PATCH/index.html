@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123748">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Laboratorio digital para descubrir la geometría de los cuerpos, resolver retos matemáticos y explorar testimonios antiguos.">
+<title>Geometría en tus manos | Laboratorio matemático e histórico</title>
+<link rel="stylesheet" href="sistema-visual.css">
+<link rel="stylesheet" href="estilos.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+<script src="catalogo.js?v=escalas1" defer></script>
+<script src="interfaz.js?v=escalas1" defer></script>
+<link rel="stylesheet" href="historia-aventura.css?v=historia2">
+</head>
+<body>
+<a class="skip" href="#laboratorio">Saltar al laboratorio</a>
+<header class="barra-superior" id="inicio">
+ <div class="contenedor barra-superior-inner">
+  <a class="marca" href="./" aria-label="Geometría en tus manos, inicio"><span class="marca-simbolo" aria-hidden="true">◇</span><span><strong>Geometría</strong><small>EN TUS MANOS</small></span></a>
+  <nav class="nav-superior" aria-label="Navegación principal">
+    <a href="#laboratorio">Figuras 3D</a><a href="#retos">Retos</a><a href="#historia">Historia</a>
+  </nav>
+  <span class="etiqueta-proyecto">Prototipo docente</span>
+ </div>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-titulo">
+ <div class="contenedor hero-inner">
+  <div class="hero-copy">
+   <p class="eyebrow hero-eyebrow"><span class="punto-vivo" aria-hidden="true"></span> LABORATORIO DE MATEMÁTICAS · EDUCACIÓN PRIMARIA</p>
+   <h1 id="hero-titulo">Observa la forma.<br><em>Descubre las reglas.</em></h1>
+   <p class="hero-desc">Gira cuerpos geométricos, investiga sus propiedades y descubre cómo se dibujaban y calculaban las figuras en el mundo antiguo.</p>
+   <div class="hero-acciones"><a class="btn-hero" href="#laboratorio">Explorar las figuras <span aria-hidden="true">↗</span></a><a class="link-hero" href="#historia">Descubrir la historia <span aria-hidden="true">→</span></a></div>
+   <div class="hero-indicadores" aria-label="Contenido del laboratorio"><span><strong>07</strong> cuerpos</span><span><strong>03</strong> recorridos</span><span><strong>3D + RA</strong> en evaluación</span></div>
+  </div>
+  <div class="hero-escena" aria-hidden="true">
+    <svg class="hero-dibujo" viewBox="0 0 480 438" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="s-face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bcebe7"/><stop offset="1" stop-color="#5aa9b4"/></linearGradient><linearGradient id="p-face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9d99e"/><stop offset="1" stop-color="#c8874a"/></linearGradient></defs>
+      <circle cx="250" cy="208" r="162" fill="none" stroke="#b6e2df" stroke-opacity=".15"/>
+      <circle cx="250" cy="208" r="119" fill="none" stroke="#b6e2df" stroke-opacity=".17" stroke-dasharray="4 7"/>
+      <path d="M30 370 444 79 M48 51 431 394" stroke="#b6e2df" stroke-opacity=".13"/>
+      <ellipse cx="254" cy="347" rx="129" ry="19" fill="#051d2b" opacity=".33"/>
+      <path d="M244 62 350 125 246 190 142 125Z" fill="url(#s-face)" stroke="#d5f5ef" stroke-width="2"/>
+      <path d="M142 125 246 190 246 325 142 260Z" fill="#3f9aab" stroke="#a6dcd9" stroke-width="2"/>
+      <path d="M246 190 350 125 350 260 246 325Z" fill="#176a86" stroke="#a6dcd9" stroke-width="2"/>
+      <path d="M246 190V325" stroke="#d7f5f2" stroke-width="1" opacity=".8"/>
+      <path d="M74 270 124 178 177 283Z" fill="url(#p-face)" stroke="#f6ddb6" stroke-width="2"/>
+      <path d="M124 178 177 283 203 248Z" fill="#ad693c" stroke="#f6ddb6" stroke-width="2"/>
+      <circle cx="365" cy="85" r="37" fill="#f1c58b"/><ellipse cx="365" cy="85" rx="16" ry="37" fill="none" stroke="#aa784a" stroke-width="1.7"/><path d="M328 85h74" stroke="#aa784a" stroke-width="1.7"/>
+      <circle cx="113" cy="63" r="5" fill="#e4bc80"/><circle cx="413" cy="322" r="4" fill="#a8d3d2"/>
+      <text x="381" y="227" fill="#c3e3e3" font-size="15" font-family="monospace" letter-spacing="1">V = a³</text>
+      <text x="67" y="333" fill="#e2c69f" font-size="12" font-family="monospace">FIG. 01</text>
+    </svg>
+    <div class="escena-legenda"><span class="escena-circulo" aria-hidden="true"></span> GEOMETRÍA QUE SE PUEDE EXPLORAR</div>
+  </div>
+ </div>
+</section>
+<section class="contenedor ruta-rapida" aria-label="Cómo empezar">
+  <h2>Empieza en tres pasos</h2>
+  <div class="pasos"><p><b>01</b><span><strong>Elige</strong> un cuerpo geométrico.</span></p><p><b>02</b><span><strong>Gira y observa</strong> sus elementos.</span></p><p><b>03</b><span><strong>Explica</strong> qué has descubierto.</span></p></div>
+</section>
+<section class="contenedor laboratorio-seccion" id="laboratorio" aria-labelledby="laboratorio-titulo">
+ <div class="seccion-cabecera"><div><span class="eyebrow seccion-eyebrow">01 / INVESTIGACIÓN VISUAL</span><h2 id="laboratorio-titulo">Laboratorio de figuras</h2><p>Selecciona un cuerpo y aprende a reconocer sus propiedades.</p></div><span class="seccion-indicador">7 modelos geométricos</span></div>
+ <div class="disposicion">
+  <nav class="panel catalogo-panel" aria-label="Catálogo de cuerpos geométricos"><div class="panel-cabecera"><h3>Elige una figura</h3><span class="panel-contador">07</span></div>
+   <div class="figuras" id="lista-figuras"><button type="button" data-figura="cubo" class="figura seleccionada" aria-current="true">
+<span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><path d="M36 8 60 21 36 34 12 21Z" fill="#afd8d6"/><path d="M12 21 36 34 36 61 12 47Z" fill="#58a8b4"/><path d="M36 34 60 21 60 47 36 61Z" fill="#237589"/></g></svg></span><span class="figura-texto"><strong>Cubo</strong><small>6 caras · 12 aristas</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" data-figura="ortoedro" class="figura" >
+<span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><path d="M32 14 63 23 45 35 14 26Z" fill="#bdded8"/><path d="M14 26 45 35 45 56 14 46Z" fill="#74a9ad"/><path d="M45 35 63 23 63 44 45 56Z" fill="#37798b"/></g></svg></span><span class="figura-texto"><strong>Ortoedro</strong><small>3 dimensiones</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" data-figura="prisma_triangular" class="figura" >
+<span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><path d="M13 53 27 17 44 53Z" fill="#8eced0"/><path d="M27 17 56 12 67 45 44 53Z" fill="#4d9db0"/><path d="M44 53 67 45 56 12" fill="none"/></g></svg></span><span class="figura-texto"><strong>Prisma triangular</strong><small>2 bases triangulares</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" data-figura="piramide_cuadrangular" class="figura" >
+<span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><path d="M36 7 8 52 36 62Z" fill="#f1bf78"/><path d="M36 7 36 62 66 49Z" fill="#d88748"/><path d="M8 52 46 42 66 49" stroke-dasharray="3 3" fill="none"/></g></svg></span><span class="figura-texto"><strong>Pirámide cuadrangular</strong><small>Base cuadrada</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" data-figura="cilindro" class="figura" >
+<span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><path d="M16 23V50C16 65 60 65 60 50V23Z" fill="#5aa0b6"/><ellipse cx="38" cy="23" rx="22" ry="10" fill="#b5dadd"/><path d="M16 50C16 65 60 65 60 50" fill="none"/></g></svg></span><span class="figura-texto"><strong>Cilindro</strong><small>2 bases circulares</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" data-figura="cono" class="figura" >
+<span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><path d="M39 8 13 53C13 67 65 67 65 53Z" fill="#d78d55"/><ellipse cx="39" cy="53" rx="26" ry="10" fill="#f0c08c"/></g></svg></span><span class="figura-texto"><strong>Cono</strong><small>1 base circular</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" data-figura="esfera" class="figura" >
+<span class="miniatura"><svg class="geom-mini" viewBox="0 0 76 72" aria-hidden="true" focusable="false"><g stroke="#265b6b" stroke-width="1.65" stroke-linejoin="round"><circle cx="38" cy="36" r="27" fill="#89c9c0"/><path d="M13 34C25 15 49 15 63 33" fill="none" opacity=".8"/><ellipse cx="38" cy="36" rx="12" ry="27" fill="none" opacity=".8"/><path d="M11 36h54" opacity=".6"/></g></svg></span><span class="figura-texto"><strong>Esfera</strong><small>Superficie curva</small></span><svg viewBox="0 0 24 24" aria-hidden="true" class="flecha-lista"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+   <p class="aviso"><strong>Medición y escala:</strong> los valores indicados describen el modelo matemático. La RA no es un instrumento de medición de precisión. <a href="escalas.html">Aprender a leer cotas y escalas</a>.</p>
+  </nav>
+  <section class="principal" aria-label="Exploración geométrica">
+   <div class="barra-figura"><div><span class="leyenda">OBJETO DE ESTUDIO</span><h3 id="titulo-figura">Cubo</h3></div><span class="categoria" id="tipo-figura">Poliedro</span></div>
+   <div class="visor-wrap"><div class="visor-borde">
+      <div class="visor-info-superior" aria-hidden="true"><span>MODELO 3D</span><span>↺ GIRAR</span></div>
+      <model-viewer id="visor" alt="Modelo tridimensional interactivo de un cubo" src="modelos_glb/cubo.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look" ar-placement="floor" ar-scale="fixed" shadow-intensity="0.6" environment-image="neutral" camera-orbit="35deg 70deg auto" interaction-prompt="auto" touch-action="pan-y" loading="eager">
+        <button slot="ar-button" id="boton-ar" class="ar-button" type="button">Ver en mi entorno (RA) <span aria-hidden="true">↗</span></button>
+        <div slot="progress-bar" class="carga" role="presentation"><div class="carga-barra"></div></div>
+      </model-viewer>
+    </div></div>
+   <div class="pie-visor"><span>Desliza para girar · Pellizca para ampliar</span><span class="metadatos" id="tamano">Medidas nominales · Arista: 12 cm</span></div>
+   <div class="actividad" id="retos"><div class="actividad-top"><span class="leyenda">02 / PIENSA Y EXPLICA</span><span class="numero">DESAFÍO MATEMÁTICO</span></div>
+      <h3 id="reto">¿Qué cambia en el volumen si duplicamos la longitud de la arista?</h3>
+      <label for="respuesta">Escribe tu razonamiento antes de comprobarlo:</label>
+      <textarea id="respuesta" rows="3" placeholder="Observo que… Creo que… Lo justificaría porque…"></textarea>
+      <div class="botones"><button class="principal-boton" id="consultar" type="button" aria-expanded="false">Ver solución razonada</button><button class="secundario-boton" id="limpiar" type="button">Limpiar respuesta</button></div>
+      <p id="solucion" class="solucion" hidden></p>
+    </div>
+    <div class="propiedades"><button id="desplegar" type="button" class="desplegar" aria-expanded="false" aria-controls="tabla-propiedades">Mostrar propiedades geométricas <span aria-hidden="true">⌄</span></button>
+     <div id="tabla-propiedades" hidden><dl><div><dt>Grupo geométrico</dt><dd id="prop-tipo">Poliedro</dd></div><div><dt>Caras planas</dt><dd id="prop-caras">6</dd></div><div><dt>Aristas rectas</dt><dd id="prop-aristas">12</dd></div><div><dt>Vértices</dt><dd id="prop-vertices">8</dd></div></dl><p>En cuerpos redondos distinguimos superficies curvas y caras planas. Las circunferencias que delimitan sus bases no se contabilizan aquí como aristas rectas.</p></div>
+    </div>
+  </section>
+ </div>
+</section>
+<section class="historia-seccion historia-misiones" id="historia" aria-labelledby="historia-titulo"><div class="contenedor historia-inner">
+ <div class="historia-intro"><span class="eyebrow">PREGUNTAS AL PASADO</span><h2 id="historia-titulo">Investiga la geometría del <em>pasado.</em></h2><p>Un dibujo antiguo puede abrir muchas preguntas. Elige un caso y busca razones para explicar lo que observas.</p><p class="historia-ruta"><strong>Tu recorrido:</strong> observa una ficha, compara las representaciones, comprueba una idea y explica tus conclusiones.</p></div>
+ <div class="historias-tarjetas">
+  <article class="tarjeta-historia"><span class="numero-historia">DOS CASOS PARA INVESTIGAR</span><div class="papiro-icono" aria-hidden="true"><svg viewBox="0 0 76 72" aria-hidden="true"><rect x="12" y="8" width="38" height="49" rx="6" fill="#fffaf0" stroke="#986a32" stroke-width="2"/><path d="M19 20h22m-22 10h14m-14 10h18" stroke="#986a32" stroke-width="2"/><circle cx="47" cy="39" r="15" fill="#d7e8dd" fill-opacity=".8" stroke="#245e58" stroke-width="4"/><path d="M58 50 69 62" stroke="#245e58" stroke-width="7" stroke-linecap="round"/></svg></div><h3>El taller del escriba</h3><p>¿80 o 800? ¿Cuánto espacio ocupa un cubo? Pon los cálculos bajo la lupa y contrasta tus respuestas.</p><a href="historia-geometria.html">Elegir un caso <span aria-hidden="true">↗</span></a></article>
+  <article class="tarjeta-historia"><span class="numero-historia">TRES RETOS GEOMÉTRICOS</span><div class="papiro-icono" aria-hidden="true"><svg viewBox="0 0 76 72" aria-hidden="true"><path d="M38 8 10 54 39 65Z" fill="#efd09a" stroke="#8b5c2a" stroke-width="2"/><path d="M38 8 39 65 67 52Z" fill="#c99256" stroke="#8b5c2a" stroke-width="2"/><path d="M10 54 40 43 67 52" fill="none" stroke="#8b5c2a" stroke-dasharray="3 4"/></svg></div><h3>Las pirámides del papiro</h3><p>Reconoce formas, encuentra la altura perpendicular y explica qué cambia al cortar una pirámide.</p><a href="piramides-historia.html">Explorar los retos <span aria-hidden="true">↗</span></a></article>
+ </div>
+ <p class="historia-limite"><strong>Una distinción importante:</strong> estudiamos fuentes antiguas a través de la investigación. Las fichas y los modelos que manipulas son actuales, sin escala histórica; no son fotografías ni reproducciones del papiro.</p>
+</div></section>
+<section class="contenedor cubo-seccion" aria-labelledby="cubo-titulo"><div class="cubo-icono" aria-hidden="true"><svg viewBox="0 0 120 112"><path d="M47 6h27v27H47zM20 33h27v27H20zM47 33h27v27H47zM74 33h27v27H74zM47 60h27v27H47zM47 87h27v20H47z" fill="#badbd9" stroke="#277383" stroke-width="2"/></svg></div><div><span class="eyebrow">04 / DEL PLANO AL ESPACIO</span><h2 id="cubo-titulo">¿Cómo se transforma una red de cuadrados en un cubo?</h2><p>Manipula un desarrollo plano, identifica sus caras y descubre sus relaciones espaciales.</p></div><a class="btn-cubo" href="cubo-interactivo.html?figura=cubo">Abrir cubo interactivo <span aria-hidden="true">↗</span></a></section>
+<section class="contenedor uso-responsable" id="docentes"><div><span class="eyebrow">MATERIAL PARA EL PROFESORADO</span><h2>Investigar, comprobar y argumentar</h2><p>Este prototipo ofrece actividades de razonamiento y fuentes históricas contextualizadas. La visualización no sustituye la manipulación de sólidos físicos ni demuestra por sí misma mejoras de aprendizaje.</p></div><div class="utilidades"><a href="diagnostico.html">Diagnóstico técnico <span aria-hidden="true">↗</span></a><a href="ensayos.html">Registro de ensayos <span aria-hidden="true">↗</span></a><a href="auditoria-pilotaje.html">Guía de pilotaje <span aria-hidden="true">↗</span></a><a href="desarrollo-cubo.svg">Plantilla de cubo <span aria-hidden="true">↗</span></a></div></section>
+</main>
+<footer class="pie"><div class="contenedor pie-inner"><div><strong>Geometría en tus manos</strong><p>Prototipo didáctico de Educación Primaria · Vista de ensayo P4.5.1</p></div><div><span>RA física pendiente de validación · P5: NO-GO.</span><br><span>Las respuestas se mantienen en la página y no se envían al servidor. El visor 3D carga una biblioteca externa.</span></div></div></footer>
+</body></html>

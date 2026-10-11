@@ -1,0 +1,20 @@
+{
+  "objetivo": "Portada con escena Three.js real, inspirada en la referencia aportada y adaptada a Geometría en tus manos.",
+  "usuario": "Corrección de alcance: «Me refería solo a la portada».",
+  "audiencia": "5.º–6.º de Primaria; uso acompañado por profesorado.",
+  "textos_obligatorios": "Todos los textos principales de la portada candidata previa; título Observa la forma. Descubre las reglas.",
+  "soporte": "HTML del repositorio existente y vista previa autónoma.",
+  "alcance": "Solo portada-candidata.html; se conserva el diseño histórico V2.",
+  "supuestos": [
+    "Escena geométrica propia en vez de trasladar el entorno vegetal de Sylva.",
+    "Giro por interacción y giro automático opcional, sin inicio automático.",
+    "Proporciones decorativas; sin relación métrica con los GLB nominales."
+  ],
+  "diales": {
+    "variedad": 6,
+    "animacion": 2,
+    "densidad": 4
+  },
+  "despliegue": "No autorizado ni realizado en este paso.",
+  "criterio_de_entrega": "Código revisable y preview; renderizado real WebGL aún pendiente."
+}

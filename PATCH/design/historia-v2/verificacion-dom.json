@@ -1,0 +1,23 @@
+{
+  "tipo": "DOM sintético con jsdom; no navegador ni prueba de renderizado",
+  "dependencia": "30.1.2",
+  "actividades": [
+    {
+      "pagina": "taller",
+      "casos": 2,
+      "comprobaciones": 62,
+      "errores_runtime": [],
+      "advertencias_css_jsdom": 0,
+      "resultado": "PASS"
+    },
+    {
+      "pagina": "piramides",
+      "casos": 3,
+      "comprobaciones": 98,
+      "errores_runtime": [],
+      "advertencias_css_jsdom": 0,
+      "resultado": "PASS"
+    }
+  ],
+  "descargas_y_3d": "NO_PROBADOS"
+}

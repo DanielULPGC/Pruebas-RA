@@ -1,0 +1,35 @@
+{
+  "base": "00ed3c6971c6c580cecedda6363eed54a0f153fb",
+  "alcance": "Three.js solo en portada-candidata.html; actividades históricas e index sin cambios respecto de Historia V2.",
+  "publicacion": "NO_PUBLICADA",
+  "ilustracion": "Geometría propia y compositiva, actual, sin escala. SVG original como alternativa.",
+  "dependencias": [
+    {
+      "nombre": "three",
+      "version": "0.180.0",
+      "licencia": "MIT",
+      "procedencia": "Registro npm, paquete three@0.180.0",
+      "web_oficial": "https://threejs.org/",
+      "sha256_license": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "nombre": "esbuild",
+      "version": "0.25.12",
+      "uso": "Construcción solamente; no se carga en el navegador."
+    }
+  ],
+  "medidas_conservadas": [
+    "Datos, módulos científicos, GLB y SVG externos idénticos.",
+    "Todas las áreas históricas conservan Historia V2."
+  ],
+  "accesibilidad": [
+    "Controles nativos, nombres accesibles y foco visible.",
+    "Ilustración y descripción alternativas.",
+    "Giro automático apagado al iniciar y desactivado con movimiento reducido."
+  ],
+  "revision": "Interna, realizada por el autor de la implementación; sin independencia plena.",
+  "limites": [
+    "Render WebGL real y rendimiento pendientes.",
+    "No acredita accesibilidad integral ni aprendizaje."
+  ]
+}
