@@ -1,26 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="titulo desc">
-<title id="titulo">MISIÓN 01 · PIRÁMIDE TRIANGULAR</title><desc id="desc">Ilustración educativa moderna · no reproduce el papiro</desc>
-<defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF5DE"/><stop offset=".55" stop-color="#F4E3C2"/><stop offset="1" stop-color="#D7ECED"/></linearGradient>
-<radialGradient id="flare" cx=".65" cy=".3" r=".7"><stop stop-color="#FFFFFF" stop-opacity=".88"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
-<linearGradient id="faceA" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7CD84"/><stop offset="1" stop-color="#D99554"/></linearGradient>
-<linearGradient id="faceB" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#DAA96E"/><stop offset="1" stop-color="#9B6543"/></linearGradient>
-<linearGradient id="faceC" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#EAB974"/><stop offset="1" stop-color="#C68754"/></linearGradient>
-<filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feGaussianBlur stdDeviation="20"/></filter>
-<pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#4B7B80" opacity=".14"/></pattern>
-</defs><rect width="960" height="600" rx="36" fill="url(#bg)"/><rect width="960" height="600" fill="url(#dots)" rx="36"/>
-<circle cx="720" cy="170" r="230" fill="url(#flare)"/><path d="M45 495H915M45 510H915" fill="none" stroke="#799B9D" stroke-width="2" opacity=".35"/>
-<path d="M85 65H875" stroke="#C7AB83" stroke-width="2" opacity=".7"/><text x="84" y="52" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="800" fill="#184D5B">MISIÓN 01 · PIRÁMIDE TRIANGULAR</text>
-<text x="84" y="565" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#4B646A">Ilustración educativa moderna · no reproduce el papiro</text>
-<ellipse cx="485" cy="487" rx="280" ry="35" fill="#103B4E" opacity=".22" filter="url(#shadow)"/>
-<path d="M481 132 L220 403 L759 394 Z" fill="url(#faceC)" stroke="#875D39" stroke-width="3"/>
-<path d="M481 132 L220 403 L469 501 Z" fill="url(#faceA)" stroke="#875D39" stroke-width="4"/>
-<path d="M481 132 L469 501 L759 394 Z" fill="url(#faceB)" stroke="#875D39" stroke-width="4"/>
-<path d="M220 403 L486 335 L759 394" fill="none" stroke="#875D39" stroke-width="3.5" stroke-dasharray="9 9"/>
-<path d="M481 132L485 418" fill="none" stroke="#0E6477" stroke-dasharray="11 9" stroke-width="5"/>
-<circle cx="485" cy="418" r="8" fill="#0E6477"/>
-<rect x="555" y="165" rx="18" width="198" height="56" fill="#EAF8F7" stroke="#9FC9C6"/>
-<text x="581" y="201" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#15596B">Base triangular</text>
-<path d="M556 221L645 306" stroke="#15596B" stroke-width="3" stroke-dasharray="7 8"/>
-<rect x="102" y="240" rx="18" width="175" height="56" fill="#F3FBFA" stroke="#9FC9C6"/>
-<text x="124" y="276" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#15596B">Altura h</text><path d="M277 270L473 397" stroke="#15596B" stroke-width="3" stroke-dasharray="7 8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="titulo descripcion">
+<title id="titulo">Pirámide triangular: esquema matemático moderno</title>
+<desc id="descripcion">Una base triangular y tres caras laterales triangulares. La altura h une el vértice con su proyección perpendicular sobre el plano de la base. Las aristas ocultas y la altura interior se muestran por transparencia con trazos discontinuos. No reproduce el papiro ni está a escala métrica. Coordenadas derivadas del modelo GLB del proyecto.</desc>
+<defs><linearGradient id="fondo" x2="1" y2="1"><stop stop-color="#FFF8EA"/><stop offset="1" stop-color="#E6F3F3"/></linearGradient></defs>
+<rect width="960" height="600" rx="28" fill="url(#fondo)"/>
+<text x="48" y="53" font-family="DejaVu Sans,sans-serif" font-size="30" font-weight="800" fill="#153F53">PIRÁMIDE TRIANGULAR</text>
+<path d="M48 70H912" stroke="#C7B398" stroke-width="2"/>
+<polygon points="480.00,108.00 377.00,308.20 420.00,457.25" fill="#E7B773" stroke="#835B3D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="480.00,108.00 420.00,457.25 647.00,369.40" fill="#C68B57" stroke="#835B3D" stroke-width="4" stroke-linejoin="round"/>
+<path id="aristas-ocultas" d="M377.00,308.20 L647.00,369.40" fill="none" stroke="#4E514D" stroke-width="3" stroke-dasharray="8 8"/>
+<path id="altura" d="M480.00,108.00 L480.00,380.00" fill="none" stroke="#064E68" stroke-width="5" stroke-dasharray="10 8"/>
+<circle id="pie-altura" cx="480.00" cy="380.00" r="7" fill="#064E68" stroke="#FFF" stroke-width="2"/>
+<text x="498.00" y="244.00" font-family="DejaVu Sans,sans-serif" font-size="32" font-weight="800" fill="#064E68">h</text>
+<rect x="690" y="190" width="220" height="106" rx="12" fill="#FFF" stroke="#9BBCC2" stroke-width="2"/>
+<text x="706" y="225" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#15495C">Altura interior</text>
+<text x="706" y="263" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#15495C">perpendicular</text>
+<text x="48" y="520" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#254A59">4 caras · 6 aristas · 4 vértices · base triangular</text>
+<text x="48" y="563" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#254A59">Esquema moderno · sin escala métrica · no reproduce el papiro</text>
+</svg>

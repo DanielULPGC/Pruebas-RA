@@ -44,3 +44,6 @@ button,input,textarea{font:inherit}button{cursor:pointer}a{color:#125a71}a:focus
 .figure-tools a:hover{background:#E8F5F6}
 .figure-tools a:focus-visible{outline:3px solid #A54E11;outline-offset:4px}
 @media(max-width:670px){.figure-tools a{width:100%;text-align:center}}
+
+/* P4.5.4-C: el rótulo ocupa su propia línea y no tapa títulos del SVG. */
+.img-badge{position:static;display:block;border-radius:0;padding:10px 14px;background:#154659;color:#FFFFFF;font-size:.75rem;line-height:1.5;text-align:center;overflow-wrap:anywhere}

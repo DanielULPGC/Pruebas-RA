@@ -17,7 +17,7 @@ const INFO = {
     edicion: 'Figura A.4, edición académica de Kelly (2026).',
     modelo: 'Pirámide triangular de elaboración contemporánea.',
     descripcion: 'Pirámide triangular: una base triangular y tres caras laterales triangulares; cuatro vértices.',
-    alt: 'Ilustración moderna de una pirámide triangular de caras ocres, con indicaciones gráficas de base y altura.'
+    alt: 'Esquema matemático contemporáneo de pirámide triangular: una base triangular, tres caras laterales triangulares, seis aristas y cuatro vértices. Altura perpendicular al plano de la base; sin escala métrica.'
   },
   p18: {
     titulo: 'La pirámide cuadrangular del problema 18',
@@ -27,7 +27,7 @@ const INFO = {
     edicion: 'Figura A.8 izquierda; figura 4 (fotografía) y figura 5 (edición) del artículo.',
     modelo: 'Pirámide cuadrangular de elaboración contemporánea.',
     descripcion: 'Pirámide de base cuadrada: una base y cuatro caras triangulares, cinco vértices y ocho aristas.',
-    alt: 'Ilustración moderna de una pirámide cuadrangular en tonos ocres con línea discontinua que señala la altura perpendicular.'
+    alt: 'Esquema matemático contemporáneo de pirámide de base cuadrada: cinco caras, ocho aristas y cinco vértices. La altura interior llega al centro de la base; sin escala métrica.'
   },
   p19: {
     titulo: 'El tronco de pirámide del problema 19',

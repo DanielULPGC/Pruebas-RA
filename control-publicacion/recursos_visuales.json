@@ -1,0 +1,264 @@
+{
+  "fase": "P4.5.4-C",
+  "fecha": "2026-10-11",
+  "base_commit": "8b0d3fa2a79c669d3ce1652a734f65d92f800dc2",
+  "criterio": "Un registro por ruta y versión; 18 entradas B no equivalen a 18 archivos actuales. Ningún dictamen técnico constituye firma humana. ACTIVA describe uso en el código, no autorización.",
+  "licencia_global_asignada": null,
+  "recursos": [
+    {
+      "id": "PVC-01",
+      "archivo": "desarrollo-cubo.svg",
+      "sha256": "98ebef68abdfb3c45ade2e7f44ee8bc8f7a070ed9821e75cd7a571301aada57a",
+      "ids_heredados": [
+        "VIS-14"
+      ],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "cubo-interactivo.html",
+        "index.html"
+      ]
+    },
+    {
+      "id": "PVC-02",
+      "archivo": "ilustraciones/atlas_elementos_piramide.webp",
+      "sha256": "8052d13ef59456adada9190e50c95626ebc24ec91f2440bb9513c998655094d0",
+      "ids_heredados": [
+        "VIS-05"
+      ],
+      "uso": "EXCLUIDA_DEL_RECURSO",
+      "dictamen_tecnico": "CONSERVA_SUPERADA",
+      "naturaleza": "ILUSTRACION_CONTEMPORANEA_RASTER",
+      "procedencia": "Archivo del repositorio; no existe acreditación de titularidad individual en el expediente",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": []
+    },
+    {
+      "id": "PVC-03",
+      "archivo": "ilustraciones/atlas_evidencia_y_modelo.svg",
+      "sha256": "3af029a11d50361f115393b6fcb2e3e65c7cb647df192e6a3eb323d7fe17c7b2",
+      "ids_heredados": [
+        "VIS-07",
+        "VIS-18"
+      ],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "piramides-historia.html"
+      ]
+    },
+    {
+      "id": "PVC-04",
+      "archivo": "ilustraciones/atlas_volumen_piramide.webp",
+      "sha256": "3714de36051a84908ab969435a75a7c6ab1608ea0b2f284a5c2ad7d9acb5d29f",
+      "ids_heredados": [
+        "VIS-06"
+      ],
+      "uso": "EXCLUIDA_DEL_RECURSO",
+      "dictamen_tecnico": "CONSERVA_SUPERADA",
+      "naturaleza": "ILUSTRACION_CONTEMPORANEA_RASTER",
+      "procedencia": "Archivo del repositorio; no existe acreditación de titularidad individual en el expediente",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": []
+    },
+    {
+      "id": "PVC-05",
+      "archivo": "ilustraciones/auditoria_elementos_piramide.svg",
+      "sha256": "88ada78b4d9148a51cf0597c463440399ab723a215e4fc1b136fb5f1476c4e91",
+      "ids_heredados": [],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "piramides-historia.html"
+      ]
+    },
+    {
+      "id": "PVC-06",
+      "archivo": "ilustraciones/auditoria_escriba_p2.svg",
+      "sha256": "a61c5fbb6e7b246b24e5e91ab3d71a06180fb4bea6a773bf0b3d9a71f9c7a2a9",
+      "ids_heredados": [],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "historia-geometria.html",
+        "historia-geometria.mjs"
+      ]
+    },
+    {
+      "id": "PVC-07",
+      "archivo": "ilustraciones/auditoria_escriba_p8.svg",
+      "sha256": "3fc37c6bc1610978342efaf661c7ff8599cb95e862ca6c3f3d5bb63f20a53c8b",
+      "ids_heredados": [],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "historia-geometria.mjs"
+      ]
+    },
+    {
+      "id": "PVC-08",
+      "archivo": "ilustraciones/auditoria_volumen_piramide.svg",
+      "sha256": "a362a0453d1f0977a3a592322dcdde8f7abb0b4aaa4ed2e299b2a50c5d99467c",
+      "ids_heredados": [],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "piramides-historia.html"
+      ]
+    },
+    {
+      "id": "PVC-09",
+      "archivo": "ilustraciones/cubo_p8_ia.webp",
+      "sha256": "e6f9a56f5c72e91ceb7d6a3ffcb4c1b9caabb874aad4d1613a1d7c526e046f2e",
+      "ids_heredados": [
+        "VIS-12"
+      ],
+      "uso": "EXCLUIDA_DEL_RECURSO",
+      "dictamen_tecnico": "CONSERVA_RECHAZADA",
+      "naturaleza": "ILUSTRACION_CONTEMPORANEA_RASTER",
+      "procedencia": "Archivo del repositorio; no existe acreditación de titularidad individual en el expediente",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": []
+    },
+    {
+      "id": "PVC-10",
+      "archivo": "ilustraciones/cubo_plano_y_cerrado.svg",
+      "sha256": "bf1b362195147da5f7804e3950f8ff78d856341b4fa109c3db98ccfa1bdc6c98",
+      "ids_heredados": [
+        "VIS-13"
+      ],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "cubo-interactivo.html"
+      ]
+    },
+    {
+      "id": "PVC-11",
+      "archivo": "ilustraciones/piramide_cuadrangular_didactica.svg",
+      "sha256": "5a426bf392ab7d96e939284439c5a618d4642ab223668f2d3f100defbb8f491a",
+      "ids_heredados": [
+        "VIS-09"
+      ],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "piramides-historia.mjs"
+      ]
+    },
+    {
+      "id": "PVC-12",
+      "archivo": "ilustraciones/piramides_triangular_didactica.svg",
+      "sha256": "24b8be3e8ce74f0c6aad6abfa042115370d890328ff6ccf92ac199c04126fba3",
+      "ids_heredados": [
+        "VIS-08"
+      ],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "piramides-historia.html",
+        "piramides-historia.mjs"
+      ]
+    },
+    {
+      "id": "PVC-13",
+      "archivo": "ilustraciones/tronco_piramide_didactica.svg",
+      "sha256": "74478f784b20870360a12e2a34291ab3a3be57c6cf8ce95c82850f0e1397055e",
+      "ids_heredados": [
+        "VIS-10",
+        "VIS-17"
+      ],
+      "uso": "ACTIVA",
+      "dictamen_tecnico": "CANDIDATA_A_REVISION_HUMANA",
+      "naturaleza": "ESQUEMA_O_FICHA_CONTEMPORANEA_SVG",
+      "procedencia": "Esquema/ficha contemporánea del proyecto; no incorpora fotografías de colecciones",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": [
+        "piramides-historia.mjs"
+      ]
+    },
+    {
+      "id": "PVC-14",
+      "archivo": "ilustraciones/volumen_p2_ia.webp",
+      "sha256": "0ea3e1ed96d33f1def5130b43d160b1385e10a3a06d3057e3975da1eaa8c328c",
+      "ids_heredados": [
+        "VIS-11"
+      ],
+      "uso": "EXCLUIDA_DEL_RECURSO",
+      "dictamen_tecnico": "CONSERVA_RECHAZADA",
+      "naturaleza": "ILUSTRACION_CONTEMPORANEA_RASTER",
+      "procedencia": "Archivo del repositorio; no existe acreditación de titularidad individual en el expediente",
+      "autor_humano_acreditado": null,
+      "evidencia_licencia_o_permiso": null,
+      "autorizacion_publicacion": "NO_RECIBIDA",
+      "publicamente_presente_en_main": true,
+      "referencias_activas": []
+    }
+  ]
+}

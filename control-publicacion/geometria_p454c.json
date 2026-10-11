@@ -1,0 +1,170 @@
+[
+  {
+    "archivo": "ilustraciones/piramides_triangular_didactica.svg",
+    "modelo": "modelos_glb/historico_piramide_triangular_didactica.glb",
+    "modelo_sha256": "aadbf7d673f17f2f24a564f224deeeb3311265104de96842a33b7b7d633713e6",
+    "svg_sha256": "24b8be3e8ce74f0c6aad6abfa042115370d890328ff6ccf92ac199c04126fba3",
+    "vertices_3d": [
+      [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      [
+        -0.8999999761581421,
+        -0.75,
+        0.0
+      ],
+      [
+        -0.44999998807907104,
+        -0.75,
+        1.149999976158142
+      ],
+      [
+        -0.44999998807907104,
+        0.8500000238418579,
+        0.4000000059604645
+      ]
+    ],
+    "base_3d": [
+      [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      [
+        -0.8999999761581421,
+        -0.75,
+        0.0
+      ],
+      [
+        -0.44999998807907104,
+        -0.75,
+        1.149999976158142
+      ]
+    ],
+    "apice_3d": [
+      -0.44999998807907104,
+      0.8500000238418579,
+      0.4000000059604645
+    ],
+    "pie_altura_3d": [
+      -0.44999998807907104,
+      -0.75,
+      0.4000000059604645
+    ],
+    "apice_proyectado": [
+      480.0,
+      107.99999594688416
+    ],
+    "pie_proyectado": [
+      480.0,
+      380.0
+    ],
+    "proyeccion": [
+      [
+        300,
+        0,
+        -80,
+        646.9999969005585
+      ],
+      [
+        68,
+        -170,
+        103,
+        241.899998575449
+      ]
+    ],
+    "escala": "SIN_ESCALA_METRICA",
+    "nota": "Altura perpendicular en 3D; su proyección 2D no conserva ángulos."
+  },
+  {
+    "archivo": "ilustraciones/piramide_cuadrangular_didactica.svg",
+    "modelo": "modelos_glb/historico_piramide_cuadrangular_didactica.glb",
+    "modelo_sha256": "5f79f8d5f08ebee8c4293b314d0869f7edaa8ae18f7c2583a831c6aec7abd8fd",
+    "svg_sha256": "5a426bf392ab7d96e939284439c5a618d4642ab223668f2d3f100defbb8f491a",
+    "vertices_3d": [
+      [
+        -0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      [
+        0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      [
+        0.699999988079071,
+        0.0,
+        0.699999988079071
+      ],
+      [
+        -0.699999988079071,
+        0.0,
+        0.699999988079071
+      ],
+      [
+        0.0,
+        1.5,
+        0.0
+      ]
+    ],
+    "base_3d": [
+      [
+        -0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      [
+        0.699999988079071,
+        0.0,
+        -0.699999988079071
+      ],
+      [
+        0.699999988079071,
+        0.0,
+        0.699999988079071
+      ],
+      [
+        -0.699999988079071,
+        0.0,
+        0.699999988079071
+      ]
+    ],
+    "apice_3d": [
+      0.0,
+      1.5,
+      0.0
+    ],
+    "pie_altura_3d": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "apice_proyectado": [
+      480.0,
+      125.0
+    ],
+    "pie_proyectado": [
+      480.0,
+      380.0
+    ],
+    "proyeccion": [
+      [
+        225,
+        0,
+        -145,
+        480.0
+      ],
+      [
+        68,
+        -170,
+        103,
+        380.0
+      ]
+    ],
+    "escala": "SIN_ESCALA_METRICA",
+    "nota": "Altura perpendicular en 3D; su proyección 2D no conserva ángulos."
+  }
+]
