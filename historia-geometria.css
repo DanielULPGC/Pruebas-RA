@@ -10,3 +10,9 @@
 .corrective-label strong{font-size:clamp(.66rem,2vw,1.65rem);line-height:1.2;letter-spacing:.03em}
 .corrective-label small{font-size:clamp(.56rem,1.4vw,1rem);line-height:1.2}
 @media(max-width:630px){.corrective-label{border-radius:6px;min-height:22%;width:48%;left:6%}.corrective-label strong{font-size:.62rem}.corrective-label small{font-size:.55rem}}
+
+/* P4.5.4-C: fichas SVG completas y aviso fuera de la lámina.
+   La máscara editorial antigua ya no corresponde a las fichas revisadas. */
+.visual-frame img{aspect-ratio:auto;object-fit:contain}
+.visual-overlay{position:static;display:block;border-radius:0;padding:10px 14px;font-size:.75rem;line-height:1.5;text-align:center;overflow-wrap:anywhere}
+.corrective-label{display:none}
