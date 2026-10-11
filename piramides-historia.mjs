@@ -1,17 +1,187 @@
-import {ESCENAS,volumenCuadrangular,volumenTriangular,resolverPregunta} from './piramides-datos.mjs';
-let caso='grupo';const $=id=>document.getElementById(id);const notas={grupo:{observacion:'',conclusion:''},p18:{observacion:'',conclusion:''},p19:{observacion:'',conclusion:''}};const respuestas={grupo:'',p18:'',p19:''};
-function guardar(){notas[caso].observacion=$('observacion').value;notas[caso].conclusion=$('conclusion').value;}
-function foto(id){if(!(id in ESCENAS))return;guardar();caso=id;const c=ESCENAS[id];document.querySelectorAll('[data-caso]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.caso===id)));
-$('contexto').textContent=c.contexto;$('tit-fuente').textContent='MPER N.S. 1.1 · Fig. '+c.figura;$('figura').src=c.imagen;$('figura').alt=id==='grupo'?'Edición científica: conjunto de dibujos de pirámides triangulares, algunos incompletos, con numerales griegos':id==='p18'?'Recorte de la columna izquierda de A.8: dos ediciones del dibujo de una pirámide cuadrangular; no es fotografía del papiro':'Recorte de la columna derecha de A.8: dos ediciones de un tronco de pirámide cuadrangular; no es fotografía del papiro';$('credito').textContent=c.fuente;const lecturas={grupo:'La figura A.4 reúne dibujos esquemáticos con líneas inclinadas, triángulos y anotaciones. Kelly examina posibles correspondencias entre ellos y los problemas 10–13; no todas están establecidas con certeza. La parte superior procede de la transcripción cercana al trazo y la inferior de la edición normalizada.',p18:'Recorte de la columna izquierda de A.8: arriba aparece el trazado editado de la pirámide de base cuadrada; abajo, una versión geométricamente regularizada. Algunas aristas posteriores quedan representadas como visibles. En la fotografía del papiro se observan lagunas de conservación. El posible significado de un trazo interno no es seguro.',p19:'Recorte de la columna derecha de A.8: arriba se muestra el dibujo editado de una pirámide cuadrangular truncada; abajo se muestra una versión regularizada. Destacan dos bases a distinta altura y diagonales en la parte inferior. Según Kelly, algunas marcas diagonales carecen de explicación segura.'};$('lectura-detalle').textContent=lecturas[id];$('enlace-figura-completa').hidden=id==='grupo';$('enlace-figura-completa').href='fuentes/kelly_2026_A8_piramides_18_19.png';$('foto-comparativa').hidden=id!=='p18';$('incertidumbre').textContent='Límite de interpretación: '+c.incertidumbre;
-$('visor-piramide').setAttribute('src',c.modelo);$('visor-piramide').setAttribute('alt',id==='grupo'?'Modelo educativo moderno de pirámide triangular':id==='p18'?'Modelo educativo moderno de pirámide de base cuadrada':'Modelo educativo moderno de tronco de pirámide cuadrangular');$('tit-modelo').textContent=id==='grupo'?'Pirámide triangular de ejemplo':id==='p18'?'Pirámide cuadrangular de ejemplo':'Tronco de pirámide de ejemplo';$('alternativa').textContent=id==='grupo'?'Pirámide triangular: base triangular, tres caras laterales triangulares y cuatro vértices.':id==='p18'?'Pirámide cuadrangular: una base cuadrada, cuatro caras triangulares y un vértice superior.':'Tronco de pirámide cuadrangular: dos bases cuadradas paralelas de diferente tamaño, conectadas por caras trapezoidales.';
-$('pregunta').textContent=c.pregunta;$('opciones').replaceChildren();const legend=document.createElement('legend');legend.textContent='Selecciona una interpretación';$('opciones').append(legend);for(const op of c.opciones){const l=document.createElement('label');const inp=document.createElement('input');inp.name='preguntaHistorica';inp.type='radio';inp.value=op.id;inp.checked=respuestas[id]===op.id;inp.addEventListener('change',()=>{respuestas[id]=op.id;$('feedback').hidden=true});l.append(inp,document.createTextNode(op.texto));$('opciones').append(l)}$('feedback').hidden=true;$('argumento').hidden=true;$('texto-argumento').textContent=c.incertidumbre;
-$('grupo-calc').hidden=id==='p19';$('corte-info').hidden=id!=='p19';const medidas=$('medidas');medidas.replaceChildren();const inputs=id==='grupo'?[['base','Base del triángulo (cm)',6],['altura-base','Altura del triángulo (cm)',4],['altura-piramide','Altura perpendicular de la pirámide (cm)',9]]:[['lado','Lado de la base cuadrada (cm)',6],['altura-piramide','Altura perpendicular de la pirámide (cm)',9]];for(const [clave,label,valor] of inputs){const l=document.createElement('label');l.textContent=label;const inp=document.createElement('input');inp.type='number';inp.min='0.1';inp.max='100000';inp.step='any';inp.value=valor;inp.id='m-'+clave;inp.dataset.default=valor;inp.addEventListener('input',()=>{$('calculo-respuesta').textContent='';$('comparacion-prisma').textContent=''});l.append(inp);medidas.append(l)}$('calculo-respuesta').textContent='Introduce las medidas y calcula el volumen.';$('comparacion-prisma').textContent='';$('observacion').value=notas[id].observacion;$('conclusion').value=notas[id].conclusion;$('mensaje-descarga').textContent='';$('copia-panel').hidden=true;}
-function calcular(){if(caso==='p19')return;try{const num=id=>{const e=$('m-'+id);if(!e||e.value.trim()==='')throw Error('Falta una medida');const n=Number(e.value);if(!Number.isFinite(n)||n<=0||n>100000)throw Error('Introduce longitudes positivas y menores o iguales a 100000.');return n};let b,h,v;
-if(caso==='grupo'){b=num('base')*num('altura-base')/2;h=num('altura-piramide');v=volumenTriangular(num('base'),num('altura-base'),h)}else{b=num('lado')**2;h=num('altura-piramide');v=volumenCuadrangular(num('lado'),h)}const formato=n=>Number(n.toPrecision(10)).toLocaleString('es-ES',{maximumFractionDigits:8});$('calculo-respuesta').classList.remove('error');$('calculo-respuesta').textContent='Área de base = '+formato(b)+' cm². Volumen = '+formato(b)+' × '+formato(h)+' ÷ 3 = '+formato(v)+' cm³.';$('comparacion-prisma').textContent='Para la misma base y altura, un prisma tendría '+formato(b*h)+' cm³: tres veces el volumen de esta pirámide.';}catch(e){$('calculo-respuesta').classList.add('error');$('calculo-respuesta').textContent=e.message;}}
-function contenidoCuaderno(){guardar();const e=ESCENAS[caso];return ['GEOMETRÍA EN TUS MANOS — P4.4-H3','Caso: '+e.titulo,'Fuente: Kelly (2026), figura '+e.figura,'ATENCIÓN: distinguir evidencia antigua y modelo didáctico moderno.','OBSERVACIÓN:',notas[caso].observacion,'CONCLUSIÓN / HIPÓTESIS:',notas[caso].conclusion,'','P5 NO-GO: HTTPS y ensayos de RA pendientes.'].join('\n');}
-function descargar(){const contenido=contenidoCuaderno();try{const blob=new Blob(['\uFEFF'+contenido],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='cuaderno_piramides_'+caso+'.txt';document.body.append(a);a.click();a.remove();URL.revokeObjectURL(url);$('mensaje-descarga').textContent='Se ha solicitado la descarga. Si no aparece, usa «Mostrar texto para copiar».';}catch(e){$('mensaje-descarga').textContent='La descarga no está disponible en este navegador. Usa «Mostrar texto para copiar». ';}}
-function mostrarTexto(){const area=$('texto-copiable');$('copia-panel').hidden=false;area.value=contenidoCuaderno();area.focus();area.select();$('mensaje-descarga').textContent='Puedes copiar manualmente el texto seleccionado y guardarlo sin datos personales.';}
-document.querySelectorAll('[data-caso]').forEach(b=>b.addEventListener('click',()=>foto(b.dataset.caso)));
-$('verificar').addEventListener('click',()=>{const respuesta=document.querySelector('input[name="preguntaHistorica"]:checked');$('feedback').hidden=false;const f=$('feedback');if(!respuesta){f.textContent='Selecciona una interpretación antes de comprobarla.';f.classList.add('error');return;}const r=resolverPregunta(caso,respuesta.value);f.classList.toggle('error',!r.correcta);f.textContent=(r.correcta?'Correcto. ':'Revisa tu interpretación. ')+r.explicacion;});
-$('mostrar-argumento').addEventListener('click',()=>{$('argumento').hidden=!$('argumento').hidden});$('calcular').addEventListener('click',calcular);$('reset-medidas').addEventListener('click',()=>{document.querySelectorAll('#medidas input').forEach(e=>e.value=e.dataset.default);calcular()});$('descargar').addEventListener('click',descargar);$('mostrar-texto').addEventListener('click',mostrarTexto);$('borrar').addEventListener('click',()=>{$('observacion').value='';$('conclusion').value='';guardar();$('mensaje-descarga').textContent='Notas borradas para el caso seleccionado.'});
-foto('grupo');
+import {ESCENAS, volumenCuadrangular, volumenTriangular, resolverPregunta} from './piramides-datos.mjs';
+
+/** Rediseño P4.5.2-P: cambia la interfaz, no el corpus histórico ni el motor matemático H2. */
+const $ = id => document.getElementById(id);
+const CASOS = ['grupo','p18','p19'];
+const ILUSTRACIONES = {
+  grupo: 'ilustraciones/piramides_triangular_didactica.svg',
+  p18: 'ilustraciones/piramide_cuadrangular_didactica.svg',
+  p19: 'ilustraciones/tronco_piramide_didactica.svg'
+};
+const INFO = {
+  grupo: {
+    titulo: 'El conjunto de pirámides triangulares',
+    pista: 'Kelly estudia varios diagramas agrupados. La correspondencia de algunos con los problemas 10–13 es discutida; observa qué sabemos antes de atribuirlos.',
+    pagina: 'Kelly (2026), figura A.4, pp. 16–17.',
+    testimonio: 'MPER N.S. 1.1, problemas 10–13.',
+    edicion: 'Figura A.4, edición académica de Kelly (2026).',
+    modelo: 'Pirámide triangular de elaboración contemporánea.',
+    descripcion: 'Pirámide triangular: una base triangular y tres caras laterales triangulares; cuatro vértices.',
+    alt: 'Ilustración moderna de una pirámide triangular de caras ocres, con indicaciones gráficas de base y altura.'
+  },
+  p18: {
+    titulo: 'La pirámide cuadrangular del problema 18',
+    pista: 'El texto trata una pirámide de base cuadrada. Kelly interpreta su dibujo como un intento de perspectiva y plantea dudas sobre el significado de un trazo interior.',
+    pagina: 'Kelly (2026), figura A.8 y figuras 4–5, pp. 11 y 18–19.',
+    testimonio: 'MPER N.S. 1.1, problema 18.',
+    edicion: 'Figura A.8 izquierda; figura 4 (fotografía) y figura 5 (edición) del artículo.',
+    modelo: 'Pirámide cuadrangular de elaboración contemporánea.',
+    descripcion: 'Pirámide de base cuadrada: una base y cuatro caras triangulares, cinco vértices y ocho aristas.',
+    alt: 'Ilustración moderna de una pirámide cuadrangular en tonos ocres con línea discontinua que señala la altura perpendicular.'
+  },
+  p19: {
+    titulo: 'El tronco de pirámide del problema 19',
+    pista: 'El dibujo representa una pirámide de base cuadrada truncada. Kelly describe marcas diagonales en la base cuyo significado exacto permanece sin aclarar.',
+    pagina: 'Kelly (2026), figura A.8 derecha, pp. 18–19.',
+    testimonio: 'MPER N.S. 1.1, problema 19.',
+    edicion: 'Figura A.8 derecha, edición académica de Kelly (2026).',
+    modelo: 'Tronco cuadrangular de elaboración contemporánea.',
+    descripcion: 'Tronco de pirámide cuadrangular: dos bases cuadradas paralelas de distinto tamaño y caras laterales trapezoidales.',
+    alt: 'Ilustración moderna de un tronco de pirámide ocre que destaca sus dos bases paralelas de tamaños diferentes.'
+  }
+};
+let caso = 'grupo';
+let paso = 0;
+const notas = Object.fromEntries(CASOS.map(id => [id,{observacion:'',conclusion:''}]));
+const respuestas = Object.fromEntries(CASOS.map(id => [id,'']));
+const medidasGuardadas = Object.fromEntries(CASOS.map(id => [id,null]));
+const progreso = Object.fromEntries(CASOS.map(id => [id,{feedback:'',error:false,argumento:false,calculo:'',prisma:''}]));
+
+function guardarNotas() {
+  notas[caso].observacion = $('observacion').value;
+  notas[caso].conclusion = $('conclusion').value;
+  const controles = [...$('medidas').querySelectorAll('input')];
+  if (controles.length) medidasGuardadas[caso] = Object.fromEntries(controles.map(x => [x.id,x.value]));
+}
+function mostrarPaso(numero, moverFoco = false) {
+  paso = Math.max(0,Math.min(3,numero));
+  for(let i=0;i<4;i++) $('paso'+i).hidden = i!==paso;
+  document.querySelectorAll('[data-paso]').forEach(b => {
+    const activo = Number(b.dataset.paso)===paso;
+    b.classList.toggle('selected',activo);
+    if(activo) b.setAttribute('aria-current','step'); else b.removeAttribute('aria-current');
+  });
+  $('anterior').disabled = paso===0;
+  $('siguiente').disabled = paso===3;
+  $('indicador-paso').textContent = `Etapa ${paso+1} de 4`;
+  if(moverFoco){ const h=$('titulo-paso'+paso); h.tabIndex=-1;h.focus({preventScroll:true}); h.scrollIntoView({block:'start',behavior:'instant'}); }
+}
+function mostrarCaso(id) {
+  if (!Object.hasOwn(ESCENAS,id)) return;
+  guardarNotas();
+  caso=id;
+  const e=ESCENAS[id], inf=INFO[id], ev=progreso[id];
+  document.querySelectorAll('[data-caso]').forEach(b => {
+    const activo=b.dataset.caso===id;
+    b.classList.toggle('selected',activo);
+    b.setAttribute('aria-pressed',String(activo));
+  });
+  $('contexto').textContent=e.contexto;
+  $('infografia').src=ILUSTRACIONES[id]; $('infografia').alt=inf.alt;
+  $('pista').textContent=inf.pista; $('referencia-caso').textContent=inf.pagina;
+  $('fuente-titulo').textContent=inf.titulo;
+  $('dato-historico').textContent=e.contexto;
+  $('doc-testimonio').textContent=inf.testimonio;
+  $('doc-edicion').textContent=inf.edicion;
+  $('doc-limite').textContent=e.incertidumbre;
+  $('tit-modelo').textContent=inf.modelo;
+  $('visor-piramide').setAttribute('src',e.modelo);
+  $('visor-piramide').setAttribute('alt',inf.descripcion);
+  $('alternativa').textContent=inf.descripcion;
+  $('pregunta').textContent=e.pregunta;
+  const opciones=$('opciones');opciones.replaceChildren();
+  const legend=document.createElement('legend');legend.textContent='Selecciona la explicación más rigurosa';opciones.append(legend);
+  for(const op of e.opciones){
+    const lab=document.createElement('label'); const radio=document.createElement('input');
+    radio.type='radio'; radio.name='preguntaHistorica';radio.value=op.id;
+    radio.checked=respuestas[id]===op.id;
+    radio.addEventListener('change',()=>{respuestas[id]=op.id;ev.feedback='';$('feedback').hidden=true});
+    lab.append(radio,document.createTextNode(op.texto));opciones.append(lab);
+  }
+  $('feedback').hidden=!ev.feedback;$('feedback').textContent=ev.feedback;$('feedback').classList.toggle('error',ev.error);
+  $('texto-argumento').textContent=e.incertidumbre;
+  $('argumento').hidden=!ev.argumento;$('mostrar-argumento').setAttribute('aria-expanded',String(ev.argumento));
+  $('grupo-calc').hidden=id==='p19'; $('corte-info').hidden=id!=='p19';
+  const medidas=$('medidas');medidas.replaceChildren();
+  const defs=id==='grupo' ? [
+    ['base','Base del triángulo (cm)',6],
+    ['altura-base','Altura del triángulo (cm)',4],
+    ['altura-piramide','Altura perpendicular de la pirámide (cm)',9]
+  ] : id==='p18' ? [
+    ['lado','Lado de la base cuadrada (cm)',6],
+    ['altura-piramide','Altura perpendicular de la pirámide (cm)',9]
+  ] : [];
+  for(const [clave,label,valor] of defs){
+    const lab=document.createElement('label');lab.textContent=label;
+    const input=document.createElement('input');input.id='m-'+clave;
+    input.type='number';input.min='0.1';input.max='100000';input.step='any';
+    input.value=medidasGuardadas[id]?.[input.id]??String(valor);input.dataset.default=String(valor);
+    input.addEventListener('input',()=>{
+      $('calculo-respuesta').textContent='Pulsa «Calcular volumen» para comprobar las nuevas medidas.';
+      $('calculo-respuesta').classList.remove('error');$('comparacion-prisma').textContent='';
+      ev.calculo='';ev.prisma='';
+    });lab.append(input);medidas.append(lab);
+  }
+  $('calculo-respuesta').textContent=ev.calculo||'Introduce las medidas y calcula el volumen.';
+  $('calculo-respuesta').classList.toggle('error',ev.calculo.startsWith('Error:'));
+  $('comparacion-prisma').textContent=ev.prisma;
+  $('observacion').value=notas[id].observacion;$('conclusion').value=notas[id].conclusion;
+  $('mensaje-descarga').textContent='';$('copia-panel').hidden=true;
+  mostrarPaso(0);
+}
+function comprobar(){
+  const input=document.querySelector('input[name="preguntaHistorica"]:checked');
+  const panel=$('feedback');panel.hidden=false;
+  if(!input){panel.textContent='Selecciona primero una respuesta.';panel.classList.add('error');progreso[caso].feedback=panel.textContent;progreso[caso].error=true;return;}
+  const r=resolverPregunta(caso,input.value);
+  panel.textContent=(r.correcta?'¡Interpretación justificada! ':'Revisa la evidencia. ')+r.explicacion;
+  panel.classList.toggle('error',!r.correcta);
+  progreso[caso].feedback=panel.textContent;progreso[caso].error=!r.correcta;
+}
+function calcular(){
+  if(caso==='p19')return;
+  const informe=$('calculo-respuesta'); const resumen=$('comparacion-prisma');
+  try {
+    const num=id => {const el=$('m-'+id);if(!el || !el.value.trim()) throw Error('Falta una medida.');
+      const n=Number(el.value);if(!Number.isFinite(n)||n<=0||n>100000)throw Error('Introduce números positivos no superiores a 100000.');return n;};
+    let base,altura,volumen;
+    if(caso==='grupo'){const b=num('base'),hbase=num('altura-base');altura=num('altura-piramide');base=b*hbase/2;volumen=volumenTriangular(b,hbase,altura);}
+    else{const l=num('lado');altura=num('altura-piramide');base=l*l;volumen=volumenCuadrangular(l,altura);}
+    const mostrar=n=>Number(n.toPrecision(10)).toLocaleString('es-ES',{maximumFractionDigits:8});
+    informe.classList.remove('error'); informe.textContent=`Área de la base: ${mostrar(base)} cm². Volumen: ${mostrar(base)} × ${mostrar(altura)} ÷ 3 = ${mostrar(volumen)} cm³.`;
+    resumen.textContent=`Un prisma con igual base y altura ocuparía ${mostrar(base*altura)} cm³: tres veces el volumen de esta pirámide.`;
+    progreso[caso].calculo=informe.textContent; progreso[caso].prisma=resumen.textContent;
+  }catch(e){informe.classList.add('error');informe.textContent='Error: '+e.message;resumen.textContent='';progreso[caso].calculo=informe.textContent;progreso[caso].prisma='';}
+}
+function cuaderno(){
+  guardarNotas();const e=ESCENAS[caso], n=notas[caso];
+  return ['GEOMETRÍA EN TUS MANOS — LAS PIRÁMIDES DEL PAPIRO',
+    'P4.5.2-P · Cuaderno escolar',`Caso: ${e.titulo}`,
+    `Estudio: Kelly (2026), figura ${e.figura}, doi:10.1016/j.hm.2026.103248`,
+    'Los dibujos e ilustraciones digitales son contemporáneos; NO son el papiro.',
+    '', 'OBSERVACIÓN:',n.observacion,'','CONCLUSIÓN / LÍMITES:',n.conclusion,'',
+    'Datos matemáticos de la calculadora: ejemplos escolares, no valores originales.',
+    'P5 NO-GO: no se han acreditado ensayos físicos de RA.'].join('\n');
+}
+function descargar(){
+  const texto=cuaderno();
+  try {const url=URL.createObjectURL(new Blob(['\uFEFF'+texto],{type:'text/plain;charset=utf-8'}));
+    const a=document.createElement('a');a.href=url;a.download='cuaderno_piramides_'+caso+'.txt';document.body.append(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),3000);
+    $('mensaje-descarga').textContent='Se ha solicitado la descarga. Si no aparece, utiliza «Mostrar texto para copiar».';
+  }catch(e){$('mensaje-descarga').textContent='No fue posible iniciar la descarga. Usa «Mostrar texto para copiar».';}
+}
+function textoCopiable(){const t=$('texto-copiable');t.value=cuaderno();$('copia-panel').hidden=false;t.focus();t.select();$('mensaje-descarga').textContent='Puedes copiar el texto seleccionado y guardarlo en tu dispositivo.';}
+
+for(const b of document.querySelectorAll('[data-caso]'))b.addEventListener('click',()=>mostrarCaso(b.dataset.caso));
+for(const b of document.querySelectorAll('[data-paso]'))b.addEventListener('click',()=>mostrarPaso(Number(b.dataset.paso),true));
+$('anterior').addEventListener('click',()=>mostrarPaso(paso-1,true));
+$('siguiente').addEventListener('click',()=>mostrarPaso(paso+1,true));
+$('verificar').addEventListener('click',comprobar);
+$('mostrar-argumento').addEventListener('click',()=>{const abrir=$('argumento').hidden;$('argumento').hidden=!abrir;$('mostrar-argumento').setAttribute('aria-expanded',String(abrir));progreso[caso].argumento=abrir;});
+$('calcular').addEventListener('click',calcular);
+$('reset-medidas').addEventListener('click',()=>{$('medidas').querySelectorAll('input').forEach(e=>e.value=e.dataset.default);calcular()});
+$('descargar').addEventListener('click',descargar);
+$('mostrar-texto').addEventListener('click',textoCopiable);
+$('borrar').addEventListener('click',()=>{notas[caso]={observacion:'',conclusion:''};$('observacion').value='';$('conclusion').value='';$('mensaje-descarga').textContent='Las notas de este caso se han borrado.';$('copia-panel').hidden=true;});
+mostrarCaso(new URLSearchParams(location.search).get('caso') in ESCENAS ? new URLSearchParams(location.search).get('caso') : 'grupo');
