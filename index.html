@@ -9,53 +9,89 @@
 <title>Geometría en tus manos | Laboratorio matemático e histórico</title>
 <link rel="stylesheet" href="sistema-visual.css">
 <link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="portada-candidata.css">
+<link rel="stylesheet" href="portada-threejs.css">
+<script src="portada-threejs.js" defer></script>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
 <script src="catalogo.js?v=escalas1" defer></script>
 <script src="interfaz.js?v=escalas1" defer></script>
 <link rel="stylesheet" href="historia-aventura.css?v=historia2">
 </head>
-<body>
+<body class="portada-v1">
 <a class="skip" href="#laboratorio">Saltar al laboratorio</a>
 <header class="barra-superior" id="inicio">
  <div class="contenedor barra-superior-inner">
   <a class="marca" href="./" aria-label="Geometría en tus manos, inicio"><span class="marca-simbolo" aria-hidden="true">◇</span><span><strong>Geometría</strong><small>EN TUS MANOS</small></span></a>
   <nav class="nav-superior" aria-label="Navegación principal">
-    <a href="#laboratorio">Figuras 3D</a><a href="#retos">Retos</a><a href="#historia">Historia</a>
+    <a href="#laboratorio">Figuras 3D</a><a href="escalas.html">Cotas y escalas</a><a href="#historia">Historia</a><a href="#retos">Retos</a>
   </nav>
   <span class="etiqueta-proyecto">Prototipo docente</span>
  </div>
 </header>
 <main>
 <section class="hero" aria-labelledby="hero-titulo">
+ <span class="palabra-fondo" aria-hidden="true">FORMA</span>
  <div class="contenedor hero-inner">
   <div class="hero-copy">
-   <p class="eyebrow hero-eyebrow"><span class="punto-vivo" aria-hidden="true"></span> LABORATORIO DE MATEMÁTICAS · EDUCACIÓN PRIMARIA</p>
+   <p class="eyebrow hero-eyebrow"><span class="punto-vivo" aria-hidden="true"></span> MATEMÁTICAS · EDUCACIÓN PRIMARIA</p>
    <h1 id="hero-titulo">Observa la forma.<br><em>Descubre las reglas.</em></h1>
    <p class="hero-desc">Gira cuerpos geométricos, investiga sus propiedades y descubre cómo se dibujaban y calculaban las figuras en el mundo antiguo.</p>
    <div class="hero-acciones"><a class="btn-hero" href="#laboratorio">Explorar las figuras <span aria-hidden="true">↗</span></a><a class="link-hero" href="#historia">Descubrir la historia <span aria-hidden="true">→</span></a></div>
    <div class="hero-indicadores" aria-label="Contenido del laboratorio"><span><strong>07</strong> cuerpos</span><span><strong>03</strong> recorridos</span><span><strong>3D + RA</strong> en evaluación</span></div>
   </div>
-  <div class="hero-escena" aria-hidden="true">
-    <svg class="hero-dibujo" viewBox="0 0 480 438" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="s-face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bcebe7"/><stop offset="1" stop-color="#5aa9b4"/></linearGradient><linearGradient id="p-face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9d99e"/><stop offset="1" stop-color="#c8874a"/></linearGradient></defs>
-      <circle cx="250" cy="208" r="162" fill="none" stroke="#b6e2df" stroke-opacity=".15"/>
-      <circle cx="250" cy="208" r="119" fill="none" stroke="#b6e2df" stroke-opacity=".17" stroke-dasharray="4 7"/>
-      <path d="M30 370 444 79 M48 51 431 394" stroke="#b6e2df" stroke-opacity=".13"/>
-      <ellipse cx="254" cy="347" rx="129" ry="19" fill="#051d2b" opacity=".33"/>
-      <path d="M244 62 350 125 246 190 142 125Z" fill="url(#s-face)" stroke="#d5f5ef" stroke-width="2"/>
-      <path d="M142 125 246 190 246 325 142 260Z" fill="#3f9aab" stroke="#a6dcd9" stroke-width="2"/>
-      <path d="M246 190 350 125 350 260 246 325Z" fill="#176a86" stroke="#a6dcd9" stroke-width="2"/>
-      <path d="M246 190V325" stroke="#d7f5f2" stroke-width="1" opacity=".8"/>
-      <path d="M74 270 124 178 177 283Z" fill="url(#p-face)" stroke="#f6ddb6" stroke-width="2"/>
-      <path d="M124 178 177 283 203 248Z" fill="#ad693c" stroke="#f6ddb6" stroke-width="2"/>
-      <circle cx="365" cy="85" r="37" fill="#f1c58b"/><ellipse cx="365" cy="85" rx="16" ry="37" fill="none" stroke="#aa784a" stroke-width="1.7"/><path d="M328 85h74" stroke="#aa784a" stroke-width="1.7"/>
-      <circle cx="113" cy="63" r="5" fill="#e4bc80"/><circle cx="413" cy="322" r="4" fill="#a8d3d2"/>
-      <text x="381" y="227" fill="#c3e3e3" font-size="15" font-family="monospace" letter-spacing="1">V = a³</text>
-      <text x="67" y="333" fill="#e2c69f" font-size="12" font-family="monospace">FIG. 01</text>
-    </svg>
-    <div class="escena-legenda"><span class="escena-circulo" aria-hidden="true"></span> GEOMETRÍA QUE SE PUEDE EXPLORAR</div>
-  </div>
+  <figure class="hero-escena" data-cover-scene>
+   <div class="escena-lienzo" data-scene-frame>
+   <svg class="hero-dibujo escena-estatica" data-scene-fallback viewBox="0 0 620 570" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="escena-titulo escena-desc">
+    <title id="escena-titulo">Cuerpos geométricos sobre una plataforma circular</title>
+    <desc id="escena-desc">Ilustración contemporánea de un cubo, una esfera y una pirámide. Sus proporciones son compositivas y no expresan medidas ni escala.</desc>
+    <defs>
+     <linearGradient id="pc-superior" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5f4e5"/><stop offset="1" stop-color="#6da9ad"/></linearGradient>
+     <linearGradient id="pc-izquierda" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#86c8c3"/><stop offset="1" stop-color="#327b89"/></linearGradient>
+     <linearGradient id="pc-derecha" x1="0" y1="0" x2="1" y2=".7"><stop stop-color="#327c91"/><stop offset="1" stop-color="#0b3f57"/></linearGradient>
+     <linearGradient id="pc-papel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2ede8"/><stop offset="1" stop-color="#95b8b8"/></linearGradient>
+     <radialGradient id="pc-esfera" cx=".3" cy=".25" r=".8"><stop stop-color="#ffe7b9"/><stop offset=".5" stop-color="#e7b875"/><stop offset="1" stop-color="#9c683c"/></radialGradient>
+    </defs>
+    <circle cx="325" cy="245" r="210" fill="none" stroke="#88b6b7" stroke-opacity=".24"/>
+    <circle cx="325" cy="245" r="170" fill="none" stroke="#88b6b7" stroke-opacity=".22" stroke-dasharray="2 9"/>
+    <path d="M105 246H552 M326 33V458" fill="none" stroke="#9bc8c6" stroke-opacity=".13"/>
+    <ellipse cx="319" cy="474" rx="220" ry="43" fill="#071f2c" opacity=".4"/>
+    <path d="M98 409V432C98 508 540 508 540 432V409Z" fill="#426a76"/>
+    <ellipse cx="319" cy="409" rx="221" ry="64" fill="url(#pc-papel)" stroke="#d6e9e4" stroke-width="1.5"/>
+    <ellipse cx="319" cy="409" rx="177" ry="48" fill="none" stroke="#638d98" stroke-opacity=".35"/>
+    <ellipse cx="320" cy="388" rx="102" ry="22" fill="#214d61" opacity=".2"/>
+    <path d="M320 110 460 190 320 274 180 190Z" fill="url(#pc-superior)" stroke="#d8f3e9" stroke-width="2"/>
+    <path d="M180 190 320 274 320 433 180 350Z" fill="url(#pc-izquierda)" stroke="#bbddd7" stroke-width="2"/>
+    <path d="M320 274 460 190 460 350 320 433Z" fill="url(#pc-derecha)" stroke="#a8ccc9" stroke-width="2"/>
+    <path d="M320 274V433 M180 190 320 274 460 190" stroke="#e0eee8" stroke-width="1.2" fill="none"/>
+    <path d="M218 212 289 255 M338 299 422 250" stroke="#effbf4" stroke-opacity=".15" stroke-width="3"/>
+    <ellipse cx="482" cy="364" rx="56" ry="16" fill="#264e5c" opacity=".2"/>
+    <circle cx="485" cy="311" r="59" fill="url(#pc-esfera)"/>
+    <ellipse cx="485" cy="311" rx="23" ry="59" fill="none" stroke="#795933" stroke-opacity=".45" stroke-width="1.5"/>
+    <path d="M427 311C451 327 518 327 543 311" fill="none" stroke="#795933" stroke-opacity=".4" stroke-width="1.5"/>
+    <ellipse cx="146" cy="405" rx="54" ry="13" fill="#264e5c" opacity=".17"/>
+    <path d="M145 282 83 401 145 425Z" fill="#efd39d" stroke="#f7e4bd" stroke-width="1.5"/>
+    <path d="M145 282 145 425 208 396Z" fill="#cb945c" stroke="#f7e4bd" stroke-width="1.5"/>
+    <path d="M83 401 151 376 208 396" fill="none" stroke="#805a37" stroke-dasharray="4 5" stroke-opacity=".5"/>
+    <circle cx="129" cy="122" r="6" fill="#e9c797"/><circle cx="528" cy="112" r="4" fill="#b9dbd2"/>
+    <path d="M498 145H558 M528 115V175" stroke="#92bdb7" stroke-opacity=".4"/>
+   </svg>
+   <canvas aria-hidden="true" hidden></canvas></div>
+   <figcaption class="escena-legenda" data-scene-caption>ILUSTRACIÓN GEOMÉTRICA · SIN ESCALA</figcaption>
+   <p class="escena-accesible">Cubo, esfera y pirámide sobre una plataforma circular. Composición didáctica actual: las proporciones no representan medidas ni escala.</p>
+   <div class="escena-controles" data-scene-controls role="group" aria-label="Girar la escena de la portada" hidden>
+    <button type="button" data-scene-action="left" aria-label="Girar a la izquierda">←</button>
+    <button type="button" data-scene-action="right" aria-label="Girar a la derecha">→</button>
+    <button type="button" data-scene-action="reset">Restablecer</button>
+    <button type="button" data-scene-action="auto" aria-pressed="false">Giro automático</button>
+   </div>
+   <p class="escena-ayuda" data-scene-status aria-live="polite">Cubo, esfera y pirámide: observa sus formas y continúa hacia el laboratorio.</p>
+  </figure>
  </div>
+ <nav class="contenedor puertas" aria-label="Recorridos del laboratorio">
+  <a class="puerta" href="#laboratorio"><span class="puerta-numero">01 / EXPLORAR</span><span class="puerta-titulo">La forma en tus manos <span aria-hidden="true">↗</span></span><span class="puerta-desc">Gira siete cuerpos y reconoce sus elementos.</span></a>
+  <a class="puerta puerta-medidas" href="escalas.html"><span class="puerta-numero">02 / MEDIR</span><span class="puerta-titulo">De la cota a la escala <span aria-hidden="true">↗</span></span><span class="puerta-desc">Compara el cubo nominal de 12 cm con el de papel de 3 cm: 1:4.</span></a>
+  <a class="puerta" href="#historia"><span class="puerta-numero">03 / INVESTIGAR</span><span class="puerta-titulo">Preguntas a los documentos <span aria-hidden="true">↗</span></span><span class="puerta-desc">Distingue las fuentes antiguas de los modelos actuales.</span></a>
+ </nav>
 </section>
 <section class="contenedor ruta-rapida" aria-label="Cómo empezar">
   <h2>Empieza en tres pasos</h2>
