@@ -1,5 +1,22 @@
 # P4.5.4-C: control de publicación de recursos visuales
 
+## Revisión selectiva de cotas y escalas (11-10-2026)
+
+Esta ampliación parte del `main` integrado `02815652f727c58479d25d00d1376ba18d24fb5a`, que incluye la corrección del taller del escriba. Los antecedentes de la sección siguiente conservan sus fechas y su línea base original.
+
+`escalas_revision.json` registra una decisión métrica por cada una de las 14 imágenes y la extensión X/Y/Z de los 11 GLB usados por las actividades. Siete modelos nominales coinciden con el catálogo. Los cuatro modelos con nombre `historico_*` son representaciones modernas relativas; sus extensiones informáticas no acreditan medidas de un objeto antiguo. Se mantienen las unidades históricas de las actividades sin convertirlas a centímetros.
+
+Se explicitan las medidas del catálogo mediante nombres de elementos: arista, diámetro, base, altura perpendicular y longitud del prisma. La lámina de volumen recibe cotas `a = 6 m` y `h = 4 m`, conservando el aviso de dibujo sin escala. Son datos escolares modernos y no se atribuyen al papiro. Se mantiene la plantilla A4 original: seis caras de 30 mm y línea de control de 30 mm. La actividad `escalas.html` compara su cubo de papel de 3 cm con el cubo nominal de 12 cm, con una relación de longitudes 1:4. El ajuste de impresión al 100 % corresponde al archivo, no a esa relación entre cubos.
+
+El control local lee los vértices binarios de los GLB, sin confiar en los límites declarados de los accessors. Usa metros glTF y convierte a centímetros. Admite únicamente las escenas estáticas y sin transformaciones de nodo de los modelos actuales; rechaza otras configuraciones. Tolerancia absoluta: 0,0001 cm por eje para los float32. Los USDZ preliminares y la conversión Quick Look quedan fuera de este control. La revisión no acredita tamaño físico de RA, compatibilidad real ni accesibilidad integral.
+
+```bash
+python3 scripts/verificar_escalas.py
+python3 -m unittest discover -s tests -v
+```
+
+Se actualizan las huellas de la lámina modificada y el manifiesto. Las revisiones humanas continúan pendientes; no se convierten decisiones métricas en autorizaciones de publicación. Verificación local ejecutada: 22 pruebas unitarias superadas, control métrico y control técnico de publicación en PASS, selección y rótulos de los siete modelos comprobados con DOM simulado, enlaces locales y anclas de la actividad comprobados. Se inspeccionó visualmente la lámina de cotas renderizada; no se acredita una prueba de la nueva página en un navegador real. Después de integrar el parche, queda comprobar la web publicada en escritorio y móvil y efectuar los ensayos físicos de RA ya previstos.
+
 ## Dictamen y alcance
 
 Candidato técnico para revisión. **La autorización definitiva por imagen permanece en NO-GO.** No se han recibido actas humanas, no hay acreditación individual de titularidad/licencia de los SVG y cuatro archivos superados/rechazados siguen presentes en el repositorio público. No se borra ni fusiona automáticamente ningún archivo.
