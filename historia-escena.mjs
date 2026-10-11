@@ -45,7 +45,7 @@ export function mountCover(root,T,options={}) {
   function sync(){buttons.auto.setAttribute('aria-pressed',String(automatic));buttons.auto.textContent=automatic?'Pausar giro':'Giro automático';buttons.auto.disabled=reduced.matches;}
   function schedule(){if(!renderer||disposed||!visible||doc.hidden||raf)return;raf=env.requestAnimationFrame(draw);}
   function draw(time){raf=0;if(!renderer||disposed||!visible||doc.hidden){last=0;return;}
-    if(canAnimate()){const dt=last?Math.min((time-last)/1000,.06):0;model.group.rotation.y+=dt*.22;last=time;}else last=0;
+    if(canAnimate()){const dt=last?Math.min((time-last)/1000,.25):0;model.group.rotation.y+=dt*.22;last=time;}else last=0;
     try{renderer.render(model.scene,model.camera);}catch(_){fail();return;}
     if(canAnimate())schedule();
   }
