@@ -1,0 +1,145 @@
+{
+  "project_id": "PRUEBAS_RA_PORTADA_V1",
+  "version": "1.0.0",
+  "canvas": {
+    "width": 1440,
+    "height": 1000,
+    "unit": "px",
+    "background": "#123748"
+  },
+  "safe_area": {
+    "top": 20,
+    "right": 24,
+    "bottom": 40,
+    "left": 24
+  },
+  "grid": {
+    "columns": 2,
+    "gap": 16
+  },
+  "layers": [
+    {
+      "id": "fondo",
+      "type": "decoration",
+      "z": 0
+    },
+    {
+      "id": "escena",
+      "type": "image",
+      "z": 1,
+      "asset_id": "geometria-v1"
+    },
+    {
+      "id": "titulo",
+      "type": "text",
+      "z": 2,
+      "content": "Observa la forma. Descubre las reglas."
+    },
+    {
+      "id": "acciones",
+      "type": "cta",
+      "z": 3
+    },
+    {
+      "id": "navegacion",
+      "type": "cta",
+      "z": 4
+    }
+  ],
+  "typography": {
+    "families": [
+      "system-ui",
+      "sans-serif"
+    ],
+    "styles": {
+      "titulo": "clamp(2.75rem,4.6vw,4.3rem)",
+      "cuerpo": "1.06rem / 1.65",
+      "navegacion": ".95rem; área mínima 44px de altura"
+    }
+  },
+  "colors": [
+    {
+      "token": "fondo",
+      "value": "#123748",
+      "role": "Fondo sólido y zonas oscuras"
+    },
+    {
+      "token": "luz",
+      "value": "#235365",
+      "role": "Zona más clara del fondo"
+    },
+    {
+      "token": "titulo",
+      "value": "#ffffff",
+      "role": "Título"
+    },
+    {
+      "token": "acento",
+      "value": "#f1d1a0",
+      "role": "Título secundario"
+    },
+    {
+      "token": "cuerpo",
+      "value": "#deebe7",
+      "role": "Texto de portada"
+    },
+    {
+      "token": "papel",
+      "value": "#f6f5ef",
+      "role": "Tarjetas"
+    },
+    {
+      "token": "tinta",
+      "value": "#173344",
+      "role": "Texto sobre papel"
+    }
+  ],
+  "assets": [
+    {
+      "id": "geometria-v1",
+      "path": "portada-candidata.html#escena-titulo",
+      "provenance": "generated",
+      "rights_status": "Ilustración vectorial creada en esta sesión. Autorización humana definitiva pendiente; no se presume licencia externa."
+    },
+    {
+      "id": "referencia",
+      "path": "upload/portada-sylva.html",
+      "provenance": "user_provided",
+      "use": "Referencia de composición, no incorporada al candidato"
+    }
+  ],
+  "responsive": [
+    {
+      "max_width": 1050,
+      "behavior": "Ocultar etiqueta secundaria y ajustar espacios"
+    },
+    {
+      "max_width": 800,
+      "behavior": "Título, escena y tarjetas en una columna"
+    },
+    {
+      "max_width": 480,
+      "behavior": "Navegación en dos columnas y título en rem"
+    }
+  ],
+  "accessibility": {
+    "alt_text": "Ilustración contemporánea de un cubo, una esfera y una pirámide, sin escala. El laboratorio ofrece interacción separada.",
+    "contrast_status": "verified",
+    "motion": "Sin animación añadida; se hereda reducción de movimiento",
+    "focus": "Foco visible específico sobre fondo oscuro y tarjetas claras",
+    "contrast_scope": "Pares textuales especificados para la portada; no auditoría integral del laboratorio."
+  },
+  "exports": [
+    {
+      "format": "HTML/CSS",
+      "width": 1440,
+      "height": 1000,
+      "unit": "px"
+    }
+  ],
+  "tests_pending": [
+    "Navegador real de la candidata: navegación, móvil y zoom",
+    "Revisión humana de composición y autorización visual",
+    "Medición física de impresión y RA; aplazada por el usuario"
+  ]
+}

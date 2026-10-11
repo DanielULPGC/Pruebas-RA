@@ -1,0 +1,9 @@
+{
+  "base_commit": "7d0e11e59a83d345ddf8e1845ceedeac92042a5c",
+  "candidate": "portada-candidata.html",
+  "production_index_changed": false,
+  "new_dependencies": [],
+  "publication": "NO PUBLICADA",
+  "physical_tests": "PENDIENTES, aplazados por el usuario",
+  "review": "Interna, con exposición previa a las decisiones de diseño; no independiente."
+}

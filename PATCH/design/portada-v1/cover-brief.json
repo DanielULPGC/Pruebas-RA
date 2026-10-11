@@ -1,0 +1,93 @@
+{
+  "project_id": "PRUEBAS_RA_PORTADA_V1",
+  "purpose": "Adaptar la portada a la referencia aportada y orientar a tres recorridos educativos sin sustituir la versión publicada.",
+  "cover_type": "web_hero",
+  "audiences": [
+    "Alumnado de 5.º y 6.º de Primaria",
+    "Profesorado"
+  ],
+  "formats": [
+    {
+      "name": "escritorio",
+      "width": 1440,
+      "height": 1000,
+      "unit": "px"
+    },
+    {
+      "name": "móvil",
+      "width": 390,
+      "height": 844,
+      "unit": "px"
+    }
+  ],
+  "content": {
+    "exact_text": [
+      {
+        "role": "marca",
+        "text": "Geometría en tus manos"
+      },
+      {
+        "role": "titulo",
+        "text": "Observa la forma. Descubre las reglas."
+      },
+      {
+        "role": "estado",
+        "text": "3D + RA en evaluación"
+      }
+    ],
+    "editable_text": [
+      "Orientación de recorridos y leyenda de la ilustración"
+    ]
+  },
+  "brand": {
+    "palette": "Azul petróleo, verde mineral y papel cálido",
+    "fonts": "Fuentes de sistema, sin nuevas descargas"
+  },
+  "constraints": [
+    "Mantener el laboratorio y la lógica de selección",
+    "No atribuir escala a la escena",
+    "No introducir modelos arqueológicos en la portada",
+    "No sustituir index.html ni publicar",
+    "No añadir animación continua ni dependencias",
+    "Conservar NO_GO de autorización visual y P5"
+  ],
+  "references": {
+    "composition": "Referencia aportada portada-sylva.html: navegación flotante, escena central y tarjetas claras; no se reutilizan su código, fotos, fuentes ni motor 3D."
+  },
+  "assumptions": [
+    "Se mantiene la dirección visual discutida; no se reabre una selección entre tres conceptos.",
+    "La primera versión utiliza una ilustración estática; la manipulación 3D permanece en el laboratorio."
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "C1",
+      "criterion": "Identidad y título conservados",
+      "verification": "Comparación de texto normalizado"
+    },
+    {
+      "id": "C2",
+      "criterion": "Laboratorio, catálogo y escalas sin cambios",
+      "verification": "Comparación de bytes y sección heredada"
+    },
+    {
+      "id": "C3",
+      "criterion": "Tres recorridos y navegación con destinos existentes",
+      "verification": "Análisis de HTML y fragmentos"
+    },
+    {
+      "id": "C4",
+      "criterion": "Escena explícitamente sin escala y procedencia declarada",
+      "verification": "Inspección del SVG y especificación"
+    },
+    {
+      "id": "C5",
+      "criterion": "Presentación legible en móvil, escritorio y ampliación",
+      "verification": "Render estático parcial y prueba posterior en navegador"
+    },
+    {
+      "id": "C6",
+      "criterion": "Sin dependencias externas añadidas",
+      "verification": "Comparación de scripts, estilos, imágenes y referencias"
+    }
+  ]
+}

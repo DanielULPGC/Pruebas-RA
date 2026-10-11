@@ -1,0 +1,31 @@
+{
+  "resultado": "PASS",
+  "tipo": "Geometría y proyección con Three.js real en CPU; interacción con DOM sintético y renderer simulado. No prueba GPU ni navegador.",
+  "three": "180",
+  "comprobaciones": 37,
+  "encuadre_inicial": {
+    "maxX": 0.7946844881793177,
+    "maxY": 0.8830565844652091,
+    "minZ": 0.9738433546080392,
+    "maxZ": 0.9887390513461389
+  },
+  "encuadre_giro_24_angulos": {
+    "maxX": 0.8073422837759057,
+    "maxY": 0.9443097582358957,
+    "minZ": 0.9738246315110479,
+    "maxZ": 0.9888722313083464
+  },
+  "controles": [
+    "giro por botones y arrastre",
+    "restablecer",
+    "giro automático optativo",
+    "reducir movimiento",
+    "parada fuera de pantalla y pestaña oculta",
+    "sin WebGL y pérdida de contexto"
+  ],
+  "pendientes": [
+    "Renderizado WebGL real",
+    "aspecto en móvil, teclado real y zoom",
+    "convivencia con model-viewer en navegador"
+  ]
+}

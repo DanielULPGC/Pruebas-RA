@@ -1,0 +1,25 @@
+{
+  "revision": "Interna; realizada por quien preparó el diseño, con exposición a las decisiones.",
+  "resultado": "Candidata preparada para revisión; no publicada.",
+  "decisiones": [
+    "Paleta papel, tinta, ocre y verde común a las tres áreas.",
+    "Introducciones en forma de preguntas y fichas con iconos contemporáneos.",
+    "Bloque de portada con título y recorrido sobre dos tarjetas para darles anchura.",
+    "Ilustraciones principales visibles en móvil; etapas en cuadrícula de dos columnas.",
+    "Nota técnica original íntegra dentro de un desplegable para profesorado; límite de representación visible antes de los retos."
+  ],
+  "evidencia": [
+    "30 controles de fuente y contraste PASS.",
+    "160 comprobaciones en DOM sintético PASS: cinco casos, etapas, respuestas, notas y calculadoras.",
+    "Revisión visual documental aproximada en escritorio y móvil, con sustituciones de controles para el motor documental."
+  ],
+  "pendientes": [
+    "Navegador real y zoom de la candidata completa, teclado real y lector de pantalla.",
+    "Visor 3D y descargas en la candidata completa servida por HTTP/HTTPS.",
+    "Revisión con alumnado y autorización visual definitiva."
+  ],
+  "alcance_preservado": [
+    "Corpus científico, valores, unidades, módulos, SVG externos, GLB y actividad de escalas.",
+    "P5 y autorización visual definitiva siguen en NO_GO; impresión y RA física pendientes."
+  ]
+}

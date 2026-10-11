@@ -1,0 +1,27 @@
+{
+  "base": "a21abcf",
+  "audiencia": "5.º–6.º de Primaria",
+  "alcance": [
+    "Historia de index.html",
+    "Historia de portada-candidata.html",
+    "historia-geometria.html",
+    "piramides-historia.html"
+  ],
+  "direccion": "Investigación documental con casos, ilustraciones y etapas breves",
+  "conservacion": [
+    "Módulos científicos y de interacción idénticos",
+    "Valores y unidades sin modificación",
+    "SVG externos y GLB idénticos",
+    "Notas técnicas originales preservadas"
+  ],
+  "activos": "Miniaturas vectoriales nuevas de geometría y lupa; ilustraciones actuales, sin escala histórica. Procedencia de creación en esta sesión; autorización visual definitiva pendiente.",
+  "animacion": "No se añaden animaciones",
+  "datos_alumnado": "No se añade almacenamiento ni transmisión",
+  "publicacion": "NO_PUBLICADA",
+  "limitaciones": [
+    "Sin prueba de navegador real de la candidata",
+    "Sin evaluación empírica con alumnado",
+    "RA e impresión físicas pendientes"
+  ],
+  "revision": "Interna, con exposición previa a las decisiones; no independiente."
+}
