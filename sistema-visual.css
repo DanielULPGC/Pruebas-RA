@@ -1,0 +1,41 @@
+/* P4.5.1 - Sistema visual: Geometría en tus manos.
+   Tokens de color, tipografía, espaciado y tratamiento accesible.
+   No modifica el motor geométrico ni añade servicios externos. */
+:root {
+  color-scheme: light;
+  --azul-profundo: #123748;
+  --azul-medio: #19576c;
+  --turquesa: #086d78;
+  --turquesa-vivo: #007e86;
+  --tinta: #173344;
+  --tinta-secundaria: #46606b;
+  --fondo: #f4f7f6;
+  --superficie: #ffffff;
+  --superficie-suave: #eaf3f2;
+  --borde: #d7e2e3;
+  --papiro: #f4e9d6;
+  --ocre: #8e572b;
+  --naranja: #f2bd71;
+  --foco: #b25217;
+  --sombra-suave: 0 12px 36px rgba(18,55,72,.08);
+  --sombra-fuerte: 0 24px 56px rgba(18,55,72,.12);
+  --radio-s: 10px;
+  --radio-m: 18px;
+  --radio-l: 26px;
+  --fuente: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --ancho: 1216px;
+}
+html {scroll-behavior: smooth; scroll-padding-top: 88px;}
+*,*::before,*::after {box-sizing: border-box;}
+body {margin: 0; background: var(--fondo); color: var(--tinta); font: 16px/1.56 var(--fuente);}
+button,textarea,input {font: inherit;}
+button {cursor: pointer;}
+a {color: var(--turquesa);}
+button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible,summary:focus-visible {
+  outline: 3px solid var(--foco); outline-offset: 4px;
+}
+[hidden] {display: none !important;}
+@media (prefers-reduced-motion: reduce) {
+  html {scroll-behavior: auto;}
+  *,*::before,*::after {animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important;}
+}
