@@ -6,8 +6,8 @@ let paso=0;
 const elecciones={p2:'',p8:''};
 const textos={p2:{observaciones:'',hipotesis:''},p8:{observaciones:'',hipotesis:''}};
 const posters={
-  p2:'ilustraciones/volumen_p2_ia.webp',
-  p8:'ilustraciones/cubo_p8_ia.webp'
+  p2:'ilustraciones/auditoria_escriba_p2.svg',
+  p8:'ilustraciones/auditoria_escriba_p8.svg'
 };
 const referencias={
   p2:{documentado:'MPER N.S. 1.1, problema 2. El enunciado conservado refiere un cubo de diez pies de arista y los diagramas adjuntos utilizan otras magnitudes.',interpretado:'En el dibujo izquierdo asociado al problema, Kelly interpreta 8 × 5 × 20 pies y detecta la anotación 80, frente a 800 del producto.',pista:'Fíjate en las cifras: ¿la ilustración moderna ayuda a detectar un posible problema de cálculo? ¿Qué comprobarías en la edición científica?',datoshistoricos:'El estudio analiza varios esquemas asociados al problema 2. La atribución de magnitudes y la interpretación del resultado corresponden a la lectura académica del papiro.'},
@@ -33,7 +33,7 @@ function mostrarCaso(id){
  document.querySelectorAll('[data-caso]').forEach(b=>{const on=b.dataset.caso===id;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
  $('contexto').textContent=c.descripcion;
  $('infografia').src=posters[id];
- $('infografia').alt=id==='p2'?'Infografía moderna generada mediante IA con un dibujo conceptual de un ortoedro y el cálculo 8 × 5 × 20 = 800; no reproduce el papiro.':'Infografía moderna generada mediante IA con dibujos conceptuales de un cubo y el cálculo 6 × 6 × 6 = 216; no reproduce el papiro.';
+ $('infografia').alt=id==='p2'?'Ficha textual moderna sobre el problema 2 de Kelly y cálculo actual 8 × 5 × 20 = 800 pies cúbicos; no reproduce el papiro.':'Ficha textual moderna sobre el problema 8 de Kelly y cálculo actual 6 × 6 × 6 = 216 pies cúbicos; no reproduce el papiro.';
  $('pista').textContent=ref.pista;
  $('datos-historicos').textContent=ref.datoshistoricos;
  $('dato-documentado').textContent=ref.documentado;
@@ -65,7 +65,7 @@ function informe(){guardar();const c=CASOS[actual],t=textos[actual];return [
  c.titulo,
  'Testimonio: MPER N.S. 1.1, Kelly (2026), figura '+c.figura,
  'DOI: 10.1016/j.hm.2026.103248',
- 'Aviso: las ilustraciones del taller fueron generadas mediante IA y no son documentos históricos.',
+ 'Aviso: las fichas visuales son modernas y no reproducen dibujos históricos.',
  'La operación escolar moderna no transcribe el procedimiento antiguo.','',
  'OBSERVACIONES:',t.observaciones,'','INTERPRETACIÓN E INCERTIDUMBRE:',t.hipotesis,'',
  'Cálculo escolar actual: '+c.magnitudes.join(' × ')+' = '+calcularVolumen(c.magnitudes)+' pies cúbicos',

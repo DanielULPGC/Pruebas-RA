@@ -19,13 +19,13 @@
 <text x="91" y="568" font-size="17" fill="#94643b" font-weight="700" font-family="DejaVu Sans,sans-serif">NO SE REPRODUCE EL PAPIRO AQUÍ</text>
 <rect x="617" y="167" width="440" height="58" rx="13" fill="#b7e0e6"/>
 <text x="637" y="205" font-size="25" fill="#164d63" font-weight="700" font-family="DejaVu Sans,sans-serif">MODELO DIDÁCTICO ACTUAL</text>
-<path d="M835 260L685 505L872 558Z" fill="url(#cara)" stroke="#956238" stroke-width="4"/>
-<path d="M835 260L872 558L1002 491Z" fill="#b97f4f" stroke="#956238" stroke-width="4"/>
-<path d="M835 260L1002 491L857 456Z" fill="#f6d698" stroke="#956238" stroke-width="4"/>
+<path d="M854 260L685 505L872 558Z" fill="url(#cara)" stroke="#956238" stroke-width="4"/>
+<path d="M854 260L872 558L1002 491Z" fill="#b97f4f" stroke="#956238" stroke-width="4"/>
+<path d="M854 260L1002 491L857 456Z" fill="#f6d698" stroke="#956238" stroke-width="4"/>
 <path d="M685 505L857 456L1002 491" fill="none" stroke="#94633c" stroke-width="3" stroke-dasharray="9 9"/>
-<path d="M835 260L835 503" stroke="#185f80" stroke-width="6" stroke-dasharray="11 9"/>
-<circle cx="835" cy="503" r="7" fill="#185f80"/>
-<text x="846" y="377" font-size="20" font-weight="700" fill="#13495f" font-family="DejaVu Sans,sans-serif">altura</text>
+<path d="M854 260L835 503" stroke="#185f80" stroke-width="6" stroke-dasharray="11 9"/>
+<circle cx="854" cy="503" r="7" fill="#185f80"/>
+<text x="865" y="377" font-size="20" font-weight="700" fill="#13495f" font-family="DejaVu Sans,sans-serif">altura</text>
 <text x="734" y="590" font-size="20" font-weight="700" fill="#20566b" font-family="DejaVu Sans,sans-serif">base cuadrada</text>
 <text x="51" y="670" font-size="20" font-weight="700" fill="#234858" font-family="DejaVu Sans,sans-serif">FUENTE → interpretación académica → modelo actual → razonamiento matemático</text>
 </svg>
