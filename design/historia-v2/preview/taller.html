@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#123C4C">
+<meta name="description" content="Taller interactivo de historia de la geometría: razona con dibujos, cubos y volúmenes del Egipto romano.">
+<title>El taller del escriba · Geometría en tus manos</title>
+<style>:root{color-scheme:light;--ink:#173b4b;--muted:#4d6470;--teal:#0c6b76;--sand:#edc17b;--paper:#f8f7f2;--line:#d7e2e2;--focus:#a34315;--shadow:0 12px 32px rgba(15,58,74,.075)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}a{color:#095c6f}button,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}button[disabled]{opacity:.5;cursor:not-allowed}[hidden]{display:none!important}.wrap{max-width:1160px;margin:0 auto;padding:0 25px}.skip{position:absolute;left:15px;top:-90px;background:#fff;color:var(--ink);padding:11px;z-index:20}.skip:focus{top:8px}.site-header{color:#fff;background:radial-gradient(circle at 78% 38%,#225d6a 0,#143f50 40%,#103343 100%)}.topbar{border-bottom:1px solid #ffffff27;display:flex;align-items:center;justify-content:space-between;gap:25px;padding-top:17px;padding-bottom:17px}.brand{text-decoration:none;color:#fff!important;letter-spacing:.07em;font-size:.78rem;font-weight:500;white-space:nowrap}.brand b{color:#edc17b}.brand-icon{font-size:1.7rem;vertical-align:middle;margin-right:7px;color:#f5c780}.topbar nav{display:flex;gap:21px;flex-wrap:wrap}.topbar nav a{color:#e1f2f4;text-decoration:none;font-size:.83rem}.topbar nav a:hover{text-decoration:underline}.hero{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:15px;align-items:center;padding-top:56px;padding-bottom:62px}.hero-copy{position:relative;z-index:1}.eyebrow,.overline{font-size:.74rem;font-weight:900;letter-spacing:.14em}.eyebrow{color:#f0c989}.hero h1{font:800 clamp(2.5rem,5.6vw,4.85rem)/1.07 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.055em;margin:12px 0 17px}.hero h1 em{color:#f0c686;font-style:normal}.hero-copy>p:not(.eyebrow){font-size:1.08rem;color:#e2f0f2;max-width:625px}.hero-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:27px}.start{display:inline-flex;gap:19px;align-items:center;text-decoration:none;background:#eec27f;color:#173744;border-radius:12px;padding:13px 20px;font-weight:850;box-shadow:0 8px 20px #072a3670}.hero-note{font-size:.8rem;color:#d2e7eb}.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 16px 16px #06233045)}.main{padding-bottom:44px}.limit{display:flex;gap:16px;background:#fdf1dc;border:1px solid #e6c992;color:#664a24;border-radius:12px;padding:15px 19px;margin:30px 0;line-height:1.52;font-size:.88rem}.limit>span{font-size:1.5rem}.case-section h2,.stage h2{font-size:clamp(1.55rem,3vw,2.15rem);letter-spacing:-.035em;line-height:1.2;margin:6px 0 23px}.overline{color:#36798b}.cases{display:grid;grid-template-columns:1fr 1fr;gap:14px}.case{position:relative;min-height:150px;display:flex;flex-direction:column;align-items:start;text-align:left;gap:6px;border:1.5px solid #cbdfe3;border-radius:18px;padding:20px 25px;color:#173e4e;background:white;box-shadow:var(--shadow);transition:transform .16s ease,box-shadow .16s ease}.case:hover{transform:translateY(-2px);box-shadow:0 14px 30px #18455622}.case.active{border-color:#0d6b7b;background:#e6f3f4;box-shadow:0 0 0 2px #147c8850}.case-num{font-size:.7rem;color:#0b6073;font-weight:800;letter-spacing:.12em}.case strong{font-size:1.35rem;letter-spacing:-.025em}.case>span:nth-last-child(2){color:#4d6671;font-size:.87rem;padding-right:35px}.case-arrow{position:absolute;bottom:17px;right:19px;font-size:1.5rem;color:#14697c}.case-context{color:#425d6c;background:#edf3f1;border-radius:12px;padding:16px;margin-top:17px}.steps{margin-top:39px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:9px;border-radius:15px;background:#e6eded}.step{border:0;background:transparent;border-radius:10px;min-height:55px;font-weight:750;color:#486572}.step.selected{color:#fff;background:#16586d}.step-circle{border:1px solid currentColor;display:inline-flex;width:25px;height:25px;align-items:center;justify-content:center;border-radius:50%;font-size:.75rem;margin-right:7px}.stage{background:white;border:1px solid var(--line);border-radius:22px;padding:29px;margin-top:20px;box-shadow:var(--shadow)}.stage-head{display:flex;justify-content:space-between;align-items:start;gap:15px}.stage-head h2{margin-bottom:23px}.stage-mark{font-size:.83rem;letter-spacing:.08em;font-weight:700;color:#96a9b3}.image-panel{display:grid;grid-template-columns:minmax(0,1fr);gap:0}.visual-frame{position:relative;background:#f3dfbd;border:1px solid #e7d4b4;border-radius:16px;overflow:hidden}.visual-frame img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}.visual-overlay{position:absolute;top:12px;right:12px;padding:8px 12px;background:#173a4ef2;color:#fff;border-radius:8px;font-size:.67rem;font-weight:900;letter-spacing:.065em}.image-disclaimer{border-left:4px solid #ba7b3d;background:#fff7e9;border-radius:7px;margin:15px 0;padding:13px 15px;font-size:.86rem;color:#634e36}.investigator{display:flex;gap:17px;padding:22px;border-radius:14px;background:#e9f4f4;margin-top:13px}.investigator h3{margin:0 0 6px}.investigator p{margin:0 0 8px}.icon-em{font-size:2rem;color:#146779}.tiny{font-size:.78rem;color:#496876}.tiny a{font-weight:650}.compare-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.compare-box{border:1px solid var(--line);background:#fbfdfc;border-radius:15px;padding:19px;min-width:0}.compare-box h3{font-size:1.25rem;line-height:1.24;margin:7px 0 12px}.compare-box>p:not(.overline){color:#49606d}.epistemic{padding:16px;border-radius:10px;background:#f5ede0;margin-top:18px}.epistemic strong{display:block;font-size:.82rem;color:#70491f;margin-top:9px}.epistemic strong:first-child{margin-top:0}.epistemic p{margin:5px 0 10px;font-size:.89rem;color:#463e35}.viewer{border:1px solid #d6e7e9;background:radial-gradient(circle at center,#eff9f9,#d9edf0);height:320px;overflow:hidden;border-radius:12px}.viewer model-viewer{width:100%;height:100%;display:block}.poster{padding:35px;text-align:center;color:#225b69}.viewer-hint{font-size:.77rem}.fallback-diagrama{display:block;width:100%;height:120px}.challenge{max-width:850px}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:7px 0 26px}.metrics>div{background:#edf5f5;border:1px solid #d9eaea;border-radius:12px;padding:16px}.metrics span{font-size:.66rem;font-weight:900;color:#4e7481;letter-spacing:.055em;display:block}.metrics strong{font-size:clamp(1.12rem,2.5vw,1.5rem);display:block;margin-top:4px}.challenge>p{font-weight:600;font-size:1.06rem}.choices{border:1px solid #ccdfe2;border-radius:12px;display:grid;gap:8px;padding:14px 17px}.choices legend{font-weight:750}.choices label{border:1px solid #dae6e8;border-radius:9px;padding:12px 13px;display:block;cursor:pointer}.choices label:has(input:checked){border-color:#25869b;background:#eaf6f6}.choices input{accent-color:#146f7f;margin-right:10px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.primary-btn,.secondary-btn,.quiet-btn,.forward-step,.back-step{border-radius:10px;padding:13px 18px;font-weight:800;border:1px solid #11576b;min-height:47px}.primary-btn,.forward-step{background:#135a70;color:white}.secondary-btn,.back-step{background:white;color:#12566c}.quiet-btn{background:transparent;color:#7b4a35;border-color:#dfc8b6}.feedback,.interpretacion{border-radius:11px;padding:18px;background:#e7f3ed;border-left:4px solid #347e6a;margin-top:19px}.feedback.error{background:#fff3e6;border-color:#b57530}.interpretacion{background:#f4f3ea;border-color:#b79b5e}.interpretacion h3{margin:0 0 6px}.interpretacion p{margin:7px 0}.notes{max-width:920px}.notes label{font-weight:750;display:block;margin:17px 0 6px}.notes textarea,#texto-copiable{width:100%;min-height:105px;border:1px solid #a7bac0;border-radius:10px;padding:13px;resize:vertical;background:#fcfefe;color:#183c4c}.notes textarea:focus{border-color:#1c7489}.privacy{font-size:.83rem;color:#4e6873;background:#edf5f6;border-radius:8px;padding:12px}.step-actions{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:24px 0 34px}.progress-copy{color:#536d78;font-size:.84rem;font-weight:750}.research-source{font-size:.89rem}.research-source details{background:#f0eee8;border:1px solid #e1dfd7;border-radius:13px;padding:15px 19px}.research-source summary{cursor:pointer;font-weight:800;color:#365d66}.research-source p{color:#52626b;line-height:1.62}.footer{background:#113949;color:#d5e3e7;margin-top:35px;padding:26px 0}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.78rem}.footrow a{color:#e6f3f4}
+@media(max-width:850px){.hero{grid-template-columns:1fr 245px;padding-top:38px;padding-bottom:44px}.topbar{align-items:flex-start}.topbar nav{gap:11px}.compare-layout{grid-template-columns:1fr}.viewer{height:330px}}
+@media(max-width:630px){.wrap{padding:0 15px}.topbar{display:block}.topbar nav{margin-top:10px}.hero{grid-template-columns:1fr;padding-top:27px;padding-bottom:33px}.hero-art{display:none}.hero h1{font-size:2.65rem}.hero-cta{gap:15px}.limit{padding:12px;font-size:.81rem}.cases{grid-template-columns:1fr}.case{min-height:110px}.steps{gap:2px;padding:5px}.step{padding:7px 1px;min-height:63px;font-size:.71rem}.step-circle{display:block;margin:0 auto 3px}.stage{padding:16px;border-radius:15px}.visual-overlay{top:8px;right:7px;padding:5px 8px;font-size:.57rem}.metrics{grid-template-columns:1fr}.metrics>div{padding:12px 15px}.step-actions{flex-wrap:wrap}.progress-copy{order:3;width:100%;text-align:center}.stage-mark{display:none}.image-disclaimer{font-size:.8rem}.viewer{height:245px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Corrección editorial visible: las imágenes generadas contienen un rótulo que decía «edición académica».
+   Se cubre en la interfaz con una etiqueta inequívoca, sin alterar los archivos originales. */
+.corrective-label{position:absolute;top:5%;left:8%;width:45%;min-height:20%;padding:1.5% 1%;border-radius:12px;background:linear-gradient(145deg,#efe0bd,#f6e6c5);box-shadow:0 2px 7px #664d2b44;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2%;color:#553e23;text-align:center;border:1px solid #c4a47c;}
+.corrective-label strong{font-size:clamp(.66rem,2vw,1.65rem);line-height:1.2;letter-spacing:.03em}
+.corrective-label small{font-size:clamp(.56rem,1.4vw,1rem);line-height:1.2}
+@media(max-width:630px){.corrective-label{border-radius:6px;min-height:22%;width:48%;left:6%}.corrective-label strong{font-size:.62rem}.corrective-label small{font-size:.55rem}}
+
+/* P4.5.4-C: fichas SVG completas y aviso fuera de la lámina.
+   La máscara editorial antigua ya no corresponde a las fichas revisadas. */
+.visual-frame img{aspect-ratio:auto;object-fit:contain}
+.visual-overlay{position:static;display:block;border-radius:0;padding:10px 14px;font-size:.75rem;line-height:1.5;text-align:center;overflow-wrap:anywhere}
+.corrective-label{display:none}
+</style>
+
+
+<style>/* Historia V2: 5.º–6.º de Primaria; observar, comparar, resolver y argumentar.
+   Diales de esta intervención: variedad 6 / animación 1 / densidad 4.
+   Paleta de investigación documental; controles, datos y motores conservados. */
+.historia-aventura {--ink:#253c40;--muted:#52676b;--paper:#f7f1e7;--teal:#245e58;--sand:#efc27e;--line:#dccdb6;--focus:#a34419;--shadow:0 10px 30px #56442b12;background:#f7f1e7;color:#253c40;}
+.historia-aventura a {color:#235d58;}
+.historia-aventura .site-header {background:#f1e2c9;color:#253c40;border-bottom:1px solid #dbc5a1;}
+.historia-aventura .topbar {border-bottom:1px solid #d7c5a8;padding-block:14px;gap:1rem;}
+.historia-aventura .brand {color:#253c40!important;font-size:.85rem;white-space:normal;}
+.historia-aventura .brand b {color:#765022;}
+.historia-aventura .brand-icon {color:#235d58;}
+.historia-aventura .topbar nav {gap:.6rem 1rem;}
+.historia-aventura .topbar nav a {color:#253c40;font-size:.95rem;display:inline-flex;align-items:center;min-height:44px;padding:6px;}
+.historia-aventura .hero {grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr);padding-block:32px 34px;gap:2rem;}
+.historia-aventura .hero h1 {font-family:system-ui,sans-serif;font-size:3.8rem;font-size:clamp(2.5rem,4.3vw,3.8rem);line-height:1.08;letter-spacing:-.04em;color:#253c40;max-width:16ch;}
+.historia-aventura .hero h1 em {color:#815021;}
+.historia-aventura .eyebrow {color:#72502b;letter-spacing:.08em;font-size:.8rem;}
+.historia-aventura .hero-copy>p:not(.eyebrow) {color:#42575b;font-size:1.08rem;max-width:49ch;}
+.historia-aventura .hero-cta,.historia-aventura .hero-meta {margin-top:1.4rem;gap:1rem;}
+.historia-aventura .start {color:#fff;background:#245e58;box-shadow:0 8px 20px #245e5822;border-radius:32px;min-height:48px;font-size:1rem;}
+.historia-aventura .start:hover {background:#194c47;}
+.historia-aventura .hero-note,.historia-aventura .hero-meta>span {color:#42575b;font-size:.875rem;}
+.historia-aventura .hero-art {min-width:0;margin:0;}
+.historia-aventura .hero-art svg {display:block;width:100%;max-width:380px;margin:auto;filter:drop-shadow(0 12px 12px #7d613a19);}
+.historia-aventura .hero-art figcaption {font-size:.75rem;color:#72502b;text-align:center;letter-spacing:.06em;margin-top:.4rem;}
+.aviso-historia {display:grid;grid-template-columns:auto 1fr;gap:.9rem;padding:1rem 1.25rem;background:#fffaf0;border:1px solid #dbc5a1;border-radius:16px;margin:1.5rem 0;}
+.aviso-historia .aviso-icono {display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#eed8b3;color:#62431c;font-size:1.3rem;font-weight:800;}
+.aviso-historia p {margin:.25rem 0 0;font-size:.95rem;line-height:1.6;color:#42575b;}
+.historia-aventura .overline {color:#72502b;letter-spacing:.08em;font-size:.8rem;}
+.historia-aventura .case-section h2,.historia-aventura .missions h2 {font-size:2rem;line-height:1.2;letter-spacing:-.03em;margin:.5rem 0 1rem;}
+.historia-aventura .cases,.historia-aventura .mission-grid {gap:1rem;}
+.historia-aventura .case,.historia-aventura .mission {position:relative;display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:1rem;align-content:start;background:#fffcf6;border:2px solid #d6c4a8;border-radius:20px;padding:1.1rem;color:#253c40;box-shadow:0 5px 18px #7650240a;min-height:180px;text-align:left;}
+.historia-aventura .case:hover,.historia-aventura .mission:hover {background:#fff8e9;border-color:#9a6c31;transform:none;}
+.historia-aventura .case.active,.historia-aventura .mission.selected {background:#edf4ed;border-color:#245e58;box-shadow:inset 0 -5px 0 #245e58;}
+.historia-aventura .caso-ilustrado {grid-column:1;grid-row:1 / span 3;width:64px;height:76px;display:grid;place-items:center;background:#f2e3ca;border-radius:14px;}
+.historia-aventura .caso-ilustrado svg {width:56px;height:62px;}
+.historia-aventura .case-num,.historia-aventura .mission-no {grid-column:2;display:block;color:#72502b;font-size:.75rem;letter-spacing:.06em;margin-bottom:.4rem;}
+.historia-aventura .case strong,.historia-aventura .mission strong {grid-column:2;font-size:1.3rem;line-height:1.18;color:#253c40;letter-spacing:-.02em;margin:0;}
+.historia-aventura .caso-descripcion {grid-column:2;color:#42575b;font-size:.95rem;line-height:1.45;margin-top:.5rem;padding:0!important;}
+.historia-aventura .case-arrow,.historia-aventura .mission-arrow {display:none;}
+.historia-aventura .case-context {color:#42575b;font-size:.95rem;background:#ece3d3;border-left:4px solid #987039;border-radius:8px;padding:.8rem 1rem;line-height:1.55;}
+.historia-aventura .case-context:empty {display:none;}
+.historia-aventura .steps {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fffcf6;border:1px solid #d6c4a8;border-radius:18px;padding:.5rem;gap:.5rem;margin-block:1.25rem;overflow:visible;}
+.historia-aventura .step {display:flex;align-items:center;flex-wrap:wrap;gap:.35rem;min-width:0;white-space:normal;min-height:52px;font-size:1rem;color:#42575b;background:transparent;border-radius:12px;border:1px solid transparent;padding:.7rem .6rem;justify-content:center;}
+.historia-aventura .step.selected {background:#245e58;color:#fff;border-color:#245e58;}
+.historia-aventura .step-circle,.historia-aventura .step-number {background:#ead9bb;color:#62431c;flex:none;margin:0;}
+.historia-aventura .step.selected .step-circle,.historia-aventura .step.selected .step-number {background:#fff3d8;color:#253c40;}
+.historia-aventura .stage {background:#fffcf7;border:1px solid #d6c4a8;border-radius:24px;padding:1.5rem;box-shadow:0 10px 32px #5f4b2e0b;}
+.historia-aventura .stage h2 {font-size:1.75rem;line-height:1.25;letter-spacing:-.03em;}
+.historia-aventura .stage-mark,.historia-aventura .counter {background:#eed8b3;color:#62431c;font-size:.85rem;border-radius:12px;}
+.historia-aventura .image-panel {border:1px solid #e1d4bf;background:#fff;border-radius:16px;overflow:hidden;}
+.historia-aventura .visual-frame,.historia-aventura .illustration {padding:0;background:#fff;}
+.historia-aventura .visual-frame img,.historia-aventura .illustration img {display:block;width:100%;height:auto;object-fit:contain;}
+.historia-aventura .visual-overlay,.historia-aventura .img-badge {position:static;display:block;background:#ece3d3;color:#59401f;border-radius:0;padding:.7rem 1rem;font-size:.75rem;line-height:1.5;letter-spacing:.05em;}
+.historia-aventura .image-disclaimer,.historia-aventura .image-caption {font-size:.95rem;color:#42575b;padding:1rem;margin:0;line-height:1.6;}
+.historia-aventura .investigator,.historia-aventura .clue {background:#e9f1e9;border:1px solid #c4d7c8;border-radius:16px;}
+.historia-aventura .investigator h3,.historia-aventura .clue h3 {color:#253c40;}
+.historia-aventura .icon-em,.historia-aventura .clue-icon {background:#245e58;color:#fff;}
+.historia-aventura .investigator p,.historia-aventura .clue p {color:#42575b;}
+.historia-aventura .compare-box,.historia-aventura .panel {background:#fffdf8;border:1px solid #dac9af;border-radius:16px;}
+.historia-aventura .epistemic,.historia-aventura .evidence-list {background:#f5ead7;border-radius:12px;}
+.historia-aventura .epistemic strong,.historia-aventura .evidence-list dt {color:#72502b;}
+.historia-aventura .epistemic p,.historia-aventura .evidence-list dd {color:#253c40;}
+.historia-aventura .viewer {background:#edf3ec;border-color:#c4d7c8;border-radius:14px;}
+.historia-aventura .viewer-hint,.historia-aventura .model-alt,.historia-aventura .tiny,.historia-aventura .micro {color:#52676b;font-size:.875rem;}
+.historia-aventura .metrics>div {background:#f5ead7;border-color:#dccdb6;border-radius:12px;}
+.historia-aventura .metrics span {color:#72502b;font-size:.8rem;}
+.historia-aventura .metrics strong {color:#253c40;}
+.historia-aventura .choices label {background:#fffdf8;border:2px solid #d6c4a8;border-radius:12px;color:#253c40;padding:1rem;min-height:52px;}
+.historia-aventura .choices label:has(input:checked) {background:#e9f1e9;border-color:#245e58;}
+.historia-aventura input[type=radio] {accent-color:#245e58;width:20px;height:20px;flex:none;}
+.historia-aventura .primary-btn,.historia-aventura .forward-step,.historia-aventura .button.primary {background:#245e58;color:#fff;border-color:#245e58;border-radius:12px;min-height:48px;}
+.historia-aventura .secondary-btn,.historia-aventura .back-step,.historia-aventura .button.secondary {background:#fffaf0;color:#253c40;border:1px solid #a99576;border-radius:12px;min-height:48px;}
+.historia-aventura .quiet-btn,.historia-aventura .button.quiet {color:#815021;min-height:48px;}
+.historia-aventura .feedback,.historia-aventura .interpretacion,.historia-aventura .interpretation {background:#e9f1e9;color:#253c40;border-color:#245e58;border-radius:12px;}
+.historia-aventura .feedback.error {background:#fae7d8;color:#783515;border-color:#a34419;}
+.historia-aventura .math-lab {background:#f5ead7;border-color:#dac9af;border-radius:16px;}
+.historia-aventura .notes textarea,.historia-aventura .notebook textarea,.historia-aventura .measure-grid input {background:#fff;color:#253c40;border:1px solid #a99576;border-radius:12px;}
+.historia-aventura .privacy {color:#52676b;font-size:.875rem;}
+.historia-aventura .atlas {background:#f1e2c9;border-radius:24px;border:1px solid #dbc5a1;}
+.historia-aventura .atlas-card {background:#fffcf7;border-color:#dccdb6;}
+.historia-aventura .atlas-kicker,.historia-aventura .atlas-status {color:#72502b;}
+.historia-aventura .atlas-limite {background:#fffaf0;color:#59401f;border-color:#d6c4a8;}
+.historia-aventura .bibliografia details,.historia-aventura .research-source details,.historia-aventura .doc-profesorado {background:#fffcf6;border:1px solid #d6c4a8;border-radius:16px;padding:1rem 1.25rem;margin:1.5rem 0;}
+.historia-aventura summary {color:#253c40;cursor:pointer;min-height:44px;display:list-item;align-content:center;}
+.historia-aventura .doc-profesorado .limit,.historia-aventura .doc-profesorado .method-note {margin:1rem 0 0;background:#f5ead7;color:#42575b;border-color:#d6c4a8;}
+.historia-aventura .footer {background:#253c40;color:#fff;}
+.historia-aventura .footer a {color:#fff3d8;}
+.historia-aventura :is(a,button,input,textarea,summary):focus-visible {outline:3px solid #a34419;outline-offset:4px;}
+.historia-aventura :is(.primary-btn,.forward-step,.primary,.start):focus-visible {outline-color:#a34419;box-shadow:0 0 0 2px #fff;}
+.historia-aventura noscript p {padding:1rem;background:#fff3d8;border:1px solid #d6c4a8;}
+/* El bloque de portada comparte el lenguaje visual sin afectar al catálogo. */
+.historia-misiones {background:#f1e2c9;border-color:#dbc5a1;}
+.historia-misiones .historia-inner {display:block;padding-block:3rem;}
+.historia-misiones .historia-intro {min-width:0;max-width:850px;margin-bottom:1.5rem;}
+.historia-misiones .historia-intro h2 {font-size:2.6rem;font-size:clamp(2rem,3.1vw,2.6rem);color:#253c40;line-height:1.1;margin-top:.8rem;}
+.historia-misiones .historia-intro h2 em {color:#815021;}
+.historia-misiones .historia-intro p {color:#42575b;font-size:1rem;line-height:1.6;}
+.historia-misiones .historias-tarjetas {grid-column:2;grid-row:1;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;}
+.historia-misiones .tarjeta-historia {padding:1.4rem;background:#fffcf7;border:1px solid #d6c4a8;border-radius:22px;min-width:0;min-height:310px;box-shadow:0 12px 28px #72502b10;}
+.historia-misiones .numero-historia {color:#72502b;font-size:.8rem;letter-spacing:.06em;}
+.historia-misiones .papiro-icono {width:116px;height:80px;background:#f1e2c9;border-radius:16px;margin:1rem 0 .25rem;}
+.historia-misiones .tarjeta-historia h3 {color:#253c40;font-size:1.5rem;line-height:1.2;}
+.historia-misiones .tarjeta-historia p {color:#42575b;font-size:.95rem;line-height:1.5;}
+.historia-misiones .tarjeta-historia a {background:#245e58;color:white;border-radius:24px;padding:.65rem 1rem;font-size:.95rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:.8rem;}
+.historia-misiones .historia-limite {margin:1.5rem 0 0;color:#59401f;font-size:.9rem;}
+.historia-misiones .historia-ruta {border-left:4px solid #987039;padding:.5rem 0 .5rem 1rem;background:transparent;}
+@media(max-width:1024px) {
+ .historia-aventura .hero {grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:1rem;}
+ .historia-aventura .mission-grid {grid-template-columns:minmax(0,1fr);}
+ .historia-aventura .mission {min-height:115px;}
+ .historia-misiones .historia-inner {grid-template-columns:minmax(0,1fr);gap:1rem;}
+ .historia-misiones .historias-tarjetas {grid-column:1;grid-row:2;}
+ .historia-misiones .historia-limite {grid-column:1;grid-row:3;}
+}
+@media(max-width:768px) {
+ .historia-aventura .hero {grid-template-columns:minmax(0,1fr);padding-block:25px;gap:1rem;}
+ .historia-aventura .hero h1 {font-size:2.75rem;max-width:16ch;}
+ .historia-aventura .hero-art {display:block;width:min(100%,300px);margin:auto;}
+ .historia-aventura .topbar {flex-direction:column;align-items:flex-start;gap:.5rem;}
+ .historia-aventura .topbar nav {gap:.2rem .8rem;}
+ .historia-aventura .cases,.historia-aventura .compare-layout,.historia-aventura .compare-grid,.historia-aventura .metrics,.historia-aventura .atlas-grid {grid-template-columns:minmax(0,1fr);}
+ .historia-aventura .case {min-height:115px;}
+ .historia-aventura .steps {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem;}
+ .historia-aventura .step {font-size:.95rem;}
+ .historia-aventura .stage {padding:1.1rem;border-radius:20px;}
+ .historia-aventura .stage h2 {font-size:1.5rem;}
+ .historia-aventura .measure-grid {grid-template-columns:minmax(0,1fr);}
+ .historia-misiones .historias-tarjetas {grid-template-columns:minmax(0,1fr);}
+ .historia-misiones .tarjeta-historia {min-height:0;}
+}
+@media(max-width:420px) {
+ .historia-aventura .wrap {padding-inline:16px;}
+ .historia-aventura .hero h1 {font-size:2.5rem;}
+ .historia-aventura .hero-art {max-width:240px;}
+ .historia-aventura .case,.historia-aventura .mission {grid-template-columns:50px minmax(0,1fr);gap:.75rem;padding:.9rem;}
+ .historia-aventura .caso-ilustrado {width:50px;height:64px;}
+ .historia-aventura .caso-ilustrado svg {width:44px;}
+ .historia-aventura .case strong,.historia-aventura .mission strong {font-size:1.15rem;}
+ .historia-aventura .aviso-historia {grid-template-columns:minmax(0,1fr);}
+ .historia-aventura .aviso-icono {display:none;}
+ .historia-aventura .stage-heading,.historia-aventura .stage-head {gap:.5rem;}
+ .historia-aventura .stage-mark,.historia-aventura .counter {display:none;}
+}
+@media(prefers-reduced-motion:reduce) {.historia-aventura {scroll-behavior:auto;}.historia-aventura *, .historia-misiones * {transition:none!important;animation:none!important;}}
+</style>
+<style>.preview-local model-viewer{height:auto!important;min-height:0!important;padding:1.1rem}.preview-banner{padding:1rem;background:#253c40;color:white;font-size:.9rem}.preview-banner a{color:#fff3d8}</style></head>
+<body class="historia-aventura preview-local"><div class="preview-banner"><a href="index.html">← Vista de conjunto</a> · Previsualización de diseño y actividades. El visor 3D se prueba en la versión completa por HTTP/HTTPS.</div>
+<a class="skip" href="#contenido">Saltar al taller</a>
+<header class="site-header">
+ <div class="wrap topbar"><a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">◇</span> GEOMETRÍA <b>EN TUS MANOS</b></a><nav aria-label="Navegación del taller"><a href="index.html">Catálogo 3D</a><a href="piramides.html">Pirámides antiguas</a><a href="https://danielulpgc.github.io/Pruebas-RA/cubo-interactivo.html">Cubo plegable</a></nav></div>
+ <div class="wrap hero"><div class="hero-copy"><p class="eyebrow">LABORATORIO HISTÓRICO · EGIPTO ROMANO</p><h1>El taller del <em>escriba</em></h1><p>¿Cómo comprobarías un cálculo que alguien escribió hace muchos siglos? Elige un caso, observa una ficha actual y explica lo que puedes averiguar.</p><div class="hero-cta"><a class="start" href="#contenido">Empezar investigación <span aria-hidden="true">↓</span></a><span class="hero-note">Para 5.º–6.º de Primaria · Matemáticas + Historia</span></div></div><figure class="hero-art" aria-label="Ilustración matemática actual sin escala"><svg aria-hidden="true" viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg"><rect x="28" y="18" width="340" height="257" rx="20" fill="#fffcf6" stroke="#d6c4a8" stroke-width="2"/><ellipse cx="203" cy="251" rx="149" ry="22" fill="#092838" opacity=".35"/><path d="M84 90 214 43 344 91 213 141Z" fill="#F9D797" stroke="#F3CA74" stroke-width="3"/><path d="M84 90 213 141 213 250 84 202Z" fill="#D69C5B" stroke="#F6D18D" stroke-width="3"/><path d="M213 141 344 91 344 202 213 250Z" fill="#AF673A" stroke="#F6D18D" stroke-width="3"/><path d="M213 141V250" stroke="#F3D4A0" stroke-width="2"/><g stroke="#E9C88E" fill="none" stroke-width="2" stroke-dasharray="5 8"><path d="m84 90 130-47"/><path d="m344 91 0 111"/></g><circle cx="333" cy="55" r="21" fill="#58BCD0" opacity=".3"/><path d="M25 90 68 74M28 116l44 4M322 250l33-10" stroke="#D7ECF0" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg><figcaption>Ilustración actual · Sin escala</figcaption></figure></div>
+</header>
+<!-- Recorrido didáctico: elegir un caso, observar, comparar, resolver y argumentar. -->
+<main id="contenido" class="wrap main">
+<noscript><p>Activa JavaScript para elegir casos y avanzar por las etapas. Puedes consultar las ilustraciones y las fuentes visibles.</p></noscript>
+ <aside class="aviso-historia"><span class="aviso-icono" aria-hidden="true">?</span><div><strong>Investigamos el pasado con herramientas de hoy.</strong><p>Estudiamos un papiro del Egipto romano a través de Kelly (2026). Las fichas y los modelos de esta web son actuales: no reproducen el documento original ni tienen escala histórica.</p></div></aside>
+ <section class="case-section" aria-labelledby="elige-titulo"><p class="overline">PRIMERO, ELIGE UNA INVESTIGACIÓN</p><h2 id="elige-titulo">Elige tu primer caso</h2><div class="cases" aria-label="Casos históricos">
+  <button class="case active" id="btn-p2" type="button" data-caso="p2" aria-pressed="true"><span class="caso-ilustrado" aria-hidden="true"><svg viewBox="0 0 76 72" aria-hidden="true"><rect x="12" y="8" width="38" height="49" rx="6" fill="#fffaf0" stroke="#986a32" stroke-width="2"/><path d="M19 20h22m-22 10h14m-14 10h18" stroke="#986a32" stroke-width="2"/><circle cx="47" cy="39" r="15" fill="#d7e8dd" fill-opacity=".8" stroke="#245e58" stroke-width="4"/><path d="M58 50 69 62" stroke="#245e58" stroke-width="7" stroke-linecap="round"/></svg></span><span class="case-num">CASO 01</span><strong>¿80 o 800?</strong><span class="caso-descripcion">Investiga un cálculo de volumen discutible.</span><span class="case-arrow" aria-hidden="true">↗</span></button>
+  <button class="case" id="btn-p8" type="button" data-caso="p8" aria-pressed="false"><span class="caso-ilustrado" aria-hidden="true"><svg viewBox="0 0 76 72" aria-hidden="true"><path d="M38 8 64 23 38 39 12 23Z" fill="#bad8ca" stroke="#245e58" stroke-width="2"/><path d="M12 23 38 39 38 65 12 49Z" fill="#85b9a8" stroke="#245e58" stroke-width="2"/><path d="M38 39 64 23 64 49 38 65Z" fill="#487f73" stroke="#245e58" stroke-width="2"/></svg></span><span class="case-num">CASO 02</span><strong>El secreto del cubo</strong><span class="caso-descripcion">Comprueba cuánto espacio ocupa un cubo.</span><span class="case-arrow" aria-hidden="true">↗</span></button>
+ </div><p class="case-context" id="contexto" aria-live="polite"></p></section>
+ <nav class="steps" aria-label="Etapas de la investigación" id="etapas"><button type="button" class="step selected" data-paso="0" aria-current="step"><span class="step-circle">1</span> Observar</button><button type="button" class="step" data-paso="1"><span class="step-circle">2</span> Comparar</button><button type="button" class="step" data-paso="2"><span class="step-circle">3</span> Resolver</button><button type="button" class="step" data-paso="3"><span class="step-circle">4</span> Argumentar</button></nav>
+ <section id="paso0" class="stage" aria-labelledby="titulo-paso0"><div class="stage-head"><div><p class="overline">PASO 1 · OBSERVAR</p><h2 id="titulo-paso0">Una fuente, dos interpretaciones</h2></div><span class="stage-mark" aria-hidden="true">01 / 04</span></div>
+  <div class="image-panel"><div class="visual-frame"><img id="infografia" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc2MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdHVsbyBkZXNjcmlwY2lvbiI+Cjx0aXRsZSBpZD0idGl0dWxvIj5Qcm9ibGVtYSAyIGRlIHVuIHBhcGlybyBtYXRlbcOhdGljbzogZmljaGEgZG9jdW1lbnRhbCB5IGPDoWxjdWxvIG1vZGVybm88L3RpdGxlPjxkZXNjIGlkPSJkZXNjcmlwY2lvbiI+RmljaGEgdGV4dHVhbCBkZSB1biB0ZXN0aW1vbmlvIGhpc3TDs3JpY28gZGUgdm9sdW1lbiBjb24gYW5vdGFjacOzbiA4MCB5IG1lZGlkYXMgaW50ZXJwcmV0YWRhcyBjb21vIDgsIDUsIDIwIHBpZXMgc2Vnw7puIEtlbGx5LiBBIGxhIGRlcmVjaGEgY8OhbGN1bG8gbW9kZXJubyA4IHBvciA1IHBvciAyMCBpZ3VhbCBhIDgwMCBwaWVzIGPDumJpY29zLiBObyBzZSByZXByZXNlbnRhIHVuIGRpYnVqbyBhbnRpZ3VvLjwvZGVzYz4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNGQ0Y0RTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFM0Y0RjYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzYwIiByeD0iMjQiIGZpbGw9InVybCgjYmcpIi8+CjxwYXRoIGQ9Ik01MiAxMjJIMTE0OCIgc3Ryb2tlPSIjQzVBNjc1IiBzdHJva2Utd2lkdGg9IjIiLz4KPHRleHQgeD0iNTQiIHk9IjY5IiBmaWxsPSIjMTUzRTUwIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMzUiPkVsIHRhbGxlciBkZWwgZXNjcmliYTogwr84MCBvIDgwMD88L3RleHQ+Cjx0ZXh0IHg9IjU0IiB5PSIxMDYiIGZpbGw9IiM0MjVGNkMiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2Fucywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSI+RGlmZXJlbmNpYXIgZWwgdGVzdGltb25pbyBjb25zZXJ2YWRvIGRlIHVuIGPDoWxjdWxvIGNvbnRlbXBvcsOhbmVvPC90ZXh0Pgo8cmVjdCB4PSI1MiIgeT0iMTYwIiB3aWR0aD0iNTEwIiBoZWlnaHQ9IjQ4NiIgcng9IjE2IiBmaWxsPSIjRkZGOUVEIiBzdHJva2U9IiNDN0EyNzMiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjgzIiB5PSIyMTMiIGZvbnQtc2l6ZT0iMjMiIGZpbGw9IiM2NzRBMzAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+VEVTVElNT05JTyBET0NVTUVOVEFETzwvdGV4dD48dGV4dCB4PSI4NCIgeT0iMjY4IiBmb250LXNpemU9IjIxIiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+TVBFUiBOLlMuIDEuMSDCtyBwcm9ibGVtYSAyPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSIzMTkiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5LZWxseSAoMjAyNiksIGZpZ3VyYSBBLjE8L3RleHQ+PHRleHQgeD0iODQiIHk9IjM2MiIgZm9udC1zaXplPSIyMSIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPlVubyBkZSBsb3MgZGlhZ3JhbWFzPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSIzOTQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5wcmVzZW50YSBlbCByZXN1bHRhZG8gODAuPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSI0NDUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5NZWRpZGFzIGludGVycHJldGFkYXM6PC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSI0ODMiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+OCwgNSB5IDIwIHBpZXM8L3RleHQ+PHRleHQgeD0iODQiIHk9IjU1NCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzlBNTQyQSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPkVzdGEgZmljaGEgTk8gZXMgdW5hIGltYWdlbjwvdGV4dD48dGV4dCB4PSI4NCIgeT0iNTgyIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOUE1NDJBIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+bmkgZWRpY2nDs24gZGVsIHBhcGlyby48L3RleHQ+PHJlY3QgeD0iNTg4IiB5PSIxNjAiIHdpZHRoPSI1NjAiIGhlaWdodD0iNDg2IiByeD0iMTYiIGZpbGw9IiNFQUY4RkEiIHN0cm9rZT0iI0EzQzlEMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNjE3IiB5PSIyMTMiIGZvbnQtc2l6ZT0iMjMiIGZpbGw9IiMxNjRCNjMiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+T1BFUkFDScOTTiBFU0NPTEFSIEFDVFVBTDwvdGV4dD48dGV4dCB4PSI2MzUiIHk9IjMzNyIgZm9udC1zaXplPSI0MyIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj44IMOXIDUgw5cgMjA8L3RleHQ+PHRleHQgeD0iNzQ4IiB5PSI0MDciIGZvbnQtc2l6ZT0iNDIiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+PTwvdGV4dD48dGV4dCB4PSI3MTMiIHk9IjQ5NCIgZm9udC1zaXplPSIzOSIgZmlsbD0iIzA5NkY4NSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj44MDAgcGllc8KzPC90ZXh0Pjx0ZXh0IHg9IjYxMSIgeT0iNTc4IiBmb250LXNpemU9IjE3IiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+VW4gY8OhbGN1bG8gY29ycmVjdG8gbm8gaWRlbnRpZmljYTwvdGV4dD48dGV4dCB4PSI2MTEiIHk9IjYwNyIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPmxhIGNhdXNhIGRlbCBkZXNhY3VlcmRvLjwvdGV4dD4KPHRleHQgeD0iNTQiIHk9IjcxOCIgZmlsbD0iIzRBNjA2OSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiPlJlZmVyZW5jaWE6IEtlbGx5ICgyMDI2KSwgSGlzdG9yaWEgTWF0aGVtYXRpY2EgNzUsIDEwMzI0OCwgZmlndXJhIEEuMSDCtyBTaW4gZGlidWpvIGFudGlndW8gaW52ZW50YWRvPC90ZXh0Pgo8L3N2Zz4=" alt="Ficha moderna del problema 2 de Kelly: lectura documental separada del cálculo escolar de 8 por 5 por 20, igual a 800 pies cúbicos; no reproduce el papiro." width="1200" height="760"><span class="visual-overlay">FICHA DIDÁCTICA · SIN ESCALA MÉTRICA · NO ES FACSÍMIL</span><span class="corrective-label" aria-hidden="true"><strong>ESQUEMA MODERNO</strong><small>Fichas de lectura y cálculo</small></span></div><p class="image-disclaimer">Esta es una <strong>ficha documental y matemática de elaboración moderna</strong>, sin simular trazos originales del papiro. La fuente y las interpretaciones se consultan en Kelly (2026); el cálculo se expresa mediante notación escolar actual.</p></div>
+  <div class="investigator"><span class="icon-em" aria-hidden="true">◉</span><div><h3>Tu primera pista</h3><p id="pista">¿Qué diferencia observas entre un dibujo esquemático y un modelo matemático moderno?</p><p class="tiny">Fuente del contexto histórico: MPER N.S. 1.1, problema 2; Kelly (2026), fig. A.1, pp. 14–15. <a href="https://doi.org/10.1016/j.hm.2026.103248" rel="noopener noreferrer" target="_blank">Consultar estudio científico ↗</a></p></div></div>
+ </section>
+ <section id="paso1" class="stage" aria-labelledby="titulo-paso1" hidden><div class="stage-head"><div><p class="overline">PASO 2 · COMPARAR</p><h2 id="titulo-paso1">De la representación al espacio</h2></div><span class="stage-mark" aria-hidden="true">02 / 04</span></div><div class="compare-layout"><article class="compare-box"><p class="overline">IDEA A INVESTIGAR</p><h3>¿Qué podemos saber del documento?</h3><p id="datos-historicos">Kelly identifica distintas representaciones de volúmenes, algunas incompletas o difíciles de interpretar. Los datos del problema se estudian con prudencia.</p><div class="epistemic"><strong>Fuente documentada</strong><p id="dato-documentado">Problema 2 de MPER N.S. 1.1.</p><strong>Interpretación académica</strong><p id="dato-interpretado">Kelly discute la anotación de un resultado.</p><strong>Herramienta escolar contemporánea</strong><p>Modelo tridimensional y operación con números actuales.</p></div></article><article class="compare-box model-column"><p class="overline">MODELO 3D ACTUAL</p><h3 id="titulo-moderno">Ortoedro matemático</h3><div class="viewer"><model-viewer id="modelo-historico" src="modelos_glb/historico_ortoedro_relativo.glb" alt="Modelo matemático tridimensional de un ortoedro actual" camera-controls environment-image="neutral" shadow-intensity="0.65" touch-action="pan-y" loading="lazy"><div slot="poster" class="poster">Esta vista previa permite usar las fichas y los retos. El modelo 3D está disponible en la versión completa.</div></model-viewer></div><p class="viewer-hint">↔ Arrastra para girar. El modelo es didáctico y su tamaño no representa las medidas históricas en pies. No es una reconstrucción arqueológica.</p><svg class="fallback-diagrama" viewBox="0 0 320 135" role="img" aria-label="Esquema contemporáneo esquemático de un ortoedro"><path id="alternativa-trazo" d="M45 45 L210 45 L210 112 L45 112 Z M45 45 L95 15 L260 15 L210 45 M210 112 L260 82 L260 15" fill="none" stroke="#257C90" stroke-width="2.8" stroke-linejoin="round"/><text id="rotulo-moderno" x="155" y="130" text-anchor="middle" fill="#164556" font-size="12">Ortoedro contemporáneo</text></svg></article></div></section>
+ <section id="paso2" class="stage" aria-labelledby="titulo-paso2" hidden><div class="stage-head"><div><p class="overline">PASO 3 · RESOLVER</p><h2 id="titulo-paso2">La prueba matemática</h2></div><span class="stage-mark" aria-hidden="true">03 / 04</span></div><div class="challenge"><div class="metrics"><div><span>MEDIDAS DE LA ACTIVIDAD</span><strong id="medidas">8 × 5 × 20 pies</strong></div><div><span>OPERACIÓN</span><strong id="operacion">8 × 5 × 20</strong></div><div><span>RESULTADO CALCULADO</span><strong id="resultado" aria-live="polite">¿?</strong></div></div><p id="pregunta">¿Qué volumen obtenemos al multiplicar las dimensiones?</p><fieldset id="opciones" class="choices"><legend>Selecciona tu hipótesis</legend></fieldset><div class="actions"><button id="comprobar" class="primary-btn" type="button">Comprobar resultado</button><button id="mostrar" class="secondary-btn" type="button" aria-expanded="false">Leer interpretación histórica</button></div><p id="feedback" class="feedback" aria-live="polite" hidden></p><div id="interpretacion" class="interpretacion" hidden><h3>¿Qué concluye el estudio?</h3><p id="conclusion"></p><p id="limite"></p></div></div></section>
+ <section id="paso3" class="stage" aria-labelledby="titulo-paso3" hidden><div class="stage-head"><div><p class="overline">PASO 4 · ARGUMENTAR</p><h2 id="titulo-paso3">Tu cuaderno de investigación</h2></div><span class="stage-mark" aria-hidden="true">04 / 04</span></div><div class="notes"><label for="observaciones">1. ¿Qué puedes describir sin inventar datos del papiro?</label><textarea id="observaciones" rows="4" placeholder="Describo el documento tal como lo presenta la investigación…"></textarea><label for="hipotesis">2. ¿Qué interpretación propones y qué no sabemos con seguridad?</label><textarea id="hipotesis" rows="4" placeholder="Los datos permiten afirmar… Sigue siendo incierto…"></textarea><p class="privacy">Las notas solo se mantienen durante esta sesión en la página; no se envían ni almacenan. Evita incluir datos personales. Puedes copiar o descargar tu trabajo.</p><div class="actions"><button id="exportar" class="primary-btn" type="button">Guardar cuaderno (TXT)</button><button id="copiar" class="secondary-btn" type="button">Copiar texto</button><button id="borrar" class="quiet-btn" type="button">Borrar este caso</button></div><p id="aviso-descarga" aria-live="polite"></p><div id="copia-panel" hidden><label for="texto-copiable">Si el navegador bloquea la descarga, selecciona y copia este texto:</label><textarea id="texto-copiable" rows="8" readonly></textarea></div></div></section>
+ <div class="step-actions"><button type="button" id="anterior" class="back-step" hidden>← Paso anterior</button><span id="estado-paso" class="progress-copy" aria-live="polite">Paso 1 de 4</span><button type="button" id="siguiente" class="forward-step">Continuar →</button></div>
+ <aside class="research-source"><details><summary>Fuentes, derechos y límites de esta propuesta <span aria-hidden="true">⌄</span></summary><div><p><strong>Publicación:</strong> Kelly, T. (2026), «Diagrams in ancient Greek practical mathematics», <em>Historia Mathematica</em> 75, 103248, DOI <a href="https://doi.org/10.1016/j.hm.2026.103248">10.1016/j.hm.2026.103248</a>.</p><p><strong>Material antiguo:</strong> MPER N.S. 1.1 (TM 63192), problemas 2 y 8, discutidos en las páginas 14–15. La datación paleográfica propuesta es la segunda mitad del siglo I d. C.; las interpretaciones conservan incertidumbre.</p><p><strong>Ilustraciones:</strong> dos fichas SVG creadas expresamente para esta revisión, basadas en la interpretación publicada por Kelly; no son documentos arqueológicos ni ediciones críticas. Para estudiar el testimonio material, consultar Kelly y las publicaciones primarias citadas.</p><p><strong>3D:</strong> los GLB son modelos matemáticos actuales. La RA física sigue sin validación formal (P5 NO-GO). Algunas reproducciones fotográficas o académicas mantienen una revisión editorial de derechos pendiente y no se incluyen en este parche.</p><p><strong>Datos:</strong> el taller no transmite ni conserva las respuestas. La biblioteca model-viewer se carga desde un proveedor externo para mostrar 3D cuando hay conexión.</p></div></details></aside>
+<details class="doc-profesorado"><summary>Información para el profesorado: representación y validación</summary> <div class="limit"><span aria-hidden="true">ⓘ</span><div><strong>Investigación histórica con modelos contemporáneos.</strong> Las fichas visuales principales son esquemas modernos revisados; NO son fotografías, facsímiles ni ediciones académicas de los papiros. Las interpretaciones históricas se basan en Kelly (2026). La visualización 3D no demuestra funcionamiento de realidad aumentada (P5: NO-GO).</div></div></details>
+</main>
+<footer class="footer"><div class="wrap footrow"><span>GEOMETRÍA EN TUS MANOS · P4.5.2-H · Prototipo experimental</span><div><a href="index.html">Inicio</a> · <a href="piramides.html">Pirámides</a> · <a href="https://danielulpgc.github.io/Pruebas-RA/ensayos.html">Ensayos</a></div></div></footer>
+<script>(()=>{
+"use strict";
+/** P4.4-H1. Casos didácticos extraídos de Kelly (2026); valores modernos, no transcripción. */
+const CASOS = Object.freeze({
+  p2: Object.freeze({
+    titulo: 'Problema 2 · Un volumen discutible', figura:'A.1',
+    diagrama:'fuentes/kelly_2026_A1_problema_2.png',
+    alt:'Edición de Kelly de tres diagramas asociados al problema 2, con signos numéricos griegos y pérdida parcial del extremo derecho.',
+    modelo:'modelos_glb/historico_ortoedro_relativo.glb',
+    descripcion:'El texto principal menciona un cubo de arista 10 pies. Los diagramas asociados ensayan otros valores para aplicar nuevamente el procedimiento. Analizamos solo el diagrama de la izquierda.',
+    magnitudes:[8,5,20], unidad:'pies', resultadoAnotado:80, resultadoCalculado:800,
+    pregunta:'En el diagrama izquierdo se leen tres longitudes que Kelly interpreta como 8, 5 y 20 pies. ¿Qué volumen resulta de multiplicarlas?',
+    opciones:[{id:'80',texto:'80 pies cúbicos'},{id:'800',texto:'800 pies cúbicos'},{id:'1000',texto:'1000 pies cúbicos'}],
+    correcta:'800',
+    explicacion:'8 × 5 × 20 = 800 pies cúbicos. Kelly señala 80 en el diagrama y plantea la posibilidad de un error de cálculo. No podemos saber con certeza cómo se originó.',
+    limite:'El 800 es el resultado aritmético moderno a partir de las dimensiones interpretadas por Kelly; el 80 pertenece al diagrama editado. No debe atribuirse automáticamente al escriba una causa concreta del desajuste.'
+  }),
+  p8: Object.freeze({
+    titulo:'Problema 8 · Un cubo de seis pies', figura:'A.2',
+    diagrama:'fuentes/kelly_2026_A2_problema_8.png',
+    alt:'Figura A.2 de Kelly con versiones editadas de dos cubos incompletos y representaciones gráficas normalizadas debajo.',
+    modelo:'modelos_glb/cubo.glb',
+    descripcion:'Kelly identifica dos diagramas de cubos. En el de la izquierda se indica una arista de 6 pies. La relación exacta del diagrama derecho con el segundo cubo es incierta.',
+    magnitudes:[6,6,6], unidad:'pies', resultadoAnotado:null, resultadoCalculado:216,
+    pregunta:'Si tomamos un cubo de 6 pies de arista, ¿cuál es su volumen matemático?',
+    opciones:[{id:'36',texto:'36 pies cúbicos'},{id:'216',texto:'216 pies cúbicos'},{id:'not',texto:'No puede calcularse con ese dato'}],
+    correcta:'216',
+    explicacion:'En un cubo todas las aristas tienen la misma longitud. 6 × 6 × 6 = 216 pies cúbicos. Es una comprobación matemática actual, no una transcripción del resultado original del papiro.',
+    limite:'La figura original está dañada, los dibujos no están a escala y Kelly considera incierta la interpretación de algunas marcas del cubo derecho.'
+  })
+});
+function calcularVolumen(medidas){ if(!Array.isArray(medidas)||medidas.length!==3||medidas.some(n=>typeof n!=="number"||!Number.isFinite(n)||n<=0))throw Error('Medidas inválidas'); return medidas.reduce((a,b)=>a*b,1); }
+function evaluar(caso,opcion){if(!(caso in CASOS)) throw Error('Caso no definido');return {acierto:opcion===CASOS[caso].correcta,explicacion:CASOS[caso].explicacion};}
+
+'use strict';
+const $ = id => document.getElementById(id);
+let actual='p2';
+let paso=0;
+const elecciones={p2:'',p8:''};
+const textos={p2:{observaciones:'',hipotesis:''},p8:{observaciones:'',hipotesis:''}};
+const posters={
+  p2:'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc2MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdHVsbyBkZXNjcmlwY2lvbiI+Cjx0aXRsZSBpZD0idGl0dWxvIj5Qcm9ibGVtYSAyIGRlIHVuIHBhcGlybyBtYXRlbcOhdGljbzogZmljaGEgZG9jdW1lbnRhbCB5IGPDoWxjdWxvIG1vZGVybm88L3RpdGxlPjxkZXNjIGlkPSJkZXNjcmlwY2lvbiI+RmljaGEgdGV4dHVhbCBkZSB1biB0ZXN0aW1vbmlvIGhpc3TDs3JpY28gZGUgdm9sdW1lbiBjb24gYW5vdGFjacOzbiA4MCB5IG1lZGlkYXMgaW50ZXJwcmV0YWRhcyBjb21vIDgsIDUsIDIwIHBpZXMgc2Vnw7puIEtlbGx5LiBBIGxhIGRlcmVjaGEgY8OhbGN1bG8gbW9kZXJubyA4IHBvciA1IHBvciAyMCBpZ3VhbCBhIDgwMCBwaWVzIGPDumJpY29zLiBObyBzZSByZXByZXNlbnRhIHVuIGRpYnVqbyBhbnRpZ3VvLjwvZGVzYz4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHgyPSIxIiB5MT0iMCIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNGQ0Y0RTQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFM0Y0RjYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzYwIiByeD0iMjQiIGZpbGw9InVybCgjYmcpIi8+CjxwYXRoIGQ9Ik01MiAxMjJIMTE0OCIgc3Ryb2tlPSIjQzVBNjc1IiBzdHJva2Utd2lkdGg9IjIiLz4KPHRleHQgeD0iNTQiIHk9IjY5IiBmaWxsPSIjMTUzRTUwIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iMzUiPkVsIHRhbGxlciBkZWwgZXNjcmliYTogwr84MCBvIDgwMD88L3RleHQ+Cjx0ZXh0IHg9IjU0IiB5PSIxMDYiIGZpbGw9IiM0MjVGNkMiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2Fucywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSI+RGlmZXJlbmNpYXIgZWwgdGVzdGltb25pbyBjb25zZXJ2YWRvIGRlIHVuIGPDoWxjdWxvIGNvbnRlbXBvcsOhbmVvPC90ZXh0Pgo8cmVjdCB4PSI1MiIgeT0iMTYwIiB3aWR0aD0iNTEwIiBoZWlnaHQ9IjQ4NiIgcng9IjE2IiBmaWxsPSIjRkZGOUVEIiBzdHJva2U9IiNDN0EyNzMiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjgzIiB5PSIyMTMiIGZvbnQtc2l6ZT0iMjMiIGZpbGw9IiM2NzRBMzAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+VEVTVElNT05JTyBET0NVTUVOVEFETzwvdGV4dD48dGV4dCB4PSI4NCIgeT0iMjY4IiBmb250LXNpemU9IjIxIiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+TVBFUiBOLlMuIDEuMSDCtyBwcm9ibGVtYSAyPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSIzMTkiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5LZWxseSAoMjAyNiksIGZpZ3VyYSBBLjE8L3RleHQ+PHRleHQgeD0iODQiIHk9IjM2MiIgZm9udC1zaXplPSIyMSIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPlVubyBkZSBsb3MgZGlhZ3JhbWFzPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSIzOTQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5wcmVzZW50YSBlbCByZXN1bHRhZG8gODAuPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSI0NDUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5NZWRpZGFzIGludGVycHJldGFkYXM6PC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSI0ODMiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+OCwgNSB5IDIwIHBpZXM8L3RleHQ+PHRleHQgeD0iODQiIHk9IjU1NCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzlBNTQyQSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPkVzdGEgZmljaGEgTk8gZXMgdW5hIGltYWdlbjwvdGV4dD48dGV4dCB4PSI4NCIgeT0iNTgyIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOUE1NDJBIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+bmkgZWRpY2nDs24gZGVsIHBhcGlyby48L3RleHQ+PHJlY3QgeD0iNTg4IiB5PSIxNjAiIHdpZHRoPSI1NjAiIGhlaWdodD0iNDg2IiByeD0iMTYiIGZpbGw9IiNFQUY4RkEiIHN0cm9rZT0iI0EzQzlEMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNjE3IiB5PSIyMTMiIGZvbnQtc2l6ZT0iMjMiIGZpbGw9IiMxNjRCNjMiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+T1BFUkFDScOTTiBFU0NPTEFSIEFDVFVBTDwvdGV4dD48dGV4dCB4PSI2MzUiIHk9IjMzNyIgZm9udC1zaXplPSI0MyIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj44IMOXIDUgw5cgMjA8L3RleHQ+PHRleHQgeD0iNzQ4IiB5PSI0MDciIGZvbnQtc2l6ZT0iNDIiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+PTwvdGV4dD48dGV4dCB4PSI3MTMiIHk9IjQ5NCIgZm9udC1zaXplPSIzOSIgZmlsbD0iIzA5NkY4NSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj44MDAgcGllc8KzPC90ZXh0Pjx0ZXh0IHg9IjYxMSIgeT0iNTc4IiBmb250LXNpemU9IjE3IiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+VW4gY8OhbGN1bG8gY29ycmVjdG8gbm8gaWRlbnRpZmljYTwvdGV4dD48dGV4dCB4PSI2MTEiIHk9IjYwNyIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPmxhIGNhdXNhIGRlbCBkZXNhY3VlcmRvLjwvdGV4dD4KPHRleHQgeD0iNTQiIHk9IjcxOCIgZmlsbD0iIzRBNjA2OSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiPlJlZmVyZW5jaWE6IEtlbGx5ICgyMDI2KSwgSGlzdG9yaWEgTWF0aGVtYXRpY2EgNzUsIDEwMzI0OCwgZmlndXJhIEEuMSDCtyBTaW4gZGlidWpvIGFudGlndW8gaW52ZW50YWRvPC90ZXh0Pgo8L3N2Zz4=',
+  p8:'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc2MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdHVsbyBkZXNjcmlwY2lvbiI+Cjx0aXRsZSBpZD0idGl0dWxvIj5Qcm9ibGVtYSA4IGRlIHVuIHBhcGlybyBtYXRlbcOhdGljbzogZmljaGEgZG9jdW1lbnRhbCB5IGN1Ym8gbW9kZXJubzwvdGl0bGU+PGRlc2MgaWQ9ImRlc2NyaXBjaW9uIj5GaWNoYSB0ZXh0dWFsIGRlbCBwcm9ibGVtYSA4IGRlbCBwYXBpcm8gTVBFUiBOUyAxLjEsIHNlZ8O6biBLZWxseTogdW4gY3VibyBkZSBhcmlzdGEgNiBwaWVzIGVuIHVuIGRpYnVqbyBkZXRlcmlvcmFkby4gQSBsYSBkZXJlY2hhIG9wZXJhY2nDs24gZXNjb2xhciBtb2Rlcm5hIHNlaXMgYWwgY3VibyBpZ3VhbCBhIDIxNiBwaWVzIGPDumJpY29zLiBObyBlcyB1biBkaWJ1am8gYW50aWd1by48L2Rlc2M+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjRkNGNEU0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRTNGNEY2Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+CjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc2MCIgcng9IjI0IiBmaWxsPSJ1cmwoI2JnKSIvPgo8cGF0aCBkPSJNNTIgMTIySDExNDgiIHN0cm9rZT0iI0M1QTY3NSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjU0IiB5PSI2OSIgZmlsbD0iIzE1M0U1MCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjM1Ij5FbCB0YWxsZXIgZGVsIGVzY3JpYmE6IHVuIGN1Ym8gZGUgc2VpcyBwaWVzPC90ZXh0Pgo8dGV4dCB4PSI1NCIgeT0iMTA2IiBmaWxsPSIjNDI1RjZDIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiPkxhIGdlb21ldHLDrWEgZXNjb2xhciBwZXJtaXRlIGludGVycHJldGFyIHVuIGRpYnVqbyBxdWUgbm8gZXN0w6EgYSBlc2NhbGE8L3RleHQ+CjxyZWN0IHg9IjUyIiB5PSIxNjAiIHdpZHRoPSI1MTAiIGhlaWdodD0iNDg2IiByeD0iMTYiIGZpbGw9IiNGRkY5RUQiIHN0cm9rZT0iI0M3QTI3MyIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iODMiIHk9IjIxMyIgZm9udC1zaXplPSIyMyIgZmlsbD0iIzY3NEEzMCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5URVNUSU1PTklPIERPQ1VNRU5UQURPPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSIyNjgiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5NUEVSIE4uUy4gMS4xIMK3IHByb2JsZW1hIDg8L3RleHQ+PHRleHQgeD0iODQiIHk9IjMxOSIgZm9udC1zaXplPSIyMSIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPktlbGx5ICgyMDI2KSwgZmlndXJhIEEuMjwvdGV4dD48dGV4dCB4PSI4NCIgeT0iMzYxIiBmb250LXNpemU9IjIxIiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+Q3VibyBjb24gdW5hIGFyaXN0YTwvdGV4dD48dGV4dCB4PSI4NCIgeT0iMzk0IiBmb250LXNpemU9IjIxIiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+ZGUgNiBwaWVzLjwvdGV4dD48dGV4dCB4PSI4NCIgeT0iNDUyIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+UGFydGUgZGVsIGRpYnVqbyBlc3TDoTwvdGV4dD48dGV4dCB4PSI4NCIgeT0iNDgzIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+ZGV0ZXJpb3JhZGEuPC90ZXh0Pjx0ZXh0IHg9Ijg0IiB5PSI1NTQiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM5QTU0MkEiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj5Fc3RhIGZpY2hhIE5PIGVzIHVuYSBpbWFnZW48L3RleHQ+PHRleHQgeD0iODQiIHk9IjU4MiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzlBNTQyQSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPm5pIGVkaWNpw7NuIGRlbCBwYXBpcm8uPC90ZXh0PjxyZWN0IHg9IjU4OCIgeT0iMTYwIiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjQ4NiIgcng9IjE2IiBmaWxsPSIjRUFGOEZBIiBzdHJva2U9IiNBM0M5RDMiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjYxNyIgeT0iMjEzIiBmb250LXNpemU9IjIzIiBmaWxsPSIjMTY0QjYzIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPk9QRVJBQ0nDk04gRVNDT0xBUiBBQ1RVQUw8L3RleHQ+PHRleHQgeD0iNjM1IiB5PSIzMzciIGZvbnQtc2l6ZT0iNDQiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+NiDDlyA2IMOXIDY8L3RleHQ+PHRleHQgeD0iNzQ4IiB5PSI0MDciIGZvbnQtc2l6ZT0iNDIiIGZpbGw9IiMyMDQ5NUUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+PTwvdGV4dD48dGV4dCB4PSI3MTMiIHk9IjQ5NCIgZm9udC1zaXplPSIzOSIgZmlsbD0iIzA5NkY4NSIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyxzYW5zLXNlcmlmIj4yMTYgcGllc8KzPC90ZXh0Pjx0ZXh0IHg9IjYxMSIgeT0iNTc4IiBmb250LXNpemU9IjE3IiBmaWxsPSIjMjA0OTVFIiBmb250LXdlaWdodD0ibm9ybWFsIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+Q8OhbGN1bG8gYWN0dWFsLCBubyB0cmFuc2NyaXBjacOzbjwvdGV4dD48dGV4dCB4PSI2MTEiIHk9IjYwNyIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzIwNDk1RSIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLHNhbnMtc2VyaWYiPmRlbCBwcm9jZWRpbWllbnRvIGFudGlndW8uPC90ZXh0Pgo8dGV4dCB4PSI1NCIgeT0iNzE4IiBmaWxsPSIjNEE2MDY5IiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCI+UmVmZXJlbmNpYTogS2VsbHkgKDIwMjYpLCBIaXN0b3JpYSBNYXRoZW1hdGljYSA3NSwgMTAzMjQ4LCBmaWd1cmEgQS4yIMK3IFNpbiBmYWNzw61taWwgc2ltdWxhZG88L3RleHQ+Cjwvc3ZnPg=='
+};
+const referencias={
+  p2:{documentado:'MPER N.S. 1.1, problema 2. El enunciado conservado refiere un cubo de diez pies de arista y los diagramas adjuntos utilizan otras magnitudes.',interpretado:'En el dibujo izquierdo asociado al problema, Kelly interpreta 8 × 5 × 20 pies y detecta la anotación 80, frente a 800 del producto.',pista:'Fíjate en las cifras: ¿la ilustración moderna ayuda a detectar un posible problema de cálculo? ¿Qué comprobarías en la edición científica?',datoshistoricos:'El estudio analiza varios esquemas asociados al problema 2. La atribución de magnitudes y la interpretación del resultado corresponden a la lectura académica del papiro.'},
+  p8:{documentado:'MPER N.S. 1.1, problema 8. Kelly identifica dibujos de dos cubos; uno de ellos tiene una arista de seis pies.',interpretado:'El diagrama izquierdo está deteriorado y la correspondencia del dibujo derecho con el segundo cubo no puede asegurarse. Nuestro cálculo de 216 es moderno.',pista:'Si una arista mide seis pies, ¿cómo podrías calcular el volumen sin necesitar un dibujo perfectamente proporcionado?',datoshistoricos:'Los dibujos presentan pérdidas y trazos cuya interpretación no siempre es segura. La operación 6 × 6 × 6 es una aplicación escolar de la geometría actual.'}
+};
+function guardar(){textos[actual].observaciones=$('observaciones').value;textos[actual].hipotesis=$('hipotesis').value;}
+function cambiarPaso(n,conFoco=false){
+ paso=Math.max(0,Math.min(3,n));
+ for(let i=0;i<4;i++){$('paso'+i).hidden=i!==paso;}
+ for(const b of document.querySelectorAll('[data-paso]')){
+  const on=Number(b.dataset.paso)===paso;
+  b.classList.toggle('selected',on);
+  if(on)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');
+ }
+ $('anterior').hidden=paso===0;
+ $('siguiente').hidden=paso===3;
+ $('estado-paso').textContent=`Paso ${paso+1} de 4`;
+ if(conFoco){const h=$('titulo-paso'+paso);h.setAttribute('tabindex','-1');h.focus({preventScroll:true});h.scrollIntoView({behavior:'auto',block:'start'});}
+}
+function mostrarCaso(id){
+ if(!Object.prototype.hasOwnProperty.call(CASOS,id))return;
+ guardar();actual=id;const c=CASOS[id];const ref=referencias[id];
+ document.querySelectorAll('[data-caso]').forEach(b=>{const on=b.dataset.caso===id;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+ $('contexto').textContent=c.descripcion;
+ $('infografia').src=posters[id];
+ $('infografia').alt=id==='p2'?'Ficha textual moderna sobre el problema 2 de Kelly y cálculo actual 8 × 5 × 20 = 800 pies cúbicos; no reproduce el papiro.':'Ficha textual moderna sobre el problema 8 de Kelly y cálculo actual 6 × 6 × 6 = 216 pies cúbicos; no reproduce el papiro.';
+ $('pista').textContent=ref.pista;
+ $('datos-historicos').textContent=ref.datoshistoricos;
+ $('dato-documentado').textContent=ref.documentado;
+ $('dato-interpretado').textContent=ref.interpretado;
+ $('titulo-moderno').textContent=id==='p2'?'Ortoedro: modelo actual':'Cubo: modelo actual';
+ $('modelo-historico').setAttribute('src',c.modelo);
+ $('modelo-historico').setAttribute('alt',id==='p2'?'Modelo actual tridimensional de un ortoedro que sirve para el cálculo escolar.':'Modelo matemático tridimensional contemporáneo de un cubo.');
+ $('alternativa-trazo').setAttribute('d',id==='p2'?'M45 45 L210 45 L210 112 L45 112 Z M45 45 L95 15 L260 15 L210 45 M210 112 L260 82 L260 15':'M80 50 L170 50 L170 125 L80 125 Z M80 50 L129 20 L219 20 L170 50 M170 125 L219 95 L219 20');
+ $('rotulo-moderno').textContent=id==='p2'?'Ortoedro (esquema actual)':'Cubo (esquema actual)';
+ $('medidas').textContent=c.magnitudes.join(' × ')+' '+c.unidad;
+ $('operacion').textContent=c.magnitudes.join(' × ');
+ $('resultado').textContent='¿?';
+ $('pregunta').textContent=c.pregunta;
+ $('opciones').replaceChildren();
+ const legend=document.createElement('legend');legend.textContent='Selecciona tu hipótesis';$('opciones').append(legend);
+ for(const op of c.opciones){const label=document.createElement('label');const inp=document.createElement('input');inp.type='radio';inp.name='respuestaHistorica';inp.value=op.id;inp.checked=elecciones[id]===op.id;inp.addEventListener('change',()=>{elecciones[id]=op.id;$('feedback').hidden=true;});label.append(inp,document.createTextNode(op.texto));$('opciones').append(label);}
+ $('feedback').hidden=true;$('feedback').classList.remove('error');$('interpretacion').hidden=true;
+ $('mostrar').setAttribute('aria-expanded','false');
+ $('conclusion').textContent=c.explicacion;
+ $('limite').textContent=c.limite;
+ $('observaciones').value=textos[id].observaciones;
+ $('hipotesis').value=textos[id].hipotesis;
+ $('aviso-descarga').textContent='';$('copia-panel').hidden=true;
+ cambiarPaso(0);
+}
+function informe(){guardar();const c=CASOS[actual],t=textos[actual];return [
+ 'GEOMETRÍA EN TUS MANOS · EL TALLER DEL ESCRIBA',
+ 'Cuaderno personal de investigación · P4.5.2-H',
+ c.titulo,
+ 'Testimonio: MPER N.S. 1.1, Kelly (2026), figura '+c.figura,
+ 'DOI: 10.1016/j.hm.2026.103248',
+ 'Aviso: las fichas visuales son modernas y no reproducen dibujos históricos.',
+ 'La operación escolar moderna no transcribe el procedimiento antiguo.','',
+ 'OBSERVACIONES:',t.observaciones,'','INTERPRETACIÓN E INCERTIDUMBRE:',t.hipotesis,'',
+ 'Cálculo escolar actual: '+c.magnitudes.join(' × ')+' = '+calcularVolumen(c.magnitudes)+' pies cúbicos',
+ 'La respuesta no se envió a servidores desde esta actividad.'
+ ].join('\n');}
+$('anterior').addEventListener('click',()=>cambiarPaso(paso-1,true));
+$('siguiente').addEventListener('click',()=>cambiarPaso(paso+1,true));
+for(const btn of document.querySelectorAll('[data-paso]'))btn.addEventListener('click',()=>cambiarPaso(Number(btn.dataset.paso),true));
+for(const btn of document.querySelectorAll('[data-caso]'))btn.addEventListener('click',()=>mostrarCaso(btn.dataset.caso));
+$('comprobar').addEventListener('click',()=>{
+ const input=document.querySelector('input[name=respuestaHistorica]:checked');const panel=$('feedback');panel.hidden=false;
+ if(!input){panel.textContent='Selecciona una respuesta para comprobarla.';panel.classList.add('error');return;}
+ elecciones[actual]=input.value;const e=evaluar(actual,input.value);panel.classList.toggle('error',!e.acierto);
+ panel.textContent=(e.acierto?'¡Cálculo correcto! ':'Vuelve a multiplicar las tres medidas. ')+e.explicacion;
+ $('resultado').textContent=String(calcularVolumen(CASOS[actual].magnitudes))+' pies³';
+});
+$('mostrar').addEventListener('click',()=>{const abrir=$('interpretacion').hidden;$('interpretacion').hidden=!abrir;$('mostrar').setAttribute('aria-expanded',String(abrir));$('mostrar').textContent=abrir?'Ocultar interpretación histórica':'Leer interpretación histórica';$('resultado').textContent=String(calcularVolumen(CASOS[actual].magnitudes))+' pies³';});
+$('borrar').addEventListener('click',()=>{textos[actual]={observaciones:'',hipotesis:''};$('observaciones').value='';$('hipotesis').value='';$('copia-panel').hidden=true;$('aviso-descarga').textContent='Las notas de este caso se han borrado de la página.';});
+$('copiar').addEventListener('click',()=>{const t=informe();$('texto-copiable').value=t;$('copia-panel').hidden=false;
+ try{if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>$('aviso-descarga').textContent='Texto copiado. También puedes seleccionarlo en el campo inferior.').catch(()=>$('aviso-descarga').textContent='Copia manualmente el texto que aparece abajo.');}else{$('aviso-descarga').textContent='Copia manualmente el texto que aparece abajo.';}}
+ catch(_){$('aviso-descarga').textContent='Copia manualmente el texto que aparece abajo.';}
+});
+$('exportar').addEventListener('click',()=>{const t=informe();$('texto-copiable').value=t;$('copia-panel').hidden=false;
+ try{const blob=new Blob([t],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='taller_escriba_'+actual+'.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),3000);$('aviso-descarga').textContent='Descarga solicitada. Si no se guardó, copia el texto que aparece abajo.';}
+ catch(_){$('aviso-descarga').textContent='No fue posible descargar. Copia manualmente el texto que aparece abajo.';}
+});
+const solicitado=new URLSearchParams(location.search).get('caso');mostrarCaso(Object.prototype.hasOwnProperty.call(CASOS,solicitado)?solicitado:'p2');
+
+})();</script></body>
+</html>

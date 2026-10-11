@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "three@0.180.0/build/three.core.js": {
+      "bytes": 1403455
+    },
+    "three@0.180.0/build/three.module.js": {
+      "bytes": 603113
+    },
+    "portada-escena.mjs": {
+      "bytes": 8748
+    },
+    "design/portada-threejs/entrada.mjs": {
+      "bytes": 174
+    }
+  },
+  "outputs": {
+    "portada-threejs.js": {
+      "bytes": 708567,
+      "entryPoint": "design/portada-threejs/entrada.mjs"
+    }
+  }
+}

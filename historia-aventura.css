@@ -1,0 +1,144 @@
+/* Historia V2: 5.º–6.º de Primaria; observar, comparar, resolver y argumentar.
+   Diales de esta intervención: variedad 6 / animación 1 / densidad 4.
+   Paleta de investigación documental; controles, datos y motores conservados. */
+.historia-aventura {--ink:#253c40;--muted:#52676b;--paper:#f7f1e7;--teal:#245e58;--sand:#efc27e;--line:#dccdb6;--focus:#a34419;--shadow:0 10px 30px #56442b12;background:#f7f1e7;color:#253c40;}
+.historia-aventura a {color:#235d58;}
+.historia-aventura .site-header {background:#f1e2c9;color:#253c40;border-bottom:1px solid #dbc5a1;}
+.historia-aventura .topbar {border-bottom:1px solid #d7c5a8;padding-block:14px;gap:1rem;}
+.historia-aventura .brand {color:#253c40!important;font-size:.85rem;white-space:normal;}
+.historia-aventura .brand b {color:#765022;}
+.historia-aventura .brand-icon {color:#235d58;}
+.historia-aventura .topbar nav {gap:.6rem 1rem;}
+.historia-aventura .topbar nav a {color:#253c40;font-size:.95rem;display:inline-flex;align-items:center;min-height:44px;padding:6px;}
+.historia-aventura .hero {grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr);padding-block:32px 34px;gap:2rem;}
+.historia-aventura .hero h1 {font-family:system-ui,sans-serif;font-size:3.8rem;font-size:clamp(2.5rem,4.3vw,3.8rem);line-height:1.08;letter-spacing:-.04em;color:#253c40;max-width:16ch;}
+.historia-aventura .hero h1 em {color:#815021;}
+.historia-aventura .eyebrow {color:#72502b;letter-spacing:.08em;font-size:.8rem;}
+.historia-aventura .hero-copy>p:not(.eyebrow) {color:#42575b;font-size:1.08rem;max-width:49ch;}
+.historia-aventura .hero-cta,.historia-aventura .hero-meta {margin-top:1.4rem;gap:1rem;}
+.historia-aventura .start {color:#fff;background:#245e58;box-shadow:0 8px 20px #245e5822;border-radius:32px;min-height:48px;font-size:1rem;}
+.historia-aventura .start:hover {background:#194c47;}
+.historia-aventura .hero-note,.historia-aventura .hero-meta>span {color:#42575b;font-size:.875rem;}
+.historia-aventura .hero-art {min-width:0;margin:0;}
+.historia-aventura .hero-art svg {display:block;width:100%;max-width:380px;margin:auto;filter:drop-shadow(0 12px 12px #7d613a19);}
+.historia-aventura .hero-art figcaption {font-size:.75rem;color:#72502b;text-align:center;letter-spacing:.06em;margin-top:.4rem;}
+.aviso-historia {display:grid;grid-template-columns:auto 1fr;gap:.9rem;padding:1rem 1.25rem;background:#fffaf0;border:1px solid #dbc5a1;border-radius:16px;margin:1.5rem 0;}
+.aviso-historia .aviso-icono {display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#eed8b3;color:#62431c;font-size:1.3rem;font-weight:800;}
+.aviso-historia p {margin:.25rem 0 0;font-size:.95rem;line-height:1.6;color:#42575b;}
+.historia-aventura .overline {color:#72502b;letter-spacing:.08em;font-size:.8rem;}
+.historia-aventura .case-section h2,.historia-aventura .missions h2 {font-size:2rem;line-height:1.2;letter-spacing:-.03em;margin:.5rem 0 1rem;}
+.historia-aventura .cases,.historia-aventura .mission-grid {gap:1rem;}
+.historia-aventura .case,.historia-aventura .mission {position:relative;display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:1rem;align-content:start;background:#fffcf6;border:2px solid #d6c4a8;border-radius:20px;padding:1.1rem;color:#253c40;box-shadow:0 5px 18px #7650240a;min-height:180px;text-align:left;}
+.historia-aventura .case:hover,.historia-aventura .mission:hover {background:#fff8e9;border-color:#9a6c31;transform:none;}
+.historia-aventura .case.active,.historia-aventura .mission.selected {background:#edf4ed;border-color:#245e58;box-shadow:inset 0 -5px 0 #245e58;}
+.historia-aventura .caso-ilustrado {grid-column:1;grid-row:1 / span 3;width:64px;height:76px;display:grid;place-items:center;background:#f2e3ca;border-radius:14px;}
+.historia-aventura .caso-ilustrado svg {width:56px;height:62px;}
+.historia-aventura .case-num,.historia-aventura .mission-no {grid-column:2;display:block;color:#72502b;font-size:.75rem;letter-spacing:.06em;margin-bottom:.4rem;}
+.historia-aventura .case strong,.historia-aventura .mission strong {grid-column:2;font-size:1.3rem;line-height:1.18;color:#253c40;letter-spacing:-.02em;margin:0;}
+.historia-aventura .caso-descripcion {grid-column:2;color:#42575b;font-size:.95rem;line-height:1.45;margin-top:.5rem;padding:0!important;}
+.historia-aventura .case-arrow,.historia-aventura .mission-arrow {display:none;}
+.historia-aventura .case-context {color:#42575b;font-size:.95rem;background:#ece3d3;border-left:4px solid #987039;border-radius:8px;padding:.8rem 1rem;line-height:1.55;}
+.historia-aventura .case-context:empty {display:none;}
+.historia-aventura .steps {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fffcf6;border:1px solid #d6c4a8;border-radius:18px;padding:.5rem;gap:.5rem;margin-block:1.25rem;overflow:visible;}
+.historia-aventura .step {display:flex;align-items:center;flex-wrap:wrap;gap:.35rem;min-width:0;white-space:normal;min-height:52px;font-size:1rem;color:#42575b;background:transparent;border-radius:12px;border:1px solid transparent;padding:.7rem .6rem;justify-content:center;}
+.historia-aventura .step.selected {background:#245e58;color:#fff;border-color:#245e58;}
+.historia-aventura .step-circle,.historia-aventura .step-number {background:#ead9bb;color:#62431c;flex:none;margin:0;}
+.historia-aventura .step.selected .step-circle,.historia-aventura .step.selected .step-number {background:#fff3d8;color:#253c40;}
+.historia-aventura .stage {background:#fffcf7;border:1px solid #d6c4a8;border-radius:24px;padding:1.5rem;box-shadow:0 10px 32px #5f4b2e0b;}
+.historia-aventura .stage h2 {font-size:1.75rem;line-height:1.25;letter-spacing:-.03em;}
+.historia-aventura .stage-mark,.historia-aventura .counter {background:#eed8b3;color:#62431c;font-size:.85rem;border-radius:12px;}
+.historia-aventura .image-panel {border:1px solid #e1d4bf;background:#fff;border-radius:16px;overflow:hidden;}
+.historia-aventura .visual-frame,.historia-aventura .illustration {padding:0;background:#fff;}
+.historia-aventura .visual-frame img,.historia-aventura .illustration img {display:block;width:100%;height:auto;object-fit:contain;}
+.historia-aventura .visual-overlay,.historia-aventura .img-badge {position:static;display:block;background:#ece3d3;color:#59401f;border-radius:0;padding:.7rem 1rem;font-size:.75rem;line-height:1.5;letter-spacing:.05em;}
+.historia-aventura .image-disclaimer,.historia-aventura .image-caption {font-size:.95rem;color:#42575b;padding:1rem;margin:0;line-height:1.6;}
+.historia-aventura .investigator,.historia-aventura .clue {background:#e9f1e9;border:1px solid #c4d7c8;border-radius:16px;}
+.historia-aventura .investigator h3,.historia-aventura .clue h3 {color:#253c40;}
+.historia-aventura .icon-em,.historia-aventura .clue-icon {background:#245e58;color:#fff;}
+.historia-aventura .investigator p,.historia-aventura .clue p {color:#42575b;}
+.historia-aventura .compare-box,.historia-aventura .panel {background:#fffdf8;border:1px solid #dac9af;border-radius:16px;}
+.historia-aventura .epistemic,.historia-aventura .evidence-list {background:#f5ead7;border-radius:12px;}
+.historia-aventura .epistemic strong,.historia-aventura .evidence-list dt {color:#72502b;}
+.historia-aventura .epistemic p,.historia-aventura .evidence-list dd {color:#253c40;}
+.historia-aventura .viewer {background:#edf3ec;border-color:#c4d7c8;border-radius:14px;}
+.historia-aventura .viewer-hint,.historia-aventura .model-alt,.historia-aventura .tiny,.historia-aventura .micro {color:#52676b;font-size:.875rem;}
+.historia-aventura .metrics>div {background:#f5ead7;border-color:#dccdb6;border-radius:12px;}
+.historia-aventura .metrics span {color:#72502b;font-size:.8rem;}
+.historia-aventura .metrics strong {color:#253c40;}
+.historia-aventura .choices label {background:#fffdf8;border:2px solid #d6c4a8;border-radius:12px;color:#253c40;padding:1rem;min-height:52px;}
+.historia-aventura .choices label:has(input:checked) {background:#e9f1e9;border-color:#245e58;}
+.historia-aventura input[type=radio] {accent-color:#245e58;width:20px;height:20px;flex:none;}
+.historia-aventura .primary-btn,.historia-aventura .forward-step,.historia-aventura .button.primary {background:#245e58;color:#fff;border-color:#245e58;border-radius:12px;min-height:48px;}
+.historia-aventura .secondary-btn,.historia-aventura .back-step,.historia-aventura .button.secondary {background:#fffaf0;color:#253c40;border:1px solid #a99576;border-radius:12px;min-height:48px;}
+.historia-aventura .quiet-btn,.historia-aventura .button.quiet {color:#815021;min-height:48px;}
+.historia-aventura .feedback,.historia-aventura .interpretacion,.historia-aventura .interpretation {background:#e9f1e9;color:#253c40;border-color:#245e58;border-radius:12px;}
+.historia-aventura .feedback.error {background:#fae7d8;color:#783515;border-color:#a34419;}
+.historia-aventura .math-lab {background:#f5ead7;border-color:#dac9af;border-radius:16px;}
+.historia-aventura .notes textarea,.historia-aventura .notebook textarea,.historia-aventura .measure-grid input {background:#fff;color:#253c40;border:1px solid #a99576;border-radius:12px;}
+.historia-aventura .privacy {color:#52676b;font-size:.875rem;}
+.historia-aventura .atlas {background:#f1e2c9;border-radius:24px;border:1px solid #dbc5a1;}
+.historia-aventura .atlas-card {background:#fffcf7;border-color:#dccdb6;}
+.historia-aventura .atlas-kicker,.historia-aventura .atlas-status {color:#72502b;}
+.historia-aventura .atlas-limite {background:#fffaf0;color:#59401f;border-color:#d6c4a8;}
+.historia-aventura .bibliografia details,.historia-aventura .research-source details,.historia-aventura .doc-profesorado {background:#fffcf6;border:1px solid #d6c4a8;border-radius:16px;padding:1rem 1.25rem;margin:1.5rem 0;}
+.historia-aventura summary {color:#253c40;cursor:pointer;min-height:44px;display:list-item;align-content:center;}
+.historia-aventura .doc-profesorado .limit,.historia-aventura .doc-profesorado .method-note {margin:1rem 0 0;background:#f5ead7;color:#42575b;border-color:#d6c4a8;}
+.historia-aventura .footer {background:#253c40;color:#fff;}
+.historia-aventura .footer a {color:#fff3d8;}
+.historia-aventura :is(a,button,input,textarea,summary):focus-visible {outline:3px solid #a34419;outline-offset:4px;}
+.historia-aventura :is(.primary-btn,.forward-step,.primary,.start):focus-visible {outline-color:#a34419;box-shadow:0 0 0 2px #fff;}
+.historia-aventura noscript p {padding:1rem;background:#fff3d8;border:1px solid #d6c4a8;}
+/* El bloque de portada comparte el lenguaje visual sin afectar al catálogo. */
+.historia-misiones {background:#f1e2c9;border-color:#dbc5a1;}
+.historia-misiones .historia-inner {display:block;padding-block:3rem;}
+.historia-misiones .historia-intro {min-width:0;max-width:850px;margin-bottom:1.5rem;}
+.historia-misiones .historia-intro h2 {font-size:2.6rem;font-size:clamp(2rem,3.1vw,2.6rem);color:#253c40;line-height:1.1;margin-top:.8rem;}
+.historia-misiones .historia-intro h2 em {color:#815021;}
+.historia-misiones .historia-intro p {color:#42575b;font-size:1rem;line-height:1.6;}
+.historia-misiones .historias-tarjetas {grid-column:2;grid-row:1;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;}
+.historia-misiones .tarjeta-historia {padding:1.4rem;background:#fffcf7;border:1px solid #d6c4a8;border-radius:22px;min-width:0;min-height:310px;box-shadow:0 12px 28px #72502b10;}
+.historia-misiones .numero-historia {color:#72502b;font-size:.8rem;letter-spacing:.06em;}
+.historia-misiones .papiro-icono {width:116px;height:80px;background:#f1e2c9;border-radius:16px;margin:1rem 0 .25rem;}
+.historia-misiones .tarjeta-historia h3 {color:#253c40;font-size:1.5rem;line-height:1.2;}
+.historia-misiones .tarjeta-historia p {color:#42575b;font-size:.95rem;line-height:1.5;}
+.historia-misiones .tarjeta-historia a {background:#245e58;color:white;border-radius:24px;padding:.65rem 1rem;font-size:.95rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:.8rem;}
+.historia-misiones .historia-limite {margin:1.5rem 0 0;color:#59401f;font-size:.9rem;}
+.historia-misiones .historia-ruta {border-left:4px solid #987039;padding:.5rem 0 .5rem 1rem;background:transparent;}
+@media(max-width:1024px) {
+ .historia-aventura .hero {grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:1rem;}
+ .historia-aventura .mission-grid {grid-template-columns:minmax(0,1fr);}
+ .historia-aventura .mission {min-height:115px;}
+ .historia-misiones .historia-inner {grid-template-columns:minmax(0,1fr);gap:1rem;}
+ .historia-misiones .historias-tarjetas {grid-column:1;grid-row:2;}
+ .historia-misiones .historia-limite {grid-column:1;grid-row:3;}
+}
+@media(max-width:768px) {
+ .historia-aventura .hero {grid-template-columns:minmax(0,1fr);padding-block:25px;gap:1rem;}
+ .historia-aventura .hero h1 {font-size:2.75rem;max-width:16ch;}
+ .historia-aventura .hero-art {display:block;width:min(100%,300px);margin:auto;}
+ .historia-aventura .topbar {flex-direction:column;align-items:flex-start;gap:.5rem;}
+ .historia-aventura .topbar nav {gap:.2rem .8rem;}
+ .historia-aventura .cases,.historia-aventura .compare-layout,.historia-aventura .compare-grid,.historia-aventura .metrics,.historia-aventura .atlas-grid {grid-template-columns:minmax(0,1fr);}
+ .historia-aventura .case {min-height:115px;}
+ .historia-aventura .steps {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem;}
+ .historia-aventura .step {font-size:.95rem;}
+ .historia-aventura .stage {padding:1.1rem;border-radius:20px;}
+ .historia-aventura .stage h2 {font-size:1.5rem;}
+ .historia-aventura .measure-grid {grid-template-columns:minmax(0,1fr);}
+ .historia-misiones .historias-tarjetas {grid-template-columns:minmax(0,1fr);}
+ .historia-misiones .tarjeta-historia {min-height:0;}
+}
+@media(max-width:420px) {
+ .historia-aventura .wrap {padding-inline:16px;}
+ .historia-aventura .hero h1 {font-size:2.5rem;}
+ .historia-aventura .hero-art {max-width:240px;}
+ .historia-aventura .case,.historia-aventura .mission {grid-template-columns:50px minmax(0,1fr);gap:.75rem;padding:.9rem;}
+ .historia-aventura .caso-ilustrado {width:50px;height:64px;}
+ .historia-aventura .caso-ilustrado svg {width:44px;}
+ .historia-aventura .case strong,.historia-aventura .mission strong {font-size:1.15rem;}
+ .historia-aventura .aviso-historia {grid-template-columns:minmax(0,1fr);}
+ .historia-aventura .aviso-icono {display:none;}
+ .historia-aventura .stage-heading,.historia-aventura .stage-head {gap:.5rem;}
+ .historia-aventura .stage-mark,.historia-aventura .counter {display:none;}
+}
+@media(prefers-reduced-motion:reduce) {.historia-aventura {scroll-behavior:auto;}.historia-aventura *, .historia-misiones * {transition:none!important;animation:none!important;}}

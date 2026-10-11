@@ -1,0 +1,158 @@
+{
+  "resultado": "PASS",
+  "base": "00ed3c6971c6c580cecedda6363eed54a0f153fb",
+  "controles": [
+    {
+      "control": "Identificadores y relaciones ARIA",
+      "resultado": "PASS",
+      "evidencia": {
+        "ids": 33,
+        "refs": 6
+      }
+    },
+    {
+      "control": "Título y textos principales conservados",
+      "resultado": "PASS",
+      "evidencia": "Jerarquía, título, introducción y llamadas a la acción intactos."
+    },
+    {
+      "control": "Cuatro controles nativos únicos",
+      "resultado": "PASS",
+      "evidencia": [
+        "left",
+        "right",
+        "reset",
+        "auto"
+      ]
+    },
+    {
+      "control": "Scripts anteriores conservados; nueva dependencia local",
+      "resultado": "PASS",
+      "evidencia": [
+        "portada-threejs.js",
+        "https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js",
+        "catalogo.js?v=escalas1",
+        "interfaz.js?v=escalas1"
+      ]
+    },
+    {
+      "control": "Todo el contenido posterior al héroe idéntico",
+      "resultado": "PASS",
+      "evidencia": "Laboratorio, historia, retos, modelos y restantes actividades de Historia V2 intactos."
+    },
+    {
+      "control": "Solo se modifica la portada respecto de Historia V2",
+      "resultado": "PASS",
+      "evidencia": {
+        "archivos_comparados": 100,
+        "cambios_fuera_alcance": []
+      }
+    },
+    {
+      "control": "CSS anterior conserva sus reglas",
+      "resultado": "PASS",
+      "evidencia": "Solo cambia un comentario de procedencia en portada-candidata.css."
+    },
+    {
+      "control": "Enlaces y recursos locales existentes",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "Sintaxis CSS; sin fuentes ni activos remotos",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "Sintaxis portada-escena.mjs",
+      "resultado": "PASS",
+      "evidencia": ""
+    },
+    {
+      "control": "Sintaxis portada-threejs.js",
+      "resultado": "PASS",
+      "evidencia": ""
+    },
+    {
+      "control": "Sintaxis design/portada-threejs/entrada.mjs",
+      "resultado": "PASS",
+      "evidencia": ""
+    },
+    {
+      "control": "Sintaxis design/portada-threejs/build.cjs",
+      "resultado": "PASS",
+      "evidencia": ""
+    },
+    {
+      "control": "Licencia íntegra en bundle y vista previa",
+      "resultado": "PASS",
+      "evidencia": "Three.js 0.180.0, MIT, copyright 2010–2025 de sus autores."
+    },
+    {
+      "control": "Preview autónoma sin recursos remotos de ejecución",
+      "resultado": "PASS",
+      "evidencia": {
+        "scripts": [
+          ""
+        ],
+        "recursos": []
+      }
+    },
+    {
+      "control": "Giro automático inicialmente apagado",
+      "resultado": "PASS",
+      "evidencia": "Controles ocultos hasta inicializar el renderer; sin autoplay."
+    },
+    {
+      "control": "Alternativa y límite de escala presentes",
+      "resultado": "PASS",
+      "evidencia": "SVG original conservado y descripción textual."
+    },
+    {
+      "control": "Contraste de los nuevos controles",
+      "resultado": "PASS",
+      "evidencia": [
+        {
+          "elemento": "Botones",
+          "ratio": 10.86
+        },
+        {
+          "elemento": "Botón activo",
+          "ratio": 8.99
+        },
+        {
+          "elemento": "Botón hover",
+          "ratio": 11.91
+        },
+        {
+          "elemento": "Botón desactivado",
+          "ratio": 7.63
+        },
+        {
+          "elemento": "Ayuda",
+          "ratio": 6.87
+        }
+      ]
+    },
+    {
+      "control": "Encaje de la escena en el aspecto CSS",
+      "resultado": "PASS",
+      "evidencia": "Proyección en CPU comprobada durante el giro en verificacion-interaccion.json."
+    }
+  ],
+  "bundle_bytes": 708567,
+  "sha256_bundle": "71bded81f4ecb514ad2166385e44c62181acdc9fd76ca6641d60a21c0be33334",
+  "limites": [
+    "Revisión de fuente y contraste focalizado; no certificación integral de accesibilidad.",
+    "DOM sintético y CPU no prueban renderizado WebGL real.",
+    "No hay captura de la escena 3D ni prueba real en móvil, teclado, zoom o RA."
+  ],
+  "regresion": {
+    "pruebas_existentes": 23,
+    "resultado": "PASS",
+    "control_tecnico": "PASS",
+    "control_metrico_local": "PASS",
+    "control_documental": "NO_GO"
+  },
+  "git_whitespace": "Comprobación de fuentes propias: PASS. El bundle generado y la preview conservan cinco líneas de espacios finales procedentes de cadenas GLSL de Three.js; no se modifica ese código compilado para suprimirlas."
+}

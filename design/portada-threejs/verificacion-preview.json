@@ -1,0 +1,10 @@
+{
+  "resultado": "PASS",
+  "tipo": "Bundle entregable ejecutado en DOM sintético con contexto gráfico nulo. No renderizado WebGL.",
+  "controles": [
+    "Bundle y controlador integrados ejecutan sin excepciones no manejadas",
+    "Alternativa SVG visible sin WebGL",
+    "Controles 3D ocultos sin WebGL"
+  ],
+  "errores": []
+}

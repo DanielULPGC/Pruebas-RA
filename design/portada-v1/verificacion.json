@@ -1,0 +1,136 @@
+{
+  "base": "7d0e11e59a83d345ddf8e1845ceedeac92042a5c",
+  "controles": [
+    {
+      "control": "Título conservado",
+      "resultado": "PASS",
+      "evidencia": "Observa la forma. Descubre las reglas."
+    },
+    {
+      "control": "Identificadores únicos",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "Relaciones ARIA resueltas",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "Destinos de enlaces existentes",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "Laboratorio y contenidos posteriores idénticos",
+      "resultado": "PASS",
+      "evidencia": "245cb4f0662e6b4805f5d2cede90fcb55a60cc35deee57a9a76da9950a05d70d"
+    },
+    {
+      "control": "Scripts idénticos a la portada publicada",
+      "resultado": "PASS",
+      "evidencia": [
+        "https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js",
+        "catalogo.js?v=escalas1",
+        "interfaz.js?v=escalas1"
+      ]
+    },
+    {
+      "control": "Sin servicios ni fuentes nuevos",
+      "resultado": "PASS",
+      "evidencia": [
+        "sistema-visual.css",
+        "estilos.css",
+        "portada-candidata.css"
+      ]
+    },
+    {
+      "control": "Sintaxis CSS",
+      "resultado": "PASS",
+      "evidencia": []
+    },
+    {
+      "control": "SVG de portada sin contenido activo ni referencias remotas",
+      "resultado": "PASS",
+      "evidencia": "c3ea7d93d884d905db0a36ffe80109fe5d282c4ad6aa7b9c62c9fcb4b3e604f8"
+    },
+    {
+      "control": "Escena etiquetada sin escala",
+      "resultado": "PASS",
+      "evidencia": "Leyenda y descripción del SVG presentes"
+    },
+    {
+      "control": "Contenido publicado intacto",
+      "resultado": "PASS",
+      "evidencia": {
+        "cambios_contenido": [],
+        "excepcion": "Actualización deliberada del manifiesto para inventariar las nuevas rutas."
+      }
+    },
+    {
+      "control": "Contraste textual de portada",
+      "resultado": "PASS",
+      "evidencia": [
+        {
+          "elemento": "Título",
+          "primer_plano": "#ffffff",
+          "fondo": "#235365",
+          "ratio": 8.41
+        },
+        {
+          "elemento": "Acento",
+          "primer_plano": "#f1d1a0",
+          "fondo": "#235365",
+          "ratio": 5.75
+        },
+        {
+          "elemento": "Descripción",
+          "primer_plano": "#deebe7",
+          "fondo": "#235365",
+          "ratio": 6.87
+        },
+        {
+          "elemento": "Eyebrow y leyenda",
+          "primer_plano": "#c6ddd5",
+          "fondo": "#235365",
+          "ratio": 5.89
+        },
+        {
+          "elemento": "Tarjeta título",
+          "primer_plano": "#173344",
+          "fondo": "#f6f5ef",
+          "ratio": 12.07
+        },
+        {
+          "elemento": "Tarjeta cuerpo",
+          "primer_plano": "#44616b",
+          "fondo": "#f6f5ef",
+          "ratio": 6.07
+        },
+        {
+          "elemento": "Tarjeta medidas cuerpo",
+          "primer_plano": "#44616b",
+          "fondo": "#f0dfc5",
+          "ratio": 5.07
+        },
+        {
+          "elemento": "Navegación",
+          "primer_plano": "#36505e",
+          "fondo": "#f7faf8",
+          "ratio": 8.1
+        },
+        {
+          "elemento": "Botón",
+          "primer_plano": "#173344",
+          "fondo": "#efd1a3",
+          "ratio": 8.99
+        }
+      ]
+    }
+  ],
+  "resultado": "PASS",
+  "limits": [
+    "Análisis de fuente y render estático; no son pruebas de navegador, móvil físico ni zoom real.",
+    "No se certifica accesibilidad integral ni autorización visual."
+  ]
+}

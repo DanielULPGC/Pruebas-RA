@@ -1,0 +1,82 @@
+/* Portada candidata V1. Composición propia, inspirada en la referencia aportada.
+   Reutiliza el laboratorio publicado. La mejora Three.js se implementa por separado. */
+.portada-v1 {background:#f4f7f6;}
+.portada-v1 .barra-superior {padding:1.25rem 1.5rem 0;background:#123748;border:0;}
+.portada-v1 .barra-superior-inner {max-width:1180px;min-height:76px;padding:12px 24px;background:#f7faf8;border:1px solid #c9ddd8;border-radius:24px;box-shadow:0 14px 32px #08243240;flex-wrap:wrap;}
+.portada-v1 .marca strong {font-size:1.25rem;}
+.portada-v1 .marca small {font-size:.75rem;letter-spacing:.09em;}
+.portada-v1 .marca-simbolo {background:#dcece5;border-radius:50%;}
+.portada-v1 .nav-superior {display:grid;grid-template-columns:repeat(4,max-content);gap:1.2rem;}
+.portada-v1 .nav-superior a {font-size:.95rem;min-height:44px;display:inline-flex;align-items:center;padding:8px 4px;white-space:normal;}
+.portada-v1 .etiqueta-proyecto {font-size:.8rem;}
+.portada-v1 .hero {background:radial-gradient(ellipse at 74% 44%,#235365 0%,transparent 55%),#123748;overflow:visible;padding-bottom:2.5rem;}
+.portada-v1 .hero::after {display:none;}
+.portada-v1 .palabra-fondo {position:absolute;top:1rem;right:4%;font-size:clamp(7rem,16vw,15rem);line-height:1;font-weight:850;letter-spacing:-.06em;color:#739a9c;opacity:.11;pointer-events:none;max-width:92%;overflow:hidden;}
+.portada-v1 .hero-inner {grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr);gap:1rem;min-height:610px;padding-top:2.25rem;padding-bottom:1.5rem;}
+.portada-v1 .hero-copy {position:relative;z-index:1;min-width:0;}
+.portada-v1 .hero-eyebrow {font-size:.8rem;letter-spacing:.09em;color:#c6ddd5;align-items:flex-start;line-height:1.6;}
+.portada-v1 .punto-vivo {flex:none;margin-top:.45rem;}
+.portada-v1 .hero h1 {font-size:4rem;font-size:clamp(2.75rem,4.6vw,4.3rem);letter-spacing:-.055em;line-height:1.06;max-width:12ch;overflow-wrap:break-word;}
+.portada-v1 .hero h1 em {color:#f1d1a0;}
+.portada-v1 .hero-desc {font-size:1.06rem;max-width:40ch;color:#deebe7;margin-bottom:1.8rem;}
+.portada-v1 .hero-acciones {gap:1.1rem 1.5rem;}
+.portada-v1 .btn-hero {background:#efd1a3;color:#173344;font-size:1rem;min-height:48px;box-shadow:0 8px 24px #08243235;border-radius:40px;gap:1rem;flex:none;}
+.portada-v1 .btn-hero:hover {background:#ffe5bd;}
+.portada-v1 .link-hero {font-size:.95rem;min-height:44px;display:inline-flex;align-items:center;gap:.6rem;flex:none;}
+.portada-v1 .hero-indicadores {font-size:.875rem;color:#c6ddd5;margin-top:1.8rem;gap:1rem;}
+.portada-v1 .hero-indicadores strong {font-size:1rem;}
+.portada-v1 .hero-escena {margin:0;align-self:center;min-width:0;}
+.portada-v1 .hero-dibujo {width:100%;max-width:620px;max-height:none;filter:drop-shadow(0 22px 20px #08243240);}
+.portada-v1 .escena-legenda {font-size:.75rem;letter-spacing:.08em;color:#c6ddd5;text-align:center;line-height:1.6;display:block;margin-top:-.5rem;}
+.portada-v1 .puertas {position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;}
+.portada-v1 .puerta {background:#f6f5ef;color:#173344;border:1px solid #e1e5dc;border-radius:20px;padding:1.4rem 1.35rem;display:flex;flex-direction:column;text-decoration:none;min-width:0;box-shadow:0 16px 35px #0625352b;overflow-wrap:anywhere;}
+.portada-v1 .puerta:hover {background:#fffaf0;border-color:#e5c694;}
+.portada-v1 .puerta-medidas {background:#f0dfc5;border-color:#f0dfc5;}
+.portada-v1 .puerta-numero {color:#44616b;font-size:.75rem;letter-spacing:.08em;font-weight:800;margin-bottom:.7rem;}
+.portada-v1 .puerta-titulo {display:flex;justify-content:space-between;align-items:flex-start;gap:.7rem;font-size:1.22rem;line-height:1.25;font-weight:800;letter-spacing:-.025em;}
+.portada-v1 .puerta-titulo span {flex:none;}
+.portada-v1 .puerta-desc {color:#44616b;font-size:.95rem;line-height:1.5;margin-top:.7rem;}
+.portada-v1 .barra-superior a:focus-visible,.portada-v1 .hero a:focus-visible {outline-color:#bf5923;outline-width:3px;outline-offset:5px;}
+.portada-v1 .hero a.btn-hero:focus-visible,.portada-v1 .hero a.link-hero:focus-visible {outline-color:#ffe4b5;}
+@media (max-width:1050px) {
+ .portada-v1 .barra-superior-inner {gap:1rem;}
+ .portada-v1 .etiqueta-proyecto {display:none;}
+ .portada-v1 .hero-inner {min-height:560px;}
+ .portada-v1 .hero h1 {font-size:clamp(2.75rem,4.6vw,3.6rem);}
+ .portada-v1 .puerta {padding:1.1rem;}
+ .portada-v1 .puerta-titulo {font-size:1.1rem;}
+}
+@media (max-width:800px) {
+ .portada-v1 .barra-superior {padding:1rem 1rem 0;}
+ .portada-v1 .barra-superior-inner {padding:12px 18px;justify-content:center;gap:.5rem 1.5rem;}
+ .portada-v1 .nav-superior {justify-content:center;gap:.5rem 1rem;}
+ .portada-v1 .hero-inner {grid-template-columns:minmax(0,1fr);gap:.25rem;min-height:0;padding-top:2.5rem;}
+ .portada-v1 .hero-copy {max-width:620px;}
+ .portada-v1 .hero h1 {max-width:14ch;font-size:clamp(2.75rem,6vw,3.9rem);}
+ .portada-v1 .hero-desc {max-width:48ch;}
+ .portada-v1 .hero-escena {width:min(100%,500px);margin:0 auto;}
+ .portada-v1 .puertas {grid-template-columns:minmax(0,1fr);max-width:620px;gap:.8rem;}
+ .portada-v1 .puerta {padding:1.2rem 1.35rem;}
+ .portada-v1 .palabra-fondo {top:8rem;right:5%;font-size:clamp(7rem,24vw,12rem);}
+}
+@media (max-width:480px) {
+ .portada-v1 .barra-superior-inner {border-radius:20px;padding:14px 12px;}
+ .portada-v1 .nav-superior {width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.25rem .5rem;}
+ .portada-v1 .nav-superior a {justify-content:center;text-align:center;line-height:1.25;font-size:.95rem;padding:8px 6px;}
+ .portada-v1 .hero-inner {padding-top:2rem;}
+ .portada-v1 .hero h1 {font-size:2.75rem;max-width:11ch;}
+ .portada-v1 .hero-desc {font-size:1rem;}
+ .portada-v1 .hero-eyebrow {font-size:.75rem;}
+ .portada-v1 .hero-indicadores {gap:.65rem;}
+ .portada-v1 .hero-indicadores span:not(:first-child) {padding-left:.65rem;}
+ .portada-v1 .hero-escena {max-width:350px;margin-top:.5rem;}
+ .portada-v1 .puerta-titulo {font-size:1.15rem;}
+}
+@media print {
+ .portada-v1 .barra-superior,.portada-v1 .palabra-fondo {display:none;}
+ .portada-v1 .hero {background:white;color:#173344;}
+ .portada-v1 .hero h1 em,.portada-v1 .hero-desc,.portada-v1 .hero-eyebrow,.portada-v1 .hero-indicadores,.portada-v1 .hero-indicadores strong,.portada-v1 .escena-legenda,.portada-v1 .link-hero {color:#173344;}
+ .portada-v1 .hero-inner {min-height:0;}
+ .portada-v1 .puertas {grid-template-columns:1fr;}
+ .portada-v1 .puerta {box-shadow:none;break-inside:avoid;}
+}
