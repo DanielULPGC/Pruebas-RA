@@ -63,7 +63,7 @@ function mostrarPaso(numero, moverFoco = false) {
   });
   $('anterior').disabled = paso===0;
   $('siguiente').disabled = paso===3;
-  $('indicador-paso').textContent = `Etapa ${paso+1} de 4`;
+  $('indicador-paso').textContent = `Paso ${paso+1} de 4`;
   if(moverFoco){ const h=$('titulo-paso'+paso); h.tabIndex=-1;h.focus({preventScroll:true}); h.scrollIntoView({block:'start',behavior:'instant'}); }
 }
 function mostrarCaso(id) {

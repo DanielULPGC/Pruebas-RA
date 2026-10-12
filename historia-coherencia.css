@@ -1,0 +1,23 @@
+/* R9: navegación compartida y apertura de Historia más breve. */
+header nav[aria-label="Navegación principal"] a {
+ display:inline-flex;align-items:center;min-height:44px;
+ padding:8px 12px;border-radius:10px;font-weight:700;
+}
+header nav[aria-label="Navegación principal"] a:focus-visible {
+ outline:3px solid #a34419;outline-offset:3px;
+}
+header nav[aria-label="Navegación principal"] a[aria-current="page"] {
+ background:#dcefe9;color:#174b49;
+}
+body:not(.historia-aventura) main>.hero {
+ padding:32px;gap:26px;margin-top:20px;
+}
+body:not(.historia-aventura) main>.hero h1 {
+ font-size:clamp(2.25rem,4vw,3.4rem);
+}
+body:not(.historia-aventura) main>.hero .escena {
+ min-height:0;
+}
+@media (max-width:760px) {
+ body:not(.historia-aventura) main>.hero {padding:22px;gap:18px;}
+}
