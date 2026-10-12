@@ -42,7 +42,7 @@ const INFO = {
 };
 let caso = 'grupo';
 let paso = 0;
-const notas = Object.fromEntries(CASOS.map(id => [id,{observacion:'',conclusion:''}]));
+const notas = Object.fromEntries(CASOS.map(id => [id,{observacion:'',conclusion:'',inicial:'',revisada:'',ayudas:0}]));
 const respuestas = Object.fromEntries(CASOS.map(id => [id,'']));
 const medidasGuardadas = Object.fromEntries(CASOS.map(id => [id,null]));
 const progreso = Object.fromEntries(CASOS.map(id => [id,{feedback:'',error:false,argumento:false,calculo:'',prisma:''}]));
@@ -50,6 +50,7 @@ const progreso = Object.fromEntries(CASOS.map(id => [id,{feedback:'',error:false
 function guardarNotas() {
   notas[caso].observacion = $('observacion').value;
   notas[caso].conclusion = $('conclusion').value;
+  notas[caso].inicial=$('idea-inicial').value;notas[caso].revisada=$('idea-revisada').value;
   const controles = [...$('medidas').querySelectorAll('input')];
   if (controles.length) medidasGuardadas[caso] = Object.fromEntries(controles.map(x => [x.id,x.value]));
 }
@@ -64,6 +65,7 @@ function mostrarPaso(numero, moverFoco = false) {
   $('anterior').disabled = paso===0;
   $('siguiente').disabled = paso===3;
   $('indicador-paso').textContent = `Paso ${paso+1} de 4`;
+  if(paso===3){guardarNotas();$('idea-resumen').textContent=notas[caso].inicial.trim()||'Aún no has escrito una idea inicial.';}
   if(moverFoco){ const h=$('titulo-paso'+paso); h.tabIndex=-1;h.focus({preventScroll:true}); h.scrollIntoView({block:'start',behavior:'instant'}); }
 }
 function mostrarCaso(id) {
@@ -126,6 +128,7 @@ function mostrarCaso(id) {
   $('calculo-respuesta').textContent=ev.calculo||'Introduce las medidas y calcula el volumen.';
   $('calculo-respuesta').classList.toggle('error',ev.calculo.startsWith('Error:'));
   $('comparacion-prisma').textContent=ev.prisma;
+  $('idea-inicial').value=notas[id].inicial;$('idea-revisada').value=notas[id].revisada;$('pregunta-inicial').textContent=ANTICIPOS[id];mostrarAyudas();
   $('observacion').value=notas[id].observacion;$('conclusion').value=notas[id].conclusion;
   $('mensaje-descarga').textContent='';$('copia-panel').hidden=true;
   mostrarPaso(0);
@@ -160,7 +163,7 @@ function cuaderno(){
     'P4.5.2-P · Cuaderno escolar',`Caso: ${e.titulo}`,
     `Estudio: Kelly (2026), figura ${e.figura}, doi:10.1016/j.hm.2026.103248`,
     'Los dibujos e ilustraciones digitales son contemporáneos; NO son el papiro.',
-    '', 'OBSERVACIÓN:',n.observacion,'','CONCLUSIÓN / LÍMITES:',n.conclusion,'',
+    '', 'IDEA INICIAL:',n.inicial,'','REVISIÓN DE MI IDEA:',n.revisada,'','PISTAS CONSULTADAS:',String(n.ayudas),'','OBSERVACIÓN:',n.observacion,'','CONCLUSIÓN / LÍMITES:',n.conclusion,'',
     'Datos matemáticos de la calculadora: ejemplos escolares, no valores originales.',
     'P5 NO-GO: no se han acreditado ensayos físicos de RA.'].join('\n');
 }
@@ -184,5 +187,23 @@ $('calcular').addEventListener('click',calcular);
 $('reset-medidas').addEventListener('click',()=>{$('medidas').querySelectorAll('input').forEach(e=>e.value=e.dataset.default);calcular()});
 $('descargar').addEventListener('click',descargar);
 $('mostrar-texto').addEventListener('click',textoCopiable);
-$('borrar').addEventListener('click',()=>{notas[caso]={observacion:'',conclusion:''};$('observacion').value='';$('conclusion').value='';$('mensaje-descarga').textContent='Las notas de este caso se han borrado.';$('copia-panel').hidden=true;});
+$('borrar').addEventListener('click',()=>{notas[caso]={observacion:'',conclusion:'',inicial:'',revisada:'',ayudas:0};$('idea-inicial').value='';$('idea-revisada').value='';$('idea-resumen').textContent='Aún no has escrito una idea inicial.';mostrarAyudas();$('observacion').value='';$('conclusion').value='';$('mensaje-descarga').textContent='Las notas de este caso se han borrado.';$('copia-panel').hidden=true;});
+
+const ANTICIPOS={
+ grupo:'¿Un dibujo por sí solo permite identificar con certeza el problema antiguo al que pertenece? ¿Qué más necesitarías?',
+ p18:'¿La altura de una pirámide es igual a una arista inclinada? ¿Cómo podrías distinguirlas?',
+ p19:'Si cortamos una pirámide con un plano paralelo a la base y retiramos la punta, ¿qué cambia en sus caras y bases?'
+};
+const PISTAS={
+ grupo:['Distingue lo que se ve en un dibujo de la interpretación de quien lo estudia.', 'Busca qué correspondencias presenta el estudio como seguras y cuáles como propuestas.', 'Que varios dibujos formen un conjunto no demuestra una correspondencia exacta para cada uno. Tu explicación debe conservar las dudas del estudio.'],
+ p18:['Localiza el vértice y el plano de la base en el modelo actual.', 'Compara un segmento perpendicular a la base con una arista inclinada: no cumplen la misma función.', 'Para calcular el volumen moderno necesitas la distancia perpendicular al plano de la base. Esto no identifica por sí solo un trazo del papiro.'],
+ p19:['Imagina el corte paralelo a la base y observa la parte que queda después de retirar la punta.', 'Compara la superficie del corte con la base original. ¿Son paralelas? ¿Tienen el mismo tamaño?', 'En el tronco que estudiamos quedan dos bases paralelas, semejantes y de distinto tamaño. Esta propiedad geométrica no explica las marcas inciertas del documento.']
+};
+function mostrarAyudas(){
+ const n=notas[caso].ayudas,lista=$('ayudas');lista.replaceChildren();
+ for(const texto of PISTAS[caso].slice(0,n)){const li=document.createElement('li');li.textContent=texto;lista.append(li);}
+ lista.hidden=n===0;const b=$('pedir-ayuda');b.disabled=n===3;b.setAttribute('aria-expanded',String(n>0));b.textContent=n===0?'Ver primera pista':n===3?'Has consultado las tres pistas':'Ver siguiente pista';
+}
+$('pedir-ayuda').addEventListener('click',()=>{notas[caso].ayudas=Math.min(3,notas[caso].ayudas+1);mostrarAyudas();});
+
 mostrarCaso(new URLSearchParams(location.search).get('caso') in ESCENAS ? new URLSearchParams(location.search).get('caso') : 'grupo');
