@@ -4,7 +4,7 @@ const $ = id => document.getElementById(id);
 let actual='p2';
 let paso=0;
 const elecciones={p2:'',p8:''};
-const textos={p2:{observaciones:'',hipotesis:''},p8:{observaciones:'',hipotesis:''}};
+const textos={p2:{observaciones:'',hipotesis:'',anticipo:'',revision:'',pistas:0},p8:{observaciones:'',hipotesis:'',anticipo:'',revision:'',pistas:0}};
 const posters={
   p2:'ilustraciones/auditoria_escriba_p2.svg',
   p8:'ilustraciones/auditoria_escriba_p8.svg'
@@ -13,7 +13,7 @@ const referencias={
   p2:{documentado:'MPER N.S. 1.1, problema 2. El enunciado conservado refiere un cubo de diez pies de arista y los diagramas adjuntos utilizan otras magnitudes.',interpretado:'En el dibujo izquierdo asociado al problema, Kelly interpreta 8 × 5 × 20 pies y detecta la anotación 80, frente a 800 del producto.',pista:'Fíjate en las cifras: ¿la ilustración moderna ayuda a detectar un posible problema de cálculo? ¿Qué comprobarías en la edición científica?',datoshistoricos:'El estudio analiza varios esquemas asociados al problema 2. La atribución de magnitudes y la interpretación del resultado corresponden a la lectura académica del papiro.'},
   p8:{documentado:'MPER N.S. 1.1, problema 8. Kelly identifica dibujos de dos cubos; uno de ellos tiene una arista de seis pies.',interpretado:'El diagrama izquierdo está deteriorado y la correspondencia del dibujo derecho con el segundo cubo no puede asegurarse. Nuestro cálculo de 216 es moderno.',pista:'Si una arista mide seis pies, ¿cómo podrías calcular el volumen sin necesitar un dibujo perfectamente proporcionado?',datoshistoricos:'Los dibujos presentan pérdidas y trazos cuya interpretación no siempre es segura. La operación 6 × 6 × 6 es una aplicación escolar de la geometría actual.'}
 };
-function guardar(){textos[actual].observaciones=$('observaciones').value;textos[actual].hipotesis=$('hipotesis').value;}
+function guardar(){textos[actual].observaciones=$('observaciones').value;textos[actual].hipotesis=$('hipotesis').value;textos[actual].anticipo=$('anticipo').value;textos[actual].revision=$('revision').value;}
 function cambiarPaso(n,conFoco=false){
  paso=Math.max(0,Math.min(3,n));
  for(let i=0;i<4;i++){$('paso'+i).hidden=i!==paso;}
@@ -25,6 +25,7 @@ function cambiarPaso(n,conFoco=false){
  $('anterior').hidden=paso===0;
  $('siguiente').hidden=paso===3;
  $('estado-paso').textContent=`Paso ${paso+1} de 4`;
+ if(paso===3){guardar();$('anticipo-resumen').textContent=textos[actual].anticipo.trim()||'Aún no has escrito una hipótesis inicial.';}
  if(conFoco){const h=$('titulo-paso'+paso);h.setAttribute('tabindex','-1');h.focus({preventScroll:true});h.scrollIntoView({behavior:'auto',block:'start'});}
 }
 function mostrarCaso(id){
@@ -54,6 +55,10 @@ function mostrarCaso(id){
  $('mostrar').setAttribute('aria-expanded','false');
  $('conclusion').textContent=c.explicacion;
  $('limite').textContent=c.limite;
+ $('anticipo').value=textos[id].anticipo;$('revision').value=textos[id].revision;
+ $('anticipo-pregunta').textContent=id==='p2'?'En nuestro modelo actual, un ortoedro mide 8 × 5 × 20 pies. ¿Qué volumen esperas obtener?':'En nuestro modelo actual, un cubo tiene 6 pies de arista. ¿Qué volumen esperas obtener?';
+ document.querySelector('.taller-reto').textContent=id==='p2'?'¿80 o 800?':'¿Cuánto ocupa el cubo?';
+ document.querySelector('.taller-ficha').open=false;renderPistas();
  $('observaciones').value=textos[id].observaciones;
  $('hipotesis').value=textos[id].hipotesis;
  $('aviso-descarga').textContent='';$('copia-panel').hidden=true;
@@ -67,7 +72,7 @@ function informe(){guardar();const c=CASOS[actual],t=textos[actual];return [
  'DOI: 10.1016/j.hm.2026.103248',
  'Aviso: las fichas visuales son modernas y no reproducen dibujos históricos.',
  'La operación escolar moderna no transcribe el procedimiento antiguo.','',
- 'OBSERVACIONES:',t.observaciones,'','INTERPRETACIÓN E INCERTIDUMBRE:',t.hipotesis,'',
+ 'HIPÓTESIS INICIAL:',t.anticipo,'','REVISIÓN DE MI IDEA:',t.revision,'','PISTAS CONSULTADAS:',String(t.pistas),'','OBSERVACIONES:',t.observaciones,'','INTERPRETACIÓN E INCERTIDUMBRE:',t.hipotesis,'',
  'Cálculo escolar actual: '+c.magnitudes.join(' × ')+' = '+calcularVolumen(c.magnitudes)+' pies cúbicos',
  'La respuesta no se envió a servidores desde esta actividad.'
  ].join('\n');}
@@ -83,7 +88,7 @@ $('comprobar').addEventListener('click',()=>{
  $('resultado').textContent=String(calcularVolumen(CASOS[actual].magnitudes))+' pies³';
 });
 $('mostrar').addEventListener('click',()=>{const abrir=$('interpretacion').hidden;$('interpretacion').hidden=!abrir;$('mostrar').setAttribute('aria-expanded',String(abrir));$('mostrar').textContent=abrir?'Ocultar interpretación histórica':'Leer interpretación histórica';$('resultado').textContent=String(calcularVolumen(CASOS[actual].magnitudes))+' pies³';});
-$('borrar').addEventListener('click',()=>{textos[actual]={observaciones:'',hipotesis:''};$('observaciones').value='';$('hipotesis').value='';$('copia-panel').hidden=true;$('aviso-descarga').textContent='Las notas de este caso se han borrado de la página.';});
+$('borrar').addEventListener('click',()=>{textos[actual]={observaciones:'',hipotesis:'',anticipo:'',revision:'',pistas:0};$('anticipo').value='';$('revision').value='';$('anticipo-resumen').textContent='Aún no has escrito una hipótesis inicial.';renderPistas();$('observaciones').value='';$('hipotesis').value='';$('copia-panel').hidden=true;$('aviso-descarga').textContent='Las notas de este caso se han borrado de la página.';});
 $('copiar').addEventListener('click',()=>{const t=informe();$('texto-copiable').value=t;$('copia-panel').hidden=false;
  try{if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>$('aviso-descarga').textContent='Texto copiado. También puedes seleccionarlo en el campo inferior.').catch(()=>$('aviso-descarga').textContent='Copia manualmente el texto que aparece abajo.');}else{$('aviso-descarga').textContent='Copia manualmente el texto que aparece abajo.';}}
  catch(_){$('aviso-descarga').textContent='Copia manualmente el texto que aparece abajo.';}
@@ -92,4 +97,16 @@ $('exportar').addEventListener('click',()=>{const t=informe();$('texto-copiable'
  try{const blob=new Blob([t],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='taller_escriba_'+actual+'.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),3000);$('aviso-descarga').textContent='Descarga solicitada. Si no se guardó, copia el texto que aparece abajo.';}
  catch(_){$('aviso-descarga').textContent='No fue posible descargar. Copia manualmente el texto que aparece abajo.';}
 });
+
+const ayudas={
+ p2:['El volumen de un ortoedro se calcula multiplicando sus tres dimensiones. ¿Qué unidad tendrá el resultado?', 'Calcula primero 8 × 5. Después multiplica ese resultado por 20; puedes descomponer 20 en 2 × 10.', 'Comprueba: 8 × 5 = 40; 40 × 2 = 80; falta multiplicar por 10. Este cálculo actual no demuestra cómo operó el escriba.'],
+ p8:['En un cubo, las tres dimensiones son iguales. Para el volumen necesitas multiplicar la arista tres veces.', 'Calcula primero 6 × 6. Después multiplica el resultado por otro 6; puedes descomponer este último en 5 + 1.', 'Comprueba: 6 × 6 = 36; calcula 36 × 5 y suma 36. El resultado del modelo actual no reconstruye los trazos perdidos del documento.']
+};
+function renderPistas(){
+ const lista=$('pistas-graduales'),n=textos[actual].pistas;lista.replaceChildren();
+ for(const texto of ayudas[actual].slice(0,n)){const li=document.createElement('li');li.textContent=texto;lista.append(li);}
+ lista.hidden=n===0;const b=$('pedir-pista');b.disabled=n===3;b.textContent=n===0?'Ver primera pista':n===3?'Has consultado las tres pistas':'Ver siguiente pista';b.setAttribute('aria-expanded',String(n>0));
+}
+$('pedir-pista').addEventListener('click',()=>{textos[actual].pistas=Math.min(3,textos[actual].pistas+1);renderPistas();});
+
 const solicitado=new URLSearchParams(location.search).get('caso');mostrarCaso(Object.prototype.hasOwnProperty.call(CASOS,solicitado)?solicitado:'p2');

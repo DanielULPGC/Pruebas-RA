@@ -14,3 +14,9 @@
   .historia-aventura .hero.taller-apertura { padding-block: 22px 12px; }
   .historia-aventura .taller-ruta { gap: 7px; }
 }
+
+.historia-aventura .taller-reflexion,.historia-aventura .taller-ayuda { background:#edf5f1; color:#253c40; padding:18px; border-radius:14px; margin-bottom:18px; }
+.historia-aventura .taller-reflexion label {display:block;font-weight:700;margin-bottom:8px;}
+.historia-aventura .taller-reflexion textarea {width:100%;box-sizing:border-box;border:1px solid #52676b;border-radius:10px;padding:12px;background:#fff;color:#253c40;}
+.historia-aventura .taller-ficha summary {cursor:pointer;padding:14px;font-weight:700;background:#fff8e9;color:#174b49;border-radius:12px;margin-bottom:16px;}
+.historia-aventura #pistas-graduales li {margin-block:12px;}
