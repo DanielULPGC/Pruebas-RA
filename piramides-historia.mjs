@@ -122,13 +122,14 @@ function mostrarCaso(id) {
     input.addEventListener('input',()=>{
       $('calculo-respuesta').textContent='Pulsa «Calcular volumen» para comprobar las nuevas medidas.';
       $('calculo-respuesta').classList.remove('error');$('comparacion-prisma').textContent='';
-      ev.calculo='';ev.prisma='';
+      ev.calculo='';ev.prisma='';actualizarEsquema();
     });lab.append(input);medidas.append(lab);
   }
   $('calculo-respuesta').textContent=ev.calculo||'Introduce las medidas y calcula el volumen.';
   $('calculo-respuesta').classList.toggle('error',ev.calculo.startsWith('Error:'));
   $('comparacion-prisma').textContent=ev.prisma;
   $('idea-inicial').value=notas[id].inicial;$('idea-revisada').value=notas[id].revisada;$('pregunta-inicial').textContent=ANTICIPOS[id];mostrarAyudas();
+  actualizarEsquema();
   $('observacion').value=notas[id].observacion;$('conclusion').value=notas[id].conclusion;
   $('mensaje-descarga').textContent='';$('copia-panel').hidden=true;
   mostrarPaso(0);
@@ -143,6 +144,7 @@ function comprobar(){
   progreso[caso].feedback=panel.textContent;progreso[caso].error=!r.correcta;
 }
 function calcular(){
+  actualizarEsquema();
   if(caso==='p19')return;
   const informe=$('calculo-respuesta'); const resumen=$('comparacion-prisma');
   try {
@@ -205,5 +207,32 @@ function mostrarAyudas(){
  lista.hidden=n===0;const b=$('pedir-ayuda');b.disabled=n===3;b.setAttribute('aria-expanded',String(n>0));b.textContent=n===0?'Ver primera pista':n===3?'Has consultado las tres pistas':'Ver siguiente pista';
 }
 $('pedir-ayuda').addEventListener('click',()=>{notas[caso].ayudas=Math.min(3,notas[caso].ayudas+1);mostrarAyudas();});
+
+
+function actualizarEsquema(){
+ const panel=$('experimento-visual');panel.hidden=caso!=='p18';if(caso!=='p18')return;
+ const a=Number($('m-lado').value),h=Number($('m-altura-piramide').value),svg=$('esquema-medidas'),grupo=$('dibujo-medidas');grupo.replaceChildren();
+ if(!Number.isFinite(a)||!Number.isFinite(h)||a<=0||h<=0||a>100000||h>100000){svg.hidden=true;$('estado-esquema').textContent='Para representar la figura, introduce dos medidas positivas no superiores a 100000.';return;}
+ svg.hidden=false;const escala=Math.min(110/Math.max(a,6),125/Math.max(h,9));
+ const crear=(tipo,atributos,texto)=>{const el=document.createElementNS('http://www.w3.org/2000/svg',tipo);for(const [k,v] of Object.entries(atributos))el.setAttribute(k,String(v));if(texto)el.textContent=texto;grupo.append(el);};
+ for(const [x,lado,altura,titulo] of [[90,6,9,'Referencia'],[270,a,h,'Tus medidas']]){
+  const b=lado*escala/2,z=lado*escala*.18,y=210,t=y-altura*escala;
+  crear('text',{x,y:28,'text-anchor':'middle',fill:'#253c40','font-size':16},titulo);
+  crear('polygon',{points:`${x},${t} ${x-b},${y} ${x},${y+z}`,fill:'#efc27e',stroke:'#815021','stroke-width':2});
+  crear('polygon',{points:`${x},${t} ${x},${y+z} ${x+b},${y}`,fill:'#d8a463',stroke:'#815021','stroke-width':2});
+  crear('path',{d:`M${x-b} ${y}L${x} ${y-z}L${x+b} ${y}M${x} ${y-z}L${x} ${t}`,fill:'none',stroke:'#815021','stroke-dasharray':'4 4'});
+  crear('path',{d:`M${x} ${t}V${y}`,fill:'none',stroke:'#174b49','stroke-width':3,'stroke-dasharray':'5 4'});
+  crear('circle',{cx:x,cy:y,r:3,fill:'#174b49'});
+  crear('text',{x,y:250,'text-anchor':'middle',fill:'#253c40','font-size':13},`lado ${lado} cm; h ${altura} cm`);
+ }
+ const volumen=volumenCuadrangular(a,h),ratio=volumen/108;
+ $('descripcion-esquema').textContent=`Comparación de pirámides de base cuadrada. Referencia: lado 6 y altura 9 cm. Tus medidas: lado ${a} y altura perpendicular ${h} cm. Las alturas se marcan con líneas discontinuas.`;
+ $('estado-esquema').textContent=`Volumen de referencia: 108 cm³. Con tus medidas: ${Number(volumen.toPrecision(8)).toLocaleString('es-ES')} cm³; ${Number(ratio.toPrecision(8)).toLocaleString('es-ES')} veces el volumen de referencia.`;
+}
+for(const [id,campo] of [['doblar-altura','m-altura-piramide'],['doblar-base','m-lado']])$(id).addEventListener('click',()=>{
+ if(caso!=='p18')return;const input=$(campo),n=Number(input.value);
+ if(!Number.isFinite(n)||n<=0||n>50000){$('estado-esquema').textContent='Para duplicar esta medida, introduce un valor positivo no superior a 50000.';return;}
+ input.value=String(n*2);calcular();
+});
 
 mostrarCaso(new URLSearchParams(location.search).get('caso') in ESCENAS ? new URLSearchParams(location.search).get('caso') : 'grupo');

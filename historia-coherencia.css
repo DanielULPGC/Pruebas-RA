@@ -26,3 +26,7 @@ body:not(.historia-aventura) main>.hero .escena {
 .piramides-hipotesis label {display:block;font-weight:700;margin-bottom:8px;}
 .piramides-hipotesis textarea {width:100%;box-sizing:border-box;border:1px solid #52676b;border-radius:10px;padding:12px;background:#fff;color:#253c40;}
 .piramides-ayudas li {margin-block:12px;}
+
+.experimento-visual {margin-block:18px;padding:16px;border:1px solid #b5ccc5;border-radius:14px;background:#fffaf0;color:#253c40;}
+.experimento-visual svg {display:block;width:100%;max-width:540px;height:auto;margin:auto;}
+.experimento-visual h4 {margin-top:0;font-size:1.15rem;}
