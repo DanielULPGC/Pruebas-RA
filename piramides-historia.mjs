@@ -42,7 +42,7 @@ const INFO = {
 };
 let caso = 'grupo';
 let paso = 0;
-const notas = Object.fromEntries(CASOS.map(id => [id,{observacion:'',conclusion:'',inicial:'',revisada:'',ayudas:0}]));
+const notas = Object.fromEntries(CASOS.map(id => [id,{observacion:'',conclusion:'',inicial:'',revisada:'',ayudas:0,transferencia:'',criterios:[false,false,false]}]));
 const respuestas = Object.fromEntries(CASOS.map(id => [id,'']));
 const medidasGuardadas = Object.fromEntries(CASOS.map(id => [id,null]));
 const progreso = Object.fromEntries(CASOS.map(id => [id,{feedback:'',error:false,argumento:false,calculo:'',prisma:''}]));
@@ -51,6 +51,7 @@ function guardarNotas() {
   notas[caso].observacion = $('observacion').value;
   notas[caso].conclusion = $('conclusion').value;
   notas[caso].inicial=$('idea-inicial').value;notas[caso].revisada=$('idea-revisada').value;
+  notas[caso].transferencia=$('respuesta-transferencia').value;notas[caso].criterios=[0,1,2].map(i=>$('criterio-'+i).checked);
   const controles = [...$('medidas').querySelectorAll('input')];
   if (controles.length) medidasGuardadas[caso] = Object.fromEntries(controles.map(x => [x.id,x.value]));
 }
@@ -129,6 +130,7 @@ function mostrarCaso(id) {
   $('calculo-respuesta').classList.toggle('error',ev.calculo.startsWith('Error:'));
   $('comparacion-prisma').textContent=ev.prisma;
   $('idea-inicial').value=notas[id].inicial;$('idea-revisada').value=notas[id].revisada;$('pregunta-inicial').textContent=ANTICIPOS[id];mostrarAyudas();
+  $('respuesta-transferencia').value=notas[id].transferencia;[0,1,2].forEach(i=>$('criterio-'+i).checked=notas[id].criterios[i]);$('situacion-nueva').textContent=TRANSFERENCIA[id].pregunta;$('orientacion-transferencia').textContent=TRANSFERENCIA[id].guia;$('guia-transferencia').open=false;
   actualizarEsquema();
   $('observacion').value=notas[id].observacion;$('conclusion').value=notas[id].conclusion;
   $('mensaje-descarga').textContent='';$('copia-panel').hidden=true;
@@ -165,7 +167,7 @@ function cuaderno(){
     'P4.5.2-P · Cuaderno escolar',`Caso: ${e.titulo}`,
     `Estudio: Kelly (2026), figura ${e.figura}, doi:10.1016/j.hm.2026.103248`,
     'Los dibujos e ilustraciones digitales son contemporáneos; NO son el papiro.',
-    '', 'IDEA INICIAL:',n.inicial,'','REVISIÓN DE MI IDEA:',n.revisada,'','PISTAS CONSULTADAS:',String(n.ayudas),'','OBSERVACIÓN:',n.observacion,'','CONCLUSIÓN / LÍMITES:',n.conclusion,'',
+    '', 'IDEA INICIAL:',n.inicial,'','REVISIÓN DE MI IDEA:',n.revisada,'','RETO DE TRANSFERENCIA:',TRANSFERENCIA[caso].pregunta,n.transferencia,'','AUTOEVALUACIÓN DEL ALUMNADO (NO CALIFICACIÓN):',n.criterios.map((v,i)=>(v?'Marcado: ':'Sin marcar: ')+CRITERIOS[i]).join('\n'),'','PISTAS CONSULTADAS:',String(n.ayudas),'','OBSERVACIÓN:',n.observacion,'','CONCLUSIÓN / LÍMITES:',n.conclusion,'',
     'Datos matemáticos de la calculadora: ejemplos escolares, no valores originales.',
     'P5 NO-GO: no se han acreditado ensayos físicos de RA.'].join('\n');
 }
@@ -189,7 +191,7 @@ $('calcular').addEventListener('click',calcular);
 $('reset-medidas').addEventListener('click',()=>{$('medidas').querySelectorAll('input').forEach(e=>e.value=e.dataset.default);calcular()});
 $('descargar').addEventListener('click',descargar);
 $('mostrar-texto').addEventListener('click',textoCopiable);
-$('borrar').addEventListener('click',()=>{notas[caso]={observacion:'',conclusion:'',inicial:'',revisada:'',ayudas:0};$('idea-inicial').value='';$('idea-revisada').value='';$('idea-resumen').textContent='Aún no has escrito una idea inicial.';mostrarAyudas();$('observacion').value='';$('conclusion').value='';$('mensaje-descarga').textContent='Las notas de este caso se han borrado.';$('copia-panel').hidden=true;});
+$('borrar').addEventListener('click',()=>{notas[caso]={observacion:'',conclusion:'',inicial:'',revisada:'',ayudas:0,transferencia:'',criterios:[false,false,false]};$('respuesta-transferencia').value='';[0,1,2].forEach(i=>$('criterio-'+i).checked=false);$('guia-transferencia').open=false;$('idea-inicial').value='';$('idea-revisada').value='';$('idea-resumen').textContent='Aún no has escrito una idea inicial.';mostrarAyudas();$('observacion').value='';$('conclusion').value='';$('mensaje-descarga').textContent='Las notas de este caso se han borrado.';$('copia-panel').hidden=true;});
 
 const ANTICIPOS={
  grupo:'¿Un dibujo por sí solo permite identificar con certeza el problema antiguo al que pertenece? ¿Qué más necesitarías?',
@@ -234,5 +236,13 @@ for(const [id,campo] of [['doblar-altura','m-altura-piramide'],['doblar-base','m
  if(!Number.isFinite(n)||n<=0||n>50000){$('estado-esquema').textContent='Para duplicar esta medida, introduce un valor positivo no superior a 50000.';return;}
  input.value=String(n*2);calcular();
 });
+
+
+const CRITERIOS=['Idea clara','Prueba o razonamiento que la sostiene','Distinción entre modelo actual y fuente histórica'];
+const TRANSFERENCIA={
+ grupo:{pregunta:'Situación inventada: encuentras un dibujo de una pirámide sin texto, fecha ni procedencia. ¿Puedes asignarlo con certeza a uno de los problemas del papiro? Explica qué información necesitarías.',guia:'La semejanza de forma no demuestra la procedencia ni permite asignar con certeza un problema. Necesitarías documentación del origen, contexto y comparación con la edición científica. Puedes describir la figura sin inventar su atribución.'},
+ p18:{pregunta:'Nuevo ejemplo escolar: una pirámide de base cuadrada tiene lado 4 cm y altura perpendicular 6 cm. Sin cambiar la base, la altura pasa a 12 cm. Predice qué ocurre con el volumen y compruébalo. ¿Este resultado explica cómo calculó un escriba antiguo?',guia:'El volumen inicial es (4 × 4 × 6) / 3 = 32 cm³. Con altura 12 cm es 64 cm³: se duplica. Es un cálculo matemático actual; por sí solo no documenta un procedimiento antiguo.'},
+ p19:{pregunta:'Nuevo ejemplo geométrico: cortas una pirámide con un plano inclinado respecto de su base y retiras la punta. ¿Puedes afirmar que la nueva cara superior es paralela a la base y semejante a ella? Explica qué condición del caso anterior ha cambiado.',guia:'El corte ya no es paralelo a la base. La nueva cara está en un plano inclinado, por lo que no es paralela a la base; tampoco puedes asegurar la semejanza. Las propiedades del tronco estudiado dependían del corte paralelo. Este ejemplo no interpreta las marcas del papiro.'}
+};
 
 mostrarCaso(new URLSearchParams(location.search).get('caso') in ESCENAS ? new URLSearchParams(location.search).get('caso') : 'grupo');

@@ -30,3 +30,10 @@ body:not(.historia-aventura) main>.hero .escena {
 .experimento-visual {margin-block:18px;padding:16px;border:1px solid #b5ccc5;border-radius:14px;background:#fffaf0;color:#253c40;}
 .experimento-visual svg {display:block;width:100%;max-width:540px;height:auto;margin:auto;}
 .experimento-visual h4 {margin-top:0;font-size:1.15rem;}
+
+.reto-transferencia {margin-block:22px;padding:18px;border:1px solid #b5ccc5;background:#edf5f1;color:#253c40;border-radius:14px;}
+.revision-criterios {margin-block:16px;border:1px solid #9dbbb1;border-radius:10px;padding:12px;}
+.revision-criterios legend {font-weight:700;}
+.reto-transferencia .revision-criterios label {display:flex;align-items:flex-start;gap:10px;font-weight:400;margin-block:10px;}
+.revision-criterios input {margin-top:5px;flex-shrink:0;}
+.reto-transferencia summary {cursor:pointer;padding:10px;font-weight:700;}
