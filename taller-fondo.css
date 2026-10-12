@@ -20,3 +20,30 @@
 .historia-aventura .taller-reflexion textarea {width:100%;box-sizing:border-box;border:1px solid #52676b;border-radius:10px;padding:12px;background:#fff;color:#253c40;}
 .historia-aventura .taller-ficha summary {cursor:pointer;padding:14px;font-weight:700;background:#fff8e9;color:#174b49;border-radius:12px;margin-bottom:16px;}
 .historia-aventura #pistas-graduales li {margin-block:12px;}
+
+/* R7: cabecera compacta, imagen completa y acceso más próximo a los casos. */
+.historia-aventura .site-header {
+ display:grid;
+ grid-template-columns:minmax(20px,1fr) minmax(0,638px) minmax(0,522px) minmax(20px,1fr);
+ align-items:center;
+ gap:0;
+}
+.historia-aventura .site-header .topbar {grid-column:2 / 4;width:100%;max-width:none;padding-inline:0;}
+.historia-aventura .hero.taller-apertura {grid-column:2;max-width:none;width:100%;padding:24px 28px 24px 0;}
+.historia-aventura .hero h1 {font-size:clamp(2.2rem,3.3vw,3rem);margin-block:0 12px;}
+.historia-aventura .taller-reto {font-size:clamp(1.6rem,2.4vw,2rem);margin-bottom:10px;}
+.historia-aventura .hero-copy>p:not(.eyebrow) {font-size:1rem;margin-block:10px;}
+.historia-aventura .hero-cta {margin-top:14px;gap:10px;}
+.historia-aventura .taller-ruta {margin-block:10px;}
+.historia-aventura .hero-copy .taller-contexto {font-size:.875rem;margin-top:12px;}
+.historia-aventura .taller-franja {grid-column:3;width:100%;max-width:none;padding:20px 0;margin:0;}
+.historia-aventura .taller-franja img {width:100%;height:auto;max-width:none;}
+.historia-aventura .taller-franja figcaption {font-size:.75rem;line-height:1.45;}
+@media (max-width:760px) {
+ .historia-aventura .site-header {display:block;}
+ .historia-aventura .site-header .topbar {padding-inline:20px;}
+ .historia-aventura .hero.taller-apertura {padding:20px 20px 10px;}
+ .historia-aventura .taller-franja {padding:4px 20px 16px;}
+ .historia-aventura .taller-franja img {max-width:360px;margin-inline:auto;}
+ .historia-aventura .taller-franja figcaption {max-width:360px;margin-inline:auto;}
+}
